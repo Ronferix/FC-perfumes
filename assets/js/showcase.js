@@ -1,11 +1,10 @@
 /* ==========================================================================
    Carrusel «Familias» de la portada: nombre de la familia y, debajo, su
-   perfume para empezar (families.json → starter) sobre el ambiente de la
-   familia. Navegación manual: flechas, teclado y deslizar.
+   perfume para empezar (families.json → starter) sobre el color de la
+   familia (sin partículas). Navegación manual: flechas, teclado y deslizar.
    El HTML de la primera diapositiva viene prerenderizado (funciona sin JS).
    ========================================================================== */
 import { esc } from "./data.js";
-import { Atmosphere } from "./fx.js";
 import { IngredientStage, loadIngredients } from "./ingredients.js";
 
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -15,7 +14,6 @@ export async function initShowcase(root, D) {
   const stage = $(".sc-stage", root);
   stage.removeAttribute("style");
   const available = await loadIngredients();
-  const fx = new Atmosphere($(".sc-fx", root), { density: 0.6 });
   const n = D.families.length;
   let i = 0, ing = null;
 
@@ -33,8 +31,6 @@ export async function initShowcase(root, D) {
     const f = D.families[i];
     const p = D.perfById[f.starter] || D.inFamily(f.id)[0];
     applyTheme(f.theme);
-    fx.setFocus(0.5, 0.45);
-    fx.setMood({ motifs: p.animation.motifs, palette: p.animation.palette, tempo: f.motion.tempo, mode: f.theme.mode });
 
     $(".sc-name", root).textContent = f.name;
     const link = $(".sc-perfume", root);
