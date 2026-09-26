@@ -82,33 +82,32 @@
 .steps__list p { color: var(--ink-soft); max-width: 34em; }
 @media (max-width: 820px) { .steps { grid-template-columns: 1fr; } }
 
-/* ---------- Familias: carrusel sencillo ---------- */
+/* ---------- Familias: carrusel sencillo (tamaños fijos: nada salta al cambiar) ---------- */
 .showcase { padding-block: clamp(4rem, 9vw, 7rem); text-align: center; }
 .sc-title { color: var(--muted); }
-.sc-name { margin-top: .8rem; font-size: clamp(2.6rem, 1.8rem + 3.6vw, 5.2rem); line-height: 1; }
-.sc-stage {
-  --bg: #f4e7d7; --bg2: #e3c29b; --ink: #2b1d14; --muted: #6a5343; --accent: #a8652f;
-  position: relative; overflow: hidden; isolation: isolate;
-  margin-top: clamp(1.8rem, 4vw, 2.8rem);
-  display: flex; justify-content: center; align-items: center; gap: clamp(.4rem, 4vw, 3.5rem);
-  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2.5rem);
-  color: var(--ink); background: var(--bg);
-  transition: color .9s var(--ease);
+.sc-name {
+  margin-top: .8rem; color: var(--ink);
+  font-size: clamp(2.4rem, 1.8rem + 3vw, 4.6rem); line-height: 1.1; height: 1.1em;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.sc-bg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
-.sc-bg .bg-layer:first-child { background: radial-gradient(60% 70% at 50% 58%, var(--bg2) 0%, transparent 72%), var(--bg); }
-.sc-perfume { flex: 0 1 360px; min-width: 0; display: flex; flex-direction: column; align-items: center; text-decoration: none; color: inherit; }
-.sc-visual { position: relative; display: block; width: min(100%, 360px); aspect-ratio: 3 / 4; }
-.sc-visual .ing-bottle { bottom: 4%; height: 90%; max-width: 88%; transition: translate .8s var(--ease); }
+.sc-stage {
+  margin-top: clamp(1.4rem, 3vw, 2.2rem);
+  display: flex; justify-content: center; align-items: center; gap: clamp(.4rem, 4vw, 3.5rem);
+}
+.sc-perfume { flex: 0 0 min(360px, 64vw); display: flex; flex-direction: column; align-items: center; text-decoration: none; color: var(--ink); }
+.sc-visual { position: relative; display: block; width: 100%; aspect-ratio: 3 / 4; }
+.sc-visual .ing-bottle { bottom: 2%; height: 92%; max-width: 90%; filter: drop-shadow(0 22px 26px rgba(29, 24, 20, .18)); transition: translate .8s var(--ease); }
 .sc-perfume:hover .ing-bottle { translate: -50% -8px; }
-.sc-pname { margin-top: 1.2rem; font-family: var(--serif); font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.4rem); line-height: 1.05; }
-.sc-pbrand { margin-top: .4rem; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.sc-pname {
+  margin-top: 1rem; font-family: var(--serif); font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.2rem); line-height: 1.1;
+  height: 2.2em; display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.sc-pbrand { margin-top: .3rem; height: 1.2em; font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
 .sc-perfume:focus-visible { outline-offset: 8px; }
-.sc-stage .g-btn { background: color-mix(in srgb, var(--bg) 60%, transparent); }
-.sc-name.in, .sc-perfume.in { animation: scFade .8s var(--ease) both; }
-@keyframes scFade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.sc-stage .g-btn { flex: none; --bg: var(--cream); }
+.sc-name.in, .sc-perfume.in { animation: scFade .7s var(--ease) both; }
+@keyframes scFade { from { opacity: 0; } to { opacity: 1; } }
 html:not(.js) .sc-stage .g-btn { visibility: hidden; }
-@media (max-width: 600px) { .sc-stage { gap: .4rem; } .sc-visual { width: min(100%, 260px); } }
 
 /* ---------- Orientación ---------- */
 .guide { background: #1a1511; color: #efe6d8; padding-block: clamp(5rem, 11vw, 8.5rem); }

@@ -54,10 +54,8 @@ def showcase_html():
     by = {p["id"]: p for p in perfumes}
     f = families[0]
     p = by[f["starter"]]
-    t = f["theme"]
-    return f"""        <p class="sc-name display" aria-live="polite">{e(f['name'])}</p>
-        <div class="sc-stage" style="--bg:{t['bg']};--bg2:{t['bg2']};--ink:{t['ink']};--muted:{t['muted']};--accent:{t['accent']}">
-          <div class="sc-bg" aria-hidden="true"><div class="bg-layer is-on"></div><div class="bg-layer"></div></div>
+    return f"""        <p class="sc-name display" aria-live="polite">{e(f.get('shortName', f['name']))}</p>
+        <div class="sc-stage">
           <button class="g-btn sc-prev" type="button" aria-label="Familia anterior">{ARROW_L}</button>
           <a class="sc-perfume" href="catalogo.html#/{f['id']}/{p['id']}">
             <span class="sc-visual"><img class="ing-bottle" src="assets/img/perfumes/{p['image']}-840.webp" width="420" height="560" alt="{e(p['alt'])}" loading="lazy"></span>

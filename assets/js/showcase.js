@@ -1,7 +1,7 @@
 /* ==========================================================================
    Carrusel «Familias» de la portada: nombre de la familia y, debajo, su
-   perfume para empezar (families.json → starter) sobre el color de la
-   familia (sin partículas). Navegación manual: flechas, teclado y deslizar.
+   perfume para empezar (families.json → starter) con tamaños fijos para
+   que la sección no salte al cambiar. Navegación manual: flechas, teclado y deslizar.
    El HTML de la primera diapositiva viene prerenderizado (funciona sin JS).
    ========================================================================== */
 import { esc } from "./data.js";
@@ -12,27 +12,16 @@ const $ = (s, r) => r.querySelector(s);
 
 export async function initShowcase(root, D) {
   const stage = $(".sc-stage", root);
-  stage.removeAttribute("style");
   const available = await loadIngredients();
   const n = D.families.length;
   let i = 0, ing = null;
-
-  function applyTheme(t) {
-    ["bg", "bg2", "ink", "muted", "accent"].forEach((k) => stage.style.setProperty(`--${k}`, t[k]));
-    const layers = [...stage.querySelectorAll(".bg-layer")];
-    const on = layers.find((l) => l.classList.contains("is-on")) || layers[0];
-    const next = layers.find((l) => l !== on);
-    next.style.background = `radial-gradient(60% 70% at 50% 58%, ${t.bg2} 0%, transparent 72%), ${t.bg}`;
-    next.classList.add("is-on"); on.classList.remove("is-on");
-  }
 
   function show(idx, animate = true) {
     i = ((idx % n) + n) % n;
     const f = D.families[i];
     const p = D.perfById[f.starter] || D.inFamily(f.id)[0];
-    applyTheme(f.theme);
 
-    $(".sc-name", root).textContent = f.name;
+    $(".sc-name", root).textContent = f.shortName || f.name;
     const link = $(".sc-perfume", root);
     link.href = `catalogo.html#/${f.id}/${p.id}`;
     link.setAttribute("aria-label", `${p.name} de ${p.brand}, familia ${f.name}. Ver ficha`);
