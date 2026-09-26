@@ -73,45 +73,22 @@
       </ol>
     </section>
 
-    <!-- FAMILIAS: carrusel con un perfume para empezar en cada una -->
+    <!-- FAMILIAS: carrusel sencillo, un perfume por familia -->
     <section class="showcase" id="familias" aria-labelledby="sc-title" aria-roledescription="carrusel">
-      <div class="sc-bg" aria-hidden="true"><div class="bg-layer is-on"></div><div class="bg-layer"></div></div>
-      <canvas class="sc-fx" aria-hidden="true"></canvas>
-      <div class="sc-inner wrap">
-        <header class="sc-head">
-          <h2 id="sc-title" class="display">Familias</h2>
-          <p>Cada familia tiene su carácter. En cada una te mostramos un perfume para empezar.</p>
-        </header>
+      <div class="wrap">
+        <h2 id="sc-title" class="eyebrow sc-title">Familias</h2>
         <!-- prerender:showcase -->
+        <p class="sc-name display" aria-live="polite">Dulces</p>
         <div class="sc-stage" style="--bg:#f4e7d7;--bg2:#e3c29b;--ink:#2b1d14;--muted:#6a5343;--accent:#a8652f">
-          <div class="sc-slide">
-            <p class="sc-count eyebrow"><span class="sc-i">01</span> / 09</p>
-            <h3 class="sc-name display">Dulces</h3>
-            <p class="sc-concept">Antojo</p>
-            <p class="sc-desc">Caramelo, vainilla, frutas y notas de repostería. Cálidos, cercanos y fáciles de querer.</p>
-            <div class="sc-pick">
-              <p class="eyebrow">Para empezar</p>
-              <p class="sc-pname">Eclaire <span class="sc-pbrand">Lattafa</span></p>
-              <p class="sc-pnotes">Caramelo · Leche · Miel</p>
-            </div>
-            <div class="sc-actions">
-              <a class="btn sc-fam" href="catalogo.html#/dulces">Ver la familia <span class="arrow" aria-hidden="true">→</span></a>
-              <a class="link sc-perf" href="catalogo.html#/dulces/eclaire">Ver Eclaire</a>
-            </div>
-          </div>
-          <div class="sc-visual"><img class="ing-bottle" src="assets/img/perfumes/eclaire-840.webp" width="420" height="560" alt="Frasco de Eclaire de Lattafa: vidrio rosado con tapa de crema dorada que parece derretirse" loading="lazy"></div>
-          <div class="g-nav sc-nav">
-            <div class="g-controls">
-              <button class="g-btn g-prev" type="button" aria-label="Familia anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
-              <button class="g-btn g-play" type="button" aria-label="Pausar el recorrido automático"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" stroke="currentColor" stroke-width="1.5"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button>
-              <button class="g-btn g-next" type="button" aria-label="Familia siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
-            </div>
-            <div class="g-tabs-wrap">
-              <ol class="g-tabs"><li><a class="g-tab" href="catalogo.html#/dulces" data-i="0" aria-current="true">Dulces</a></li><li><a class="g-tab" href="catalogo.html#/amaderados" data-i="1">Amaderados</a></li><li><a class="g-tab" href="catalogo.html#/florales" data-i="2">Florales</a></li><li><a class="g-tab" href="catalogo.html#/especiados" data-i="3">Especiados</a></li><li><a class="g-tab" href="catalogo.html#/citricos" data-i="4">Cítricos</a></li><li><a class="g-tab" href="catalogo.html#/atalcados" data-i="5">Atalcados</a></li><li><a class="g-tab" href="catalogo.html#/ambarados" data-i="6">Ambarados</a></li><li><a class="g-tab" href="catalogo.html#/cuero" data-i="7">Cuero</a></li><li><a class="g-tab" href="catalogo.html#/nicho" data-i="8">Nicho</a></li></ol>
-              <div class="g-progress" aria-hidden="true"><span></span></div>
-            </div>
-          </div>
-          <p class="visually-hidden sc-live" aria-live="polite"></p>
+          <div class="sc-bg" aria-hidden="true"><div class="bg-layer is-on"></div><div class="bg-layer"></div></div>
+          <canvas class="sc-fx" aria-hidden="true"></canvas>
+          <button class="g-btn sc-prev" type="button" aria-label="Familia anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <a class="sc-perfume" href="catalogo.html#/dulces/eclaire">
+            <span class="sc-visual"><img class="ing-bottle" src="assets/img/perfumes/eclaire-840.webp" width="420" height="560" alt="Frasco de Eclaire de Lattafa: vidrio rosado con tapa de crema dorada que parece derretirse" loading="lazy"></span>
+            <span class="sc-pname">Eclaire</span>
+            <span class="sc-pbrand">Lattafa</span>
+          </a>
+          <button class="g-btn sc-next" type="button" aria-label="Familia siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
         </div>
         <!-- /prerender:showcase -->
       </div>

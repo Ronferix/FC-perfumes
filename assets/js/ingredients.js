@@ -29,9 +29,9 @@ export class IngredientStage {
   /**
    * @param {HTMLElement} el contenedor
    * @param {object} p perfume
-   * @param {object} opts { notes, available:Set, phaseMs, bottleClass, sizes, captions }
+   * @param {object} opts { notes, available:Set, phaseMs, bottleClass, sizes, captions, cycle }
    */
-  constructor(el, p, { notes, available, phaseMs = 3400, bottleClass = "", sizes = "40vw", captions = true } = {}) {
+  constructor(el, p, { notes, available, phaseMs = 3400, bottleClass = "", sizes = "40vw", captions = true, cycle = true } = {}) {
     this.el = el; this.p = p; this.notes = notes; this.phaseMs = phaseMs;
     this.i = 0; this.timer = 0; this.visible = true;
     const phases = p.notes ? PHASES.map(([k, label]) => {
@@ -63,7 +63,8 @@ export class IngredientStage {
       el.setAttribute("aria-label", phases.map((ph) => `${ph.label}: ${ph.notes.map((n) => noteName(notes, n)).join(", ")}`).join(". "));
     }
     this.show(0);
-    if (!reduced && phases.length > 1) {
+    if (!cycle) el.classList.add("is-static");
+    else if (!reduced && phases.length > 1) {
       this.io = new IntersectionObserver(([e]) => { this.visible = e.isIntersecting; this.visible ? this.play() : this.pause(); });
       this.io.observe(el);
     } else if (reduced) el.classList.add("is-static");

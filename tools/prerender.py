@@ -50,43 +50,22 @@ PLAY = ('<svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9
 
 
 def showcase_html():
-    """Primera diapositiva estática (funciona sin JS); showcase.js anima el resto."""
+    """Primera diapositiva estática (funciona sin JS); showcase.js cambia de familia con las flechas."""
     by = {p["id"]: p for p in perfumes}
     f = families[0]
     p = by[f["starter"]]
     t = f["theme"]
-    tabs = "".join(
-        f'<li><a class="g-tab" href="catalogo.html#/{x["id"]}" data-i="{i}"{" aria-current=\"true\"" if i == 0 else ""}>{e(x.get("shortName", x["name"]))}</a></li>'
-        for i, x in enumerate(families))
-    return f"""        <div class="sc-stage" style="--bg:{t['bg']};--bg2:{t['bg2']};--ink:{t['ink']};--muted:{t['muted']};--accent:{t['accent']}">
-          <div class="sc-slide">
-            <p class="sc-count eyebrow"><span class="sc-i">01</span> / {len(families):02d}</p>
-            <h3 class="sc-name display">{e(f['name'])}</h3>
-            <p class="sc-concept">{e(f['concept'])}</p>
-            <p class="sc-desc">{e(f['description'])}</p>
-            <div class="sc-pick">
-              <p class="eyebrow">Para empezar</p>
-              <p class="sc-pname">{e(p['name'])} <span class="sc-pbrand">{e(p['brand'])}</span></p>
-              <p class="sc-pnotes">{e(notes_line(p))}</p>
-            </div>
-            <div class="sc-actions">
-              <a class="btn sc-fam" href="catalogo.html#/{f['id']}">Ver la familia <span class="arrow" aria-hidden="true">→</span></a>
-              <a class="link sc-perf" href="catalogo.html#/{f['id']}/{p['id']}">Ver {e(p['name'])}</a>
-            </div>
-          </div>
-          <div class="sc-visual"><img class="ing-bottle" src="assets/img/perfumes/{p['image']}-840.webp" width="420" height="560" alt="{e(p['alt'])}" loading="lazy"></div>
-          <div class="g-nav sc-nav">
-            <div class="g-controls">
-              <button class="g-btn g-prev" type="button" aria-label="Familia anterior">{ARROW_L}</button>
-              <button class="g-btn g-play" type="button" aria-label="Pausar el recorrido automático">{PLAY}</button>
-              <button class="g-btn g-next" type="button" aria-label="Familia siguiente">{ARROW_R}</button>
-            </div>
-            <div class="g-tabs-wrap">
-              <ol class="g-tabs">{tabs}</ol>
-              <div class="g-progress" aria-hidden="true"><span></span></div>
-            </div>
-          </div>
-          <p class="visually-hidden sc-live" aria-live="polite"></p>
+    return f"""        <p class="sc-name display" aria-live="polite">{e(f['name'])}</p>
+        <div class="sc-stage" style="--bg:{t['bg']};--bg2:{t['bg2']};--ink:{t['ink']};--muted:{t['muted']};--accent:{t['accent']}">
+          <div class="sc-bg" aria-hidden="true"><div class="bg-layer is-on"></div><div class="bg-layer"></div></div>
+          <canvas class="sc-fx" aria-hidden="true"></canvas>
+          <button class="g-btn sc-prev" type="button" aria-label="Familia anterior">{ARROW_L}</button>
+          <a class="sc-perfume" href="catalogo.html#/{f['id']}/{p['id']}">
+            <span class="sc-visual"><img class="ing-bottle" src="assets/img/perfumes/{p['image']}-840.webp" width="420" height="560" alt="{e(p['alt'])}" loading="lazy"></span>
+            <span class="sc-pname">{e(p['name'])}</span>
+            <span class="sc-pbrand">{e(p['brand'])}</span>
+          </a>
+          <button class="g-btn sc-next" type="button" aria-label="Familia siguiente">{ARROW_R}</button>
         </div>"""
 
 
