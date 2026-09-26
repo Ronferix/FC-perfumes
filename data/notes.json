@@ -1,0 +1,734 @@
+{
+  "_comment": "Diccionario de notas. 'motif' es el tipo de animación que evoca la nota: drip (dulce/viscoso), drops (frutas), splash (cítricos), petals (flores), embers (especias), smoke (incienso/oud), motes (maderas), glow (ámbar/resinas), haze (almizcle/polvo), breeze (aromático/verde/acuático), sheen (cuero).",
+  "abedul": {
+    "es": "Abedul",
+    "motif": "smoke",
+    "color": "#7a6a5a",
+    "img": "abedul"
+  },
+  "acorde-cupcake": {
+    "es": "Acorde de cupcake",
+    "motif": "drip",
+    "color": "#e6b8a2",
+    "img": "cupcake"
+  },
+  "acorde-fougere": {
+    "es": "Acorde fougère",
+    "motif": "breeze",
+    "color": "#7a8a5a",
+    "img": "lavanda"
+  },
+  "acorde-gourmand": {
+    "es": "Acorde gourmand",
+    "motif": "drip",
+    "color": "#d7a46a",
+    "img": "praline"
+  },
+  "acorde-terroso": {
+    "es": "Acorde terroso",
+    "motif": "motes",
+    "color": "#6a5a40",
+    "img": "maderas"
+  },
+  "akigalawood": {
+    "es": "Akigalawood",
+    "motif": "motes",
+    "color": "#6e4a2f",
+    "img": "maderas"
+  },
+  "albahaca": {
+    "es": "Albahaca",
+    "motif": "breeze",
+    "color": "#6f8f4e",
+    "img": "albahaca"
+  },
+  "aldehidos": {
+    "es": "Aldehídos",
+    "motif": "breeze",
+    "color": "#eef2f4"
+  },
+  "almendra": {
+    "es": "Almendra",
+    "motif": "drip",
+    "color": "#d9c2a0",
+    "img": "almendra"
+  },
+  "almizcle": {
+    "es": "Almizcle",
+    "motif": "haze",
+    "color": "#efe9e1",
+    "img": "algodon"
+  },
+  "almizcle-blanco": {
+    "es": "Almizcle blanco",
+    "motif": "haze",
+    "color": "#f6f3ee",
+    "img": "algodon"
+  },
+  "ambar": {
+    "es": "Ámbar",
+    "motif": "glow",
+    "color": "#d9912f",
+    "img": "ambar"
+  },
+  "ambar-gris": {
+    "es": "Ámbar gris",
+    "motif": "haze",
+    "color": "#e6dccb",
+    "img": "algodon"
+  },
+  "ambar-seco": {
+    "es": "Ámbar seco",
+    "motif": "glow",
+    "color": "#c98a3a",
+    "img": "ambar"
+  },
+  "amberwood": {
+    "es": "Amberwood",
+    "motif": "motes",
+    "color": "#b07a42",
+    "img": "maderas"
+  },
+  "ambroxan": {
+    "es": "Ambroxan",
+    "motif": "haze",
+    "color": "#e3d6c2",
+    "img": "algodon"
+  },
+  "anis-estrellado": {
+    "es": "Anís estrellado",
+    "motif": "embers",
+    "color": "#6b4130",
+    "img": "anis"
+  },
+  "ante": {
+    "es": "Ante (suede)",
+    "motif": "sheen",
+    "color": "#9a7050",
+    "img": "cuero"
+  },
+  "azafran": {
+    "es": "Azafrán",
+    "motif": "embers",
+    "color": "#c2462a",
+    "img": "azafran"
+  },
+  "azahar": {
+    "es": "Azahar",
+    "motif": "petals",
+    "color": "#fbf3e0",
+    "img": "azahar"
+  },
+  "azucar": {
+    "es": "Azúcar",
+    "motif": "drip",
+    "color": "#faf5ec",
+    "img": "azucar"
+  },
+  "azucar-cocida": {
+    "es": "Azúcar cocida",
+    "motif": "drip",
+    "color": "#d79a4a",
+    "img": "caramelo"
+  },
+  "benjui": {
+    "es": "Benjuí",
+    "motif": "glow",
+    "color": "#b8854b",
+    "img": "ambar"
+  },
+  "bergamota": {
+    "es": "Bergamota",
+    "motif": "splash",
+    "color": "#c9d86a",
+    "img": "bergamota"
+  },
+  "cacao": {
+    "es": "Cacao",
+    "motif": "drip",
+    "color": "#5a3522",
+    "img": "cacao"
+  },
+  "cafe": {
+    "es": "Café",
+    "motif": "embers",
+    "color": "#5a3a24",
+    "img": "cafe"
+  },
+  "canela": {
+    "es": "Canela",
+    "motif": "embers",
+    "color": "#a0522d",
+    "img": "canela"
+  },
+  "caramelo": {
+    "es": "Caramelo",
+    "motif": "drip",
+    "color": "#c98b3e",
+    "img": "caramelo"
+  },
+  "cardamomo": {
+    "es": "Cardamomo",
+    "motif": "embers",
+    "color": "#9bb07a",
+    "img": "cardamomo"
+  },
+  "cashmeran": {
+    "es": "Cashmeran",
+    "motif": "haze",
+    "color": "#d9cbbb",
+    "img": "algodon"
+  },
+  "cedro": {
+    "es": "Cedro",
+    "motif": "motes",
+    "color": "#a67b52",
+    "img": "cedro"
+  },
+  "chantilly": {
+    "es": "Crema chantilly",
+    "motif": "drip",
+    "color": "#fbf6ee",
+    "img": "crema"
+  },
+  "ciruela": {
+    "es": "Ciruela",
+    "motif": "drops",
+    "color": "#6a2a4a",
+    "img": "ciruela"
+  },
+  "ciruela-mirabel": {
+    "es": "Ciruela mirabel",
+    "motif": "drops",
+    "color": "#e3b53a",
+    "img": "mirabel"
+  },
+  "citricos": {
+    "es": "Cítricos",
+    "motif": "splash",
+    "color": "#eed65a",
+    "img": "limon"
+  },
+  "coco": {
+    "es": "Coco",
+    "motif": "drip",
+    "color": "#f4efe6",
+    "img": "coco"
+  },
+  "crema-mantequilla": {
+    "es": "Crema de mantequilla",
+    "motif": "drip",
+    "color": "#f2dfa6",
+    "img": "crema"
+  },
+  "cuero": {
+    "es": "Cuero",
+    "motif": "sheen",
+    "color": "#5a3a28",
+    "img": "cuero"
+  },
+  "datil": {
+    "es": "Dátil",
+    "motif": "drip",
+    "color": "#6b3a1e",
+    "img": "datil"
+  },
+  "davana": {
+    "es": "Davana",
+    "motif": "breeze",
+    "color": "#b3843a",
+    "img": "davana"
+  },
+  "durazno": {
+    "es": "Durazno",
+    "motif": "drops",
+    "color": "#f3b27a",
+    "img": "durazno"
+  },
+  "flores-blancas": {
+    "es": "Flores blancas",
+    "motif": "petals",
+    "color": "#f5efe2",
+    "img": "gardenia"
+  },
+  "fresa": {
+    "es": "Fresa",
+    "motif": "drops",
+    "color": "#d8344a",
+    "img": "fresa"
+  },
+  "fresa-smores": {
+    "es": "Fresa (s'mores)",
+    "motif": "drops",
+    "color": "#d8344a",
+    "img": "fresa"
+  },
+  "frutas": {
+    "es": "Frutas",
+    "motif": "drops",
+    "color": "#e0874a",
+    "img": "frutos-rojos"
+  },
+  "frutas-confitadas": {
+    "es": "Frutas confitadas",
+    "motif": "drops",
+    "color": "#d9763a",
+    "img": "frutas-confitadas"
+  },
+  "frutas-tropicales": {
+    "es": "Frutas tropicales",
+    "motif": "drops",
+    "color": "#f2b134",
+    "img": "mango"
+  },
+  "gardenia": {
+    "es": "Gardenia",
+    "motif": "petals",
+    "color": "#f7f2e6",
+    "img": "gardenia"
+  },
+  "geranio": {
+    "es": "Geranio",
+    "motif": "petals",
+    "color": "#d06a7a",
+    "img": "geranio"
+  },
+  "glaseado": {
+    "es": "Glaseado de azúcar",
+    "motif": "drip",
+    "color": "#fbe9ef",
+    "img": "azucar"
+  },
+  "gota-rocio": {
+    "es": "Gota de rocío",
+    "motif": "breeze",
+    "color": "#cfe6ee",
+    "img": "agua"
+  },
+  "granada": {
+    "es": "Granada",
+    "motif": "drops",
+    "color": "#b3283a",
+    "img": "granada"
+  },
+  "grosella-negra": {
+    "es": "Grosella negra (cassis)",
+    "motif": "drops",
+    "color": "#4a2340",
+    "img": "grosella"
+  },
+  "guayaco": {
+    "es": "Guayaco",
+    "motif": "motes",
+    "color": "#7a5a3a",
+    "img": "maderas"
+  },
+  "haba-tonka": {
+    "es": "Haba tonka",
+    "motif": "drip",
+    "color": "#8a5a34",
+    "img": "haba-tonka"
+  },
+  "heliotropo": {
+    "es": "Heliotropo",
+    "motif": "haze",
+    "color": "#cdb6d9",
+    "img": "heliotropo"
+  },
+  "hojas-cedro": {
+    "es": "Hojas de cedro",
+    "motif": "breeze",
+    "color": "#6b7f4a",
+    "img": "hojas"
+  },
+  "hojas-verdes": {
+    "es": "Hojas verdes",
+    "motif": "breeze",
+    "color": "#7fa54a",
+    "img": "hojas"
+  },
+  "iris": {
+    "es": "Iris",
+    "motif": "haze",
+    "color": "#b7a6cf",
+    "img": "iris"
+  },
+  "jazmin": {
+    "es": "Jazmín",
+    "motif": "petals",
+    "color": "#f7f1dc",
+    "img": "jazmin"
+  },
+  "jazmin-sambac": {
+    "es": "Jazmín sambac",
+    "motif": "petals",
+    "color": "#f7f1dc",
+    "img": "jazmin"
+  },
+  "jengibre": {
+    "es": "Jengibre",
+    "motif": "embers",
+    "color": "#d8b25a",
+    "img": "jengibre"
+  },
+  "lavanda": {
+    "es": "Lavanda",
+    "motif": "breeze",
+    "color": "#8c7fb8",
+    "img": "lavanda"
+  },
+  "lavandin": {
+    "es": "Lavandín",
+    "motif": "breeze",
+    "color": "#8c7fb8",
+    "img": "lavanda"
+  },
+  "leche": {
+    "es": "Leche",
+    "motif": "drip",
+    "color": "#f6f0e4",
+    "img": "leche"
+  },
+  "lirio": {
+    "es": "Lirio",
+    "motif": "petals",
+    "color": "#f2ecd8",
+    "img": "lirio"
+  },
+  "limon": {
+    "es": "Limón",
+    "motif": "splash",
+    "color": "#f2e04a",
+    "img": "limon"
+  },
+  "madera-flotante": {
+    "es": "Madera flotante",
+    "motif": "motes",
+    "color": "#b8a58a",
+    "img": "maderas"
+  },
+  "maderas-secas": {
+    "es": "Maderas secas",
+    "motif": "motes",
+    "color": "#9a7a5a",
+    "img": "maderas"
+  },
+  "madreselva": {
+    "es": "Madreselva",
+    "motif": "petals",
+    "color": "#f2e3a0",
+    "img": "madreselva"
+  },
+  "mahonial": {
+    "es": "Mahonial",
+    "motif": "petals",
+    "color": "#efe2c8",
+    "img": "nardo"
+  },
+  "mandarina": {
+    "es": "Mandarina",
+    "motif": "splash",
+    "color": "#f28c28",
+    "img": "naranja"
+  },
+  "mango": {
+    "es": "Mango",
+    "motif": "drops",
+    "color": "#f2a33a",
+    "img": "mango"
+  },
+  "manzana": {
+    "es": "Manzana",
+    "motif": "drops",
+    "color": "#9cc04a",
+    "img": "manzana"
+  },
+  "manzana-granny-smith": {
+    "es": "Manzana Granny Smith",
+    "motif": "drops",
+    "color": "#9cc04a",
+    "img": "manzana"
+  },
+  "manzana-verde": {
+    "es": "Manzana verde",
+    "motif": "drops",
+    "color": "#8cc04a",
+    "img": "manzana"
+  },
+  "maracuya": {
+    "es": "Maracuyá",
+    "motif": "drops",
+    "color": "#e8b23a",
+    "img": "maracuya"
+  },
+  "melon": {
+    "es": "Melón",
+    "motif": "drops",
+    "color": "#f2b77a",
+    "img": "melon"
+  },
+  "menta": {
+    "es": "Menta",
+    "motif": "breeze",
+    "color": "#7fc4a0",
+    "img": "menta"
+  },
+  "mermelada-fresa": {
+    "es": "Mermelada de fresa",
+    "motif": "drip",
+    "color": "#a3152d",
+    "img": "fresa"
+  },
+  "miel": {
+    "es": "Miel",
+    "motif": "drip",
+    "color": "#dca33c",
+    "img": "miel"
+  },
+  "mirra": {
+    "es": "Mirra",
+    "motif": "smoke",
+    "color": "#8c5a2e",
+    "img": "mirra"
+  },
+  "musgo": {
+    "es": "Musgo",
+    "motif": "breeze",
+    "color": "#6f7a52",
+    "img": "musgo"
+  },
+  "musgo-roble": {
+    "es": "Musgo de roble",
+    "motif": "breeze",
+    "color": "#5f6b45",
+    "img": "musgo"
+  },
+  "naranja": {
+    "es": "Naranja",
+    "motif": "splash",
+    "color": "#f39a2a",
+    "img": "naranja"
+  },
+  "naranja-dulce": {
+    "es": "Naranja dulce",
+    "motif": "splash",
+    "color": "#f5a13a",
+    "img": "naranja"
+  },
+  "nardo": {
+    "es": "Nardo (tuberosa)",
+    "motif": "petals",
+    "color": "#f3eadb",
+    "img": "nardo"
+  },
+  "notas-amaderadas": {
+    "es": "Notas amaderadas",
+    "motif": "motes",
+    "color": "#8a6a4a",
+    "img": "maderas"
+  },
+  "notas-dulces": {
+    "es": "Notas dulces",
+    "motif": "drip",
+    "color": "#e0a86a",
+    "img": "praline"
+  },
+  "notas-empolvadas": {
+    "es": "Notas empolvadas",
+    "motif": "haze",
+    "color": "#e7dce0",
+    "img": "polvo"
+  },
+  "notas-florales": {
+    "es": "Notas florales",
+    "motif": "petals",
+    "color": "#e8b4c0",
+    "img": "rosa"
+  },
+  "notas-marinas": {
+    "es": "Notas marinas",
+    "motif": "breeze",
+    "color": "#7fb8d0",
+    "img": "agua"
+  },
+  "notas-orientales": {
+    "es": "Notas orientales",
+    "motif": "glow",
+    "color": "#b86a2a",
+    "img": "ambar"
+  },
+  "notas-verdes": {
+    "es": "Notas verdes",
+    "motif": "breeze",
+    "color": "#8fb05a",
+    "img": "hojas"
+  },
+  "nuez-moscada": {
+    "es": "Nuez moscada",
+    "motif": "embers",
+    "color": "#8b5a2b",
+    "img": "nuez-moscada"
+  },
+  "olibano": {
+    "es": "Olíbano (incienso)",
+    "motif": "smoke",
+    "color": "#cfc6b4",
+    "img": "olibano"
+  },
+  "orquidea": {
+    "es": "Orquídea",
+    "motif": "petals",
+    "color": "#c98ab8",
+    "img": "orquidea"
+  },
+  "oud": {
+    "es": "Oud",
+    "motif": "smoke",
+    "color": "#4a3326",
+    "img": "oud"
+  },
+  "pachuli": {
+    "es": "Pachulí",
+    "motif": "motes",
+    "color": "#5a4632",
+    "img": "pachuli"
+  },
+  "pasiflora": {
+    "es": "Pasiflora",
+    "motif": "petals",
+    "color": "#c77ab8",
+    "img": "pasiflora"
+  },
+  "peonia": {
+    "es": "Peonía",
+    "motif": "petals",
+    "color": "#ec9fb3",
+    "img": "peonia"
+  },
+  "pera": {
+    "es": "Pera",
+    "motif": "drops",
+    "color": "#d6d27a",
+    "img": "pera"
+  },
+  "pimienta": {
+    "es": "Pimienta",
+    "motif": "embers",
+    "color": "#4a4040",
+    "img": "pimienta"
+  },
+  "pimienta-negra": {
+    "es": "Pimienta negra",
+    "motif": "embers",
+    "color": "#3a3434",
+    "img": "pimienta"
+  },
+  "pimienta-rosa": {
+    "es": "Pimienta rosa",
+    "motif": "embers",
+    "color": "#d9707a",
+    "img": "pimienta-rosa"
+  },
+  "pina": {
+    "es": "Piña",
+    "motif": "drops",
+    "color": "#f0c64a",
+    "img": "pina"
+  },
+  "praline": {
+    "es": "Praliné",
+    "motif": "drip",
+    "color": "#a8703f",
+    "img": "praline"
+  },
+  "ralladura-naranja": {
+    "es": "Ralladura de naranja",
+    "motif": "splash",
+    "color": "#f39a2a",
+    "img": "naranja"
+  },
+  "ron": {
+    "es": "Ron",
+    "motif": "drip",
+    "color": "#8a4a22",
+    "img": "ron"
+  },
+  "rosa": {
+    "es": "Rosa",
+    "motif": "petals",
+    "color": "#d9788e",
+    "img": "rosa"
+  },
+  "salvia": {
+    "es": "Salvia",
+    "motif": "breeze",
+    "color": "#8fa37f",
+    "img": "salvia"
+  },
+  "sandalo": {
+    "es": "Sándalo",
+    "motif": "motes",
+    "color": "#c9a27a",
+    "img": "sandalo"
+  },
+  "tagetes": {
+    "es": "Tagetes",
+    "motif": "petals",
+    "color": "#e89a2a",
+    "img": "tagetes"
+  },
+  "te-azul": {
+    "es": "Té azul",
+    "motif": "breeze",
+    "color": "#6f93b8",
+    "img": "te"
+  },
+  "toronja": {
+    "es": "Toronja",
+    "motif": "splash",
+    "color": "#f08a6a",
+    "img": "toronja"
+  },
+  "tutti-frutti": {
+    "es": "Tutti frutti",
+    "motif": "drops",
+    "color": "#e86a5a",
+    "img": "frutos-rojos"
+  },
+  "uva": {
+    "es": "Uva",
+    "motif": "drops",
+    "color": "#6a3a6a",
+    "img": "uva"
+  },
+  "vainilla": {
+    "es": "Vainilla",
+    "motif": "drip",
+    "color": "#e9d3a8",
+    "img": "vainilla"
+  },
+  "vainilla-bourbon": {
+    "es": "Vainilla bourbon",
+    "motif": "drip",
+    "color": "#d9b77e",
+    "img": "vainilla"
+  },
+  "vetiver": {
+    "es": "Vetiver",
+    "motif": "motes",
+    "color": "#6d6a42",
+    "img": "vetiver"
+  },
+  "violeta": {
+    "es": "Violeta",
+    "motif": "petals",
+    "color": "#7a5fa0",
+    "img": "violeta"
+  },
+  "ylang-ylang": {
+    "es": "Ylang-ylang",
+    "motif": "petals",
+    "color": "#f0d56a",
+    "img": "ylang-ylang"
+  }
+}

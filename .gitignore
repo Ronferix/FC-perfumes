@@ -1,0 +1,14 @@
+# Carpeta de trabajo de IA (referencias, entradas y resultados sin procesar)
+_ia/
+
+# Configuración local del editor / Claude
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

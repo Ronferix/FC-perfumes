@@ -1,0 +1,3023 @@
+[
+  {
+    "id": "khamrah",
+    "name": "Khamrah",
+    "aka": [],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "especiados",
+    "alsoIn": [
+      "dulces"
+    ],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2022,
+    "notes": {
+      "top": [
+        "canela",
+        "nuez-moscada",
+        "bergamota"
+      ],
+      "heart": [
+        "datil",
+        "praline",
+        "nardo",
+        "mahonial"
+      ],
+      "base": [
+        "vainilla",
+        "haba-tonka",
+        "amberwood",
+        "mirra",
+        "benjui",
+        "akigalawood"
+      ]
+    },
+    "keyNotes": [
+      "canela",
+      "datil",
+      "vainilla"
+    ],
+    "description": "Canela y nuez moscada abren paso a un corazón de dátil y praliné. El fondo se asienta en vainilla, haba tonka y resinas cálidas como la mirra y el benjuí.",
+    "image": "khamrah",
+    "alt": "Frasco de Khamrah de Lattafa: vidrio facetado con líquido ámbar y etiqueta dorada",
+    "animation": {
+      "motifs": [
+        "embers",
+        "drip"
+      ],
+      "palette": [
+        "#a0522d",
+        "#6b3a1e",
+        "#e9d3a8",
+        "#d9912f"
+      ]
+    },
+    "order": 1,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/khamrah"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Khamrah-75805.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía «Dulces» decía «lirio» en el corazón; la nota oficial es nardo (tuberosa) y mahonial."
+      ]
+    },
+    "imageSource": "ia"
+  },
+  {
+    "id": "yara-tous",
+    "name": "Yara Tous",
+    "aka": [],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "dulces",
+    "alsoIn": [],
+    "genderByBrand": "femenino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2023,
+    "notes": {
+      "top": [
+        "mango",
+        "coco",
+        "maracuya"
+      ],
+      "heart": [
+        "jazmin",
+        "azahar",
+        "heliotropo"
+      ],
+      "base": [
+        "vainilla",
+        "almizcle",
+        "cashmeran"
+      ]
+    },
+    "keyNotes": [
+      "mango",
+      "coco",
+      "vainilla"
+    ],
+    "description": "Tropical y cremoso: mango, coco y maracuyá sobre flores blancas, con un fondo suave de vainilla y almizcle.",
+    "image": "yara-tous",
+    "alt": "Frasco de Yara Tous de Lattafa: cilindro amarillo con lazo dorado",
+    "animation": {
+      "motifs": [
+        "drops",
+        "drip"
+      ],
+      "palette": [
+        "#f2a33a",
+        "#e8b23a",
+        "#f4efe6",
+        "#fbf3e0"
+      ]
+    },
+    "order": 1,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/yara-tous"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Yara-Tous-83320.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía traducía cashmeran como «madera de cachemira»; es un material almizclado, no una madera."
+      ]
+    },
+    "imageSource": "ia"
+  },
+  {
+    "id": "eclaire",
+    "name": "Eclaire",
+    "aka": [],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "dulces",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2024,
+    "notes": {
+      "top": [
+        "caramelo",
+        "leche",
+        "azucar"
+      ],
+      "heart": [
+        "miel",
+        "flores-blancas"
+      ],
+      "base": [
+        "vainilla",
+        "praline",
+        "almizcle"
+      ]
+    },
+    "keyNotes": [
+      "caramelo",
+      "leche",
+      "miel"
+    ],
+    "description": "Inspirado en la pastelería: caramelo y leche al inicio, miel y flores blancas en el corazón, y un fondo de vainilla y praliné.",
+    "image": "eclaire",
+    "alt": "Frasco de Eclaire de Lattafa: vidrio rosado con tapa de crema dorada que parece derretirse",
+    "animation": {
+      "motifs": [
+        "drip",
+        "haze"
+      ],
+      "palette": [
+        "#c98b3e",
+        "#f6f0e4",
+        "#dca33c",
+        "#faf5ec"
+      ]
+    },
+    "order": 2,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/eclaire"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Eclaire-93628.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía añadía «maderas» en el fondo; no aparece en la pirámide oficial."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "vanilla-freak",
+    "name": "Vanilla Freak",
+    "aka": [],
+    "brand": "Lattafa",
+    "line": "Give Me Gourmand",
+    "family": "dulces",
+    "alsoIn": [],
+    "genderByBrand": null,
+    "concentration": "Eau de Parfum",
+    "presentation": "75 ml",
+    "year": 2025,
+    "notes": {
+      "top": [
+        "acorde-cupcake"
+      ],
+      "heart": [
+        "canela",
+        "almendra",
+        "glaseado"
+      ],
+      "base": [
+        "vainilla",
+        "almizcle",
+        "crema-mantequilla"
+      ]
+    },
+    "keyNotes": [
+      "acorde-cupcake",
+      "almendra",
+      "vainilla"
+    ],
+    "description": "Vainilla en clave de repostería: cupcake, glaseado y almendra con un toque de canela, sobre un fondo de vainilla y crema de mantequilla.",
+    "image": "vanilla-freak",
+    "alt": "Frasco de Vanilla Freak de Lattafa con forma de cupcake turquesa y betún rosa",
+    "animation": {
+      "motifs": [
+        "drip",
+        "drops"
+      ],
+      "palette": [
+        "#e6b8a2",
+        "#fbe9ef",
+        "#e9d3a8",
+        "#7fd1c7"
+      ]
+    },
+    "order": 3,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/vanilla-freak"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Vanilla-Freak-114400.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía lo atribuía a French Avenue; es de Lattafa (colección Give Me Gourmand).",
+        "Las notas de la infografía (cacao, jazmín, ámbar, maderas) no corresponden al producto."
+      ]
+    },
+    "imageSource": "ia"
+  },
+  {
+    "id": "berry-on-top",
+    "name": "Berry On Top",
+    "aka": [
+      "Berry On"
+    ],
+    "brand": "Lattafa",
+    "line": "Give Me Gourmand",
+    "family": "dulces",
+    "alsoIn": [],
+    "genderByBrand": "femenino",
+    "concentration": "Eau de Parfum",
+    "presentation": "75 ml",
+    "year": 2025,
+    "notes": {
+      "top": [
+        "fresa",
+        "chantilly"
+      ],
+      "heart": [
+        "azucar-cocida",
+        "mermelada-fresa",
+        "flores-blancas"
+      ],
+      "base": [
+        "almizcle",
+        "vainilla"
+      ]
+    },
+    "keyNotes": [
+      "fresa",
+      "chantilly",
+      "vainilla"
+    ],
+    "description": "Fresas con crema: fresa y chantilly al inicio, mermelada y azúcar cocida después, sobre vainilla y almizcle.",
+    "image": "berry-on-top",
+    "alt": "Frasco de Berry On Top de Lattafa con forma de postre rosa coronado por una fresa",
+    "animation": {
+      "motifs": [
+        "drops",
+        "drip"
+      ],
+      "palette": [
+        "#d8344a",
+        "#fbf6ee",
+        "#a3152d",
+        "#f3c1c8"
+      ]
+    },
+    "order": 4,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/berry-on-top"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Berry-On-Top-114395.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía lo llamaba «Berry On» y lo atribuía a Zimaya; es «Berry On Top» de Lattafa.",
+        "Las notas de la infografía (mandarina, naranja, maderas) no corresponden al producto."
+      ]
+    },
+    "imageSource": "ia"
+  },
+  {
+    "id": "ameer-al-arab",
+    "name": "Ameer Al Arab",
+    "aka": [
+      "Ameerat Al Arab negro"
+    ],
+    "brand": "Asdaaf (Lattafa)",
+    "line": null,
+    "family": "amaderados",
+    "alsoIn": [],
+    "genderByBrand": "masculino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2022,
+    "notes": {
+      "top": [
+        "jazmin",
+        "mirra"
+      ],
+      "heart": [
+        "albahaca",
+        "cardamomo",
+        "lavanda",
+        "pimienta"
+      ],
+      "base": [
+        "pachuli",
+        "azafran",
+        "sandalo"
+      ]
+    },
+    "keyNotes": [
+      "albahaca",
+      "cardamomo",
+      "sandalo"
+    ],
+    "description": "Aromático y especiado: albahaca, cardamomo y lavanda sobre un fondo de pachulí, azafrán y sándalo.",
+    "image": "ameer-al-arab",
+    "alt": "Frasco negro rectangular de Ameer Al Arab de Asdaaf con placa plateada y tapa metálica",
+    "animation": {
+      "motifs": [
+        "breeze",
+        "motes"
+      ],
+      "palette": [
+        "#6f8f4e",
+        "#9bb07a",
+        "#c9a27a",
+        "#8c7fb8"
+      ]
+    },
+    "order": 1,
+    "published": true,
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa (sitio oficial)",
+          "url": "https://lattafa.com/product/ameer-al-arab/"
+        },
+        {
+          "label": "Al Hajis Perfumes (minorista, «Ameerat Al Arab (Black)»)",
+          "url": "https://alhajisperfumes.com/products/lattafa-asdaaf-ameerat-al-arab-black-edp-100ml"
+        }
+      ],
+      "discrepancies": [
+        "El negocio lo conoce como «Ameerat Al Arab negro». Oficialmente el frasco negro es Ameer Al Arab (masculino); Ameerat Al Arab es la línea femenina. Minoristas venden el frasco negro como «Ameerat Al Arab (Black)».",
+        "Las pirámides publicadas varían entre fuentes; se usa la del sitio oficial de Lattafa. Confirmar con foto del frasco que vende el negocio."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "hayaati",
+    "name": "Hayaati",
+    "aka": [
+      "Hayaati negro",
+      "Hayaati Black"
+    ],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "amaderados",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2020,
+    "notes": {
+      "top": [
+        "manzana",
+        "bergamota"
+      ],
+      "heart": [
+        "canela",
+        "notas-amaderadas"
+      ],
+      "base": [
+        "almizcle",
+        "vainilla"
+      ]
+    },
+    "keyNotes": [
+      "manzana",
+      "canela",
+      "notas-amaderadas"
+    ],
+    "description": "Manzana y bergamota abren un corazón de canela y maderas. Cierra suave, con almizcle y vainilla.",
+    "image": "hayaati",
+    "alt": "Frasco negro redondeado de Hayaati de Lattafa con caligrafía plateada",
+    "animation": {
+      "motifs": [
+        "motes",
+        "embers"
+      ],
+      "palette": [
+        "#8a6a4a",
+        "#9cc04a",
+        "#a0522d",
+        "#e9d3a8"
+      ]
+    },
+    "order": 2,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/hayaati"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Hayaati-75902.html"
+        }
+      ],
+      "discrepancies": []
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "amber-oud-bleu",
+    "name": "Amber Oud Bleu Edition",
+    "aka": [
+      "Al Haramain Blue",
+      "Amber Oud Bleu"
+    ],
+    "brand": "Al Haramain",
+    "line": "Amber Oud",
+    "family": "amaderados",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "60, 100 y 200 ml",
+    "year": 2022,
+    "notes": {
+      "top": [
+        "toronja",
+        "limon",
+        "menta",
+        "pimienta-rosa"
+      ],
+      "heart": [
+        "jengibre",
+        "vetiver",
+        "jazmin"
+      ],
+      "base": [
+        "olibano",
+        "sandalo",
+        "cedro",
+        "pachuli"
+      ]
+    },
+    "keyNotes": [
+      "toronja",
+      "menta",
+      "sandalo"
+    ],
+    "description": "Frescura cítrica con menta y pimienta rosa que se asienta en maderas: sándalo, cedro y un toque de incienso.",
+    "image": "amber-oud-bleu",
+    "alt": "Frasco de Amber Oud Bleu Edition de Al Haramain: bloque dorado con franja azul y tapa dorada",
+    "animation": {
+      "motifs": [
+        "breeze",
+        "motes"
+      ],
+      "palette": [
+        "#7fc4a0",
+        "#f08a6a",
+        "#c9a27a",
+        "#6f93b8"
+      ]
+    },
+    "order": 3,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Al Haramain (tienda oficial)",
+          "url": "https://shop.alharamainperfumes.com/default/amber-oud-bleu-edition.html"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Al-Haramain-Perfumes/Amber-Oud-Bleu-Edition-73206.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía lo llamaba «Al Haramain Blue» con notas (limón, lavanda, romero) que no corresponden. El negocio confirmó que es Amber Oud Bleu."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "fusion-accord",
+    "name": "Fusion Accord",
+    "aka": [
+      "Hamidi Accord"
+    ],
+    "brand": "Hamidi",
+    "line": "Fusion",
+    "family": "amaderados",
+    "alsoIn": [],
+    "genderByBrand": null,
+    "concentration": "Eau de Parfum",
+    "presentation": "85 ml",
+    "year": 2023,
+    "notes": {
+      "top": [
+        "pina",
+        "manzana",
+        "grosella-negra",
+        "bergamota"
+      ],
+      "heart": [
+        "jazmin",
+        "abedul",
+        "pachuli",
+        "rosa"
+      ],
+      "base": [
+        "musgo-roble",
+        "ambar-gris",
+        "almizcle",
+        "vainilla"
+      ]
+    },
+    "keyNotes": [
+      "pina",
+      "abedul",
+      "musgo-roble"
+    ],
+    "description": "Frutal y amaderado: piña, manzana y grosella negra sobre un corazón de abedul y pachulí, con fondo de musgo de roble y ámbar gris.",
+    "image": "fusion-accord",
+    "alt": "Frasco rectangular de Hamidi Fusion Accord con vidrio de vetas naranja y rojo y tapa dorada",
+    "animation": {
+      "motifs": [
+        "motes",
+        "drops"
+      ],
+      "palette": [
+        "#f0c64a",
+        "#7a6a5a",
+        "#5f6b45",
+        "#e0874a"
+      ]
+    },
+    "order": 4,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Hamidi (tienda oficial; sin pirámide publicada)",
+          "url": "https://hamidiperfume.com/products/hamidi-fusion-accord-exclusive"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Hamidi/Accord-88251.html"
+        }
+      ],
+      "discrepancies": [
+        "Nombre oficial: «Fusion Accord».",
+        "La infografía usaba notas cítricas genéricas que no corresponden."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "nitro-green",
+    "name": "Nitro Green",
+    "aka": [],
+    "brand": "Dumont",
+    "line": "Nitro",
+    "family": "amaderados",
+    "alsoIn": [],
+    "genderByBrand": "masculino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2020,
+    "notes": {
+      "top": [
+        "acorde-fougere",
+        "vainilla"
+      ],
+      "heart": [
+        "lavandin",
+        "ambar-seco",
+        "hojas-cedro"
+      ],
+      "base": [
+        "violeta",
+        "acorde-terroso"
+      ]
+    },
+    "keyNotes": [
+      "lavandin",
+      "hojas-cedro",
+      "acorde-terroso"
+    ],
+    "description": "Fougère aromático: lavandín y hojas de cedro con un toque de vainilla, sobre un fondo terroso con violeta.",
+    "image": "nitro-green",
+    "alt": "Frasco verde botella de Dumont Nitro Green con funda de piel verde y tapa cobre",
+    "animation": {
+      "motifs": [
+        "breeze",
+        "motes"
+      ],
+      "palette": [
+        "#8c7fb8",
+        "#6b7f4a",
+        "#6a5a40",
+        "#7a5fa0"
+      ]
+    },
+    "order": 5,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Dumont (tienda oficial)",
+          "url": "https://dumontperfumes.com/products/nitro-green"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Dumont/Nitro-Green-73024.html"
+        }
+      ],
+      "discrepancies": [
+        "Estaba en Cítricos; su perfil oficial es fougère aromático, por lo que se movió a Amaderados.",
+        "Las notas de la infografía (toronja, limón, manzana, menta) no corresponden."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "ishq-silver",
+    "name": "Ishq Al Shuyukh Silver",
+    "aka": [],
+    "brand": "Lattafa Pride",
+    "line": null,
+    "family": "amaderados",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2022,
+    "notes": {
+      "top": [
+        "limon",
+        "bergamota"
+      ],
+      "heart": [
+        "pina",
+        "pimienta-negra"
+      ],
+      "base": [
+        "vainilla",
+        "cedro",
+        "amberwood",
+        "pachuli"
+      ]
+    },
+    "keyNotes": [
+      "limon",
+      "pina",
+      "cedro"
+    ],
+    "description": "Luminoso y amaderado: limón y bergamota, piña con pimienta negra y un fondo de cedro, pachulí y vainilla.",
+    "image": "ishq-silver",
+    "alt": "Frasco negro de Ishq Al Shuyukh Silver con una daga plateada en relieve y tapa plateada",
+    "animation": {
+      "motifs": [
+        "motes",
+        "splash"
+      ],
+      "palette": [
+        "#a67b52",
+        "#f2e04a",
+        "#f0c64a",
+        "#d8d8d8"
+      ]
+    },
+    "order": 6,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/ishq-al-shuyukh-silver"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Ishq-Al-Shuyukh-Silver-81099.html"
+        }
+      ],
+      "discrepancies": [
+        "Estaba en Cuero, pero no tiene notas de cuero; se movió a Amaderados.",
+        "Las notas de la infografía (lavanda, cuero, geranio, azafrán, oud) no corresponden."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "shaheen-silver",
+    "name": "Shaheen Silver",
+    "aka": [],
+    "brand": "Lattafa Pride",
+    "line": null,
+    "family": "amaderados",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2022,
+    "notes": {
+      "top": [
+        "bergamota",
+        "grosella-negra"
+      ],
+      "heart": [
+        "pachuli",
+        "rosa"
+      ],
+      "base": [
+        "musgo-roble",
+        "almizcle",
+        "ambar"
+      ]
+    },
+    "keyNotes": [
+      "grosella-negra",
+      "pachuli",
+      "musgo-roble"
+    ],
+    "description": "Bergamota y cassis sobre pachulí y rosa, con un fondo de musgo de roble, almizcle y ámbar.",
+    "image": "shaheen-silver",
+    "alt": "Frasco negro de Shaheen Silver con un halcón plateado en relieve y tapa en forma de halcón",
+    "animation": {
+      "motifs": [
+        "motes",
+        "drops"
+      ],
+      "palette": [
+        "#5a4632",
+        "#4a2340",
+        "#5f6b45",
+        "#d8d8d8"
+      ]
+    },
+    "order": 7,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/shaheen-silver"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Shaheen-Silver-82815.html"
+        }
+      ],
+      "discrepancies": [
+        "Estaba en Cuero, pero no tiene notas de cuero; se movió a Amaderados.",
+        "Las notas de la infografía (piña, cuero, iris, violeta) no corresponden."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "yara",
+    "name": "Yara",
+    "aka": [
+      "Yara Rose",
+      "Yara rosa"
+    ],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "florales",
+    "alsoIn": [
+      "atalcados"
+    ],
+    "genderByBrand": "femenino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2020,
+    "notes": {
+      "top": [
+        "orquidea",
+        "heliotropo",
+        "mandarina"
+      ],
+      "heart": [
+        "acorde-gourmand",
+        "frutas-tropicales"
+      ],
+      "base": [
+        "vainilla",
+        "almizcle",
+        "sandalo"
+      ]
+    },
+    "keyNotes": [
+      "orquidea",
+      "heliotropo",
+      "vainilla"
+    ],
+    "description": "Orquídea y heliotropo con un toque de mandarina, un corazón cremoso de frutas tropicales y un fondo suave de vainilla y almizcle.",
+    "image": "yara",
+    "alt": "Frasco rosa pálido de Yara de Lattafa con lazo plateado",
+    "animation": {
+      "motifs": [
+        "petals",
+        "haze"
+      ],
+      "palette": [
+        "#c98ab8",
+        "#cdb6d9",
+        "#f3d6de",
+        "#e9d3a8"
+      ]
+    },
+    "order": 1,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/yara"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Yara-76880.html"
+        }
+      ],
+      "discrepancies": [
+        "Aparecía dos veces (Florales como «Yara Rose» y Atalcados como «Yara»); ahora es una sola ficha con familia secundaria."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "yara-elixir",
+    "name": "Yara Elixir",
+    "aka": [],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "florales",
+    "alsoIn": [
+      "dulces"
+    ],
+    "genderByBrand": "femenino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2025,
+    "notes": {
+      "top": [
+        "fresa-smores",
+        "grosella-negra"
+      ],
+      "heart": [
+        "jazmin",
+        "azahar"
+      ],
+      "base": [
+        "vainilla",
+        "caramelo",
+        "ambar",
+        "almizcle"
+      ]
+    },
+    "keyNotes": [
+      "fresa-smores",
+      "jazmin",
+      "caramelo"
+    ],
+    "description": "Fresa y grosella negra dan paso a jazmín y azahar; el fondo es denso y dulce, con vainilla, caramelo y ámbar.",
+    "image": "yara-elixir",
+    "alt": "Frasco rosa viejo de Yara Elixir de Lattafa con lazo cobrizo",
+    "animation": {
+      "motifs": [
+        "petals",
+        "drops"
+      ],
+      "palette": [
+        "#d8344a",
+        "#f7f1dc",
+        "#c98b3e",
+        "#e8b4c0"
+      ]
+    },
+    "order": 2,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/yara-elixir"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Yara-Elixir-117615.html"
+        }
+      ],
+      "discrepancies": []
+    },
+    "imageSource": "ia"
+  },
+  {
+    "id": "fakhar-rose",
+    "name": "Fakhar Rose",
+    "aka": [
+      "Fakhar Women"
+    ],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "florales",
+    "alsoIn": [],
+    "genderByBrand": "femenino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2022,
+    "notes": {
+      "top": [
+        "frutas",
+        "lirio",
+        "granada",
+        "aldehidos"
+      ],
+      "heart": [
+        "nardo",
+        "jazmin",
+        "gardenia",
+        "ylang-ylang",
+        "madreselva",
+        "rosa",
+        "peonia"
+      ],
+      "base": [
+        "vainilla",
+        "almizcle-blanco",
+        "sandalo",
+        "ambroxan"
+      ]
+    },
+    "keyNotes": [
+      "granada",
+      "nardo",
+      "rosa"
+    ],
+    "description": "Un ramo generoso: granada y lirio al inicio, un corazón de nardo, jazmín, gardenia y rosa, y un fondo limpio de almizcle blanco y sándalo.",
+    "image": "fakhar-rose",
+    "alt": "Frasco redondo blanco con placa rosa dorada de Fakhar Rose de Lattafa",
+    "animation": {
+      "motifs": [
+        "petals",
+        "drops"
+      ],
+      "palette": [
+        "#d9788e",
+        "#f3eadb",
+        "#b3283a",
+        "#ec9fb3"
+      ]
+    },
+    "order": 3,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/fakhar"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Fakhar-Rose-70466.html"
+        }
+      ],
+      "discrepancies": []
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "queen-of-arabia",
+    "name": "Queen of Arabia",
+    "aka": [
+      "Queen Arabia"
+    ],
+    "brand": "Lattafa Pride",
+    "line": null,
+    "family": "florales",
+    "alsoIn": [],
+    "genderByBrand": "femenino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": null,
+    "notes": null,
+    "keyNotes": [
+      "vainilla",
+      "ambar"
+    ],
+    "description": "Oriental floral de fondo cálido, con vainilla y ámbar. Pregúntanos por sus notas: te contamos cómo se siente en la piel.",
+    "image": "queen-of-arabia",
+    "alt": "Frasco dorado de Queen of Arabia con marco verde ornamentado y tapa en forma de corona",
+    "animation": {
+      "motifs": [
+        "petals",
+        "glow"
+      ],
+      "palette": [
+        "#f5efe2",
+        "#d9912f",
+        "#e9d3a8",
+        "#3f8a5a"
+      ]
+    },
+    "order": 4,
+    "published": true,
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/queen-of-arabia"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Queen-Of-Arabia-113075.html"
+        }
+      ],
+      "discrepancies": [
+        "Las fuentes oficiales no coinciden: Lattafa USA publica ylang-ylang, nuez moscada, toronja / jazmín, rosa, flores blancas / vainilla, ámbar, maderas suaves; lattafa.com y Fragrantica publican coco, sal / sándalo, heliotropo / vainilla, ámbar. Solo coinciden vainilla y ámbar, así que no se muestra pirámide.",
+        "Nombre oficial: «Queen of Arabia»."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "fusion-concord",
+    "name": "Fusion Concord",
+    "aka": [
+      "Hamidi Concord"
+    ],
+    "brand": "Hamidi",
+    "line": "Fusion",
+    "family": "florales",
+    "alsoIn": [],
+    "genderByBrand": null,
+    "concentration": "Eau de Parfum",
+    "presentation": "85 ml",
+    "year": 2023,
+    "notes": {
+      "top": [
+        "jazmin",
+        "azahar",
+        "durazno"
+      ],
+      "heart": [
+        "jazmin-sambac",
+        "nardo",
+        "rosa"
+      ],
+      "base": [
+        "sandalo",
+        "praline",
+        "almizcle",
+        "iris"
+      ]
+    },
+    "keyNotes": [
+      "durazno",
+      "nardo",
+      "praline"
+    ],
+    "description": "Floral blanco y frutal: jazmín, azahar y durazno, un corazón de nardo y rosa, y un fondo de sándalo con praliné.",
+    "image": "fusion-concord",
+    "alt": "Frasco rectangular de Hamidi Fusion Concord con vidrio de vetas violeta y tapa dorada",
+    "animation": {
+      "motifs": [
+        "petals",
+        "drip"
+      ],
+      "palette": [
+        "#f7f1dc",
+        "#f3b27a",
+        "#a8703f",
+        "#b7a6cf"
+      ]
+    },
+    "order": 5,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Hamidi (tienda oficial; sin pirámide publicada)",
+          "url": "https://hamidiperfume.com/products/hamidi-fusion-concord-exclusive"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Hamidi/Concord-88249.html"
+        }
+      ],
+      "discrepancies": [
+        "Estaba en Amaderados; su pirámide es floral, así que se movió a Florales.",
+        "Nombre oficial: «Fusion Concord»."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "ameerat-blue",
+    "name": "Ameerat Al Arab Blue",
+    "aka": [],
+    "brand": "Asdaaf (Lattafa)",
+    "line": null,
+    "family": "florales",
+    "alsoIn": [],
+    "genderByBrand": null,
+    "concentration": null,
+    "presentation": null,
+    "year": null,
+    "notes": null,
+    "keyNotes": [],
+    "description": "Estamos confirmando la información de este perfume. Escríbenos y te contamos cómo es.",
+    "image": null,
+    "alt": "",
+    "animation": {
+      "motifs": [
+        "breeze",
+        "petals"
+      ],
+      "palette": [
+        "#7fb8d0",
+        "#f7f1dc",
+        "#6f93b8",
+        "#ffffff"
+      ]
+    },
+    "order": 6,
+    "published": true,
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Perfums Arabics (minorista)",
+          "url": "https://perfumsarabics.com/products/ameerat-al-arab-blue"
+        }
+      ],
+      "discrepancies": [
+        "No existe ficha oficial ni especializada. El minorista que lo vende usa la foto de «Ameer Al Arab Imperium» (frasco azul, 2024), que tiene otra pirámide (bergamota, salvia, jengibre / geranio, cashmeran, manzana / ámbar, almizcle, sándalo). Falta foto del frasco que vende el negocio para confirmar."
+      ]
+    }
+  },
+  {
+    "id": "khamrah-qahwa",
+    "name": "Khamrah Qahwa",
+    "aka": [],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "especiados",
+    "alsoIn": [
+      "ambarados"
+    ],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2023,
+    "notes": {
+      "top": [
+        "canela",
+        "cardamomo",
+        "jengibre"
+      ],
+      "heart": [
+        "praline",
+        "frutas-confitadas",
+        "flores-blancas"
+      ],
+      "base": [
+        "cafe",
+        "vainilla",
+        "haba-tonka",
+        "benjui",
+        "almizcle"
+      ]
+    },
+    "keyNotes": [
+      "cardamomo",
+      "cafe",
+      "praline"
+    ],
+    "description": "Especias de café árabe (canela, cardamomo, jengibre) con praliné y frutas confitadas, sobre café, vainilla y haba tonka.",
+    "image": "khamrah-qahwa",
+    "alt": "Frasco de Khamrah Qahwa de Lattafa: vidrio facetado con líquido dorado y etiqueta café",
+    "animation": {
+      "motifs": [
+        "embers",
+        "smoke"
+      ],
+      "palette": [
+        "#5a3a24",
+        "#9bb07a",
+        "#a8703f",
+        "#d8b25a"
+      ]
+    },
+    "order": 2,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/khamrah-qahwa"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Khamrah-Qahwa-88175.html"
+        }
+      ],
+      "discrepancies": []
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "asad-bourbon",
+    "name": "Asad Bourbon",
+    "aka": [],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "especiados",
+    "alsoIn": [
+      "ambarados"
+    ],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2025,
+    "notes": {
+      "top": [
+        "pimienta-rosa",
+        "lavanda",
+        "ciruela-mirabel"
+      ],
+      "heart": [
+        "cacao",
+        "davana",
+        "nuez-moscada"
+      ],
+      "base": [
+        "vetiver",
+        "vainilla-bourbon",
+        "ambar"
+      ]
+    },
+    "keyNotes": [
+      "pimienta-rosa",
+      "cacao",
+      "vainilla-bourbon"
+    ],
+    "description": "Pimienta rosa, lavanda y ciruela mirabel; después, cacao y nuez moscada; al final, vainilla bourbon, ámbar y vetiver.",
+    "image": "asad-bourbon",
+    "alt": "Frasco café de Asad Bourbon de Lattafa con caligrafía dorada y un medallón al frente",
+    "animation": {
+      "motifs": [
+        "embers",
+        "drip"
+      ],
+      "palette": [
+        "#d9707a",
+        "#5a3522",
+        "#d9b77e",
+        "#e3b53a"
+      ]
+    },
+    "order": 3,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa (sitio oficial)",
+          "url": "https://lattafa.com/product/asad-bourbon/"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Asad-Bourbon-101124.html"
+        }
+      ],
+      "discrepancies": [
+        "Fragrantica lo clasifica como masculino; el sitio oficial de Lattafa lo presenta como unisex."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "checkmate-knight",
+    "name": "Checkmate Knight",
+    "aka": [],
+    "brand": "Armaf",
+    "line": "Checkmate",
+    "family": "especiados",
+    "alsoIn": [],
+    "genderByBrand": null,
+    "concentration": null,
+    "presentation": null,
+    "year": null,
+    "notes": null,
+    "keyNotes": [],
+    "description": "Estamos confirmando la versión exacta de este perfume. Escríbenos y te contamos cómo es.",
+    "image": null,
+    "alt": "",
+    "animation": {
+      "motifs": [
+        "embers",
+        "motes"
+      ],
+      "palette": [
+        "#d9893a",
+        "#a67b52",
+        "#e3c29b",
+        "#3a2e28"
+      ]
+    },
+    "order": 4,
+    "published": true,
+    "verification": {
+      "status": "unverified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Armaf (sitio oficial: solo Black Knight y White Knight)",
+          "url": "https://armaf.com/products/checkmate-black-knight"
+        },
+        {
+          "label": "FragranceX (minorista, «Checkmate Knight»)",
+          "url": "https://www.fragrancex.com/products/armaf/armaf-checkmate-knight-cologne"
+        }
+      ],
+      "discrepancies": [
+        "La infografía lo atribuía a French Avenue; es de Armaf.",
+        "El sitio oficial de Armaf solo lista Checkmate Black Knight y Checkmate White Knight (2026). Algunos minoristas venden un «Checkmate Knight» con otra pirámide (bergamota, limón, lavanda / cedro, cardamomo, pachulí / ámbar, vetiver, haba tonka). Falta foto del frasco para saber cuál es."
+      ]
+    }
+  },
+  {
+    "id": "9pm-rebel",
+    "name": "9 PM Rebel",
+    "aka": [
+      "9PM Rebel"
+    ],
+    "brand": "Afnan",
+    "line": "9 PM",
+    "family": "especiados",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2024,
+    "notes": {
+      "top": [
+        "mandarina",
+        "pina",
+        "manzana-granny-smith"
+      ],
+      "heart": [
+        "cedro",
+        "musgo-roble",
+        "vainilla"
+      ],
+      "base": [
+        "caramelo",
+        "maderas-secas",
+        "ambar-gris",
+        "almizcle"
+      ]
+    },
+    "keyNotes": [
+      "pina",
+      "manzana-granny-smith",
+      "caramelo"
+    ],
+    "description": "Frutal y moderno: mandarina, piña y manzana verde sobre cedro y vainilla, con un fondo de caramelo y maderas secas.",
+    "image": "9pm-rebel",
+    "alt": "Frasco rectangular rojo oscuro de 9 PM Rebel de Afnan con un 9 grande y tapa esférica negra",
+    "animation": {
+      "motifs": [
+        "drops",
+        "embers"
+      ],
+      "palette": [
+        "#f0c64a",
+        "#9cc04a",
+        "#c98b3e",
+        "#8a1c2a"
+      ]
+    },
+    "order": 5,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Afnan (tienda oficial)",
+          "url": "https://us.afnan.com/products/9-pm-rebel"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Afnan/9-PM-Rebel-99238.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía decía «amberwood»; la ficha oficial dice ámbar gris."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "oud-saffron",
+    "name": "Oud Saffron",
+    "aka": [
+      "Orientica Saffron"
+    ],
+    "brand": "Orientica",
+    "line": "Luxury Collection",
+    "family": "especiados",
+    "alsoIn": [
+      "ambarados"
+    ],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": null,
+    "year": 2021,
+    "notes": {
+      "top": [
+        "notas-orientales",
+        "vainilla"
+      ],
+      "heart": [
+        "azafran",
+        "pachuli"
+      ],
+      "base": [
+        "oud",
+        "almizcle",
+        "guayaco"
+      ]
+    },
+    "keyNotes": [
+      "azafran",
+      "oud",
+      "vainilla"
+    ],
+    "description": "Azafrán y pachulí con un fondo profundo de oud y guayaco, suavizado por vainilla y almizcle.",
+    "image": "oud-saffron",
+    "alt": "Frasco de Orientica Oud Saffron: vidrio negro con enrejado plateado y cristales azules",
+    "animation": {
+      "motifs": [
+        "smoke",
+        "embers"
+      ],
+      "palette": [
+        "#c2462a",
+        "#4a3326",
+        "#e9d3a8",
+        "#8a8fb8"
+      ]
+    },
+    "order": 6,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Orientica (tienda oficial; sin pirámide publicada)",
+          "url": "https://www.orienticaperfumes.com/en-us/products/oud-saffron"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Orientica-Premium/Oud-Saffron-69363.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía lo llamaba «Orientica Saffron» y lo ponía en Cuero con notas de cuero, rosa y jazmín que no corresponden. Nombre oficial: «Oud Saffron». Se movió a Especiados."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "hawas-ice",
+    "name": "Hawas Ice",
+    "aka": [],
+    "brand": "Rasasi",
+    "line": "Hawas",
+    "family": "citricos",
+    "alsoIn": [],
+    "genderByBrand": "masculino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2023,
+    "notes": {
+      "top": [
+        "manzana",
+        "limon",
+        "bergamota",
+        "anis-estrellado"
+      ],
+      "heart": [
+        "ciruela",
+        "azahar",
+        "cardamomo"
+      ],
+      "base": [
+        "almizcle",
+        "ambar",
+        "madera-flotante",
+        "musgo"
+      ]
+    },
+    "keyNotes": [
+      "manzana",
+      "limon",
+      "anis-estrellado"
+    ],
+    "description": "Fresco y helado: manzana, limón y bergamota con un toque de anís estrellado, ciruela y azahar, y un fondo de almizcle y musgo.",
+    "image": "hawas-ice",
+    "alt": "Frasco azul hielo de Hawas Ice de Rasasi con tapa blanca texturizada",
+    "animation": {
+      "motifs": [
+        "splash",
+        "breeze"
+      ],
+      "palette": [
+        "#f2e04a",
+        "#9cc04a",
+        "#cfe6ee",
+        "#ffffff"
+      ]
+    },
+    "order": 1,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Intense Oud (distribuidor)",
+          "url": "https://www.intenseoud.com/products/hawas-ice-for-men-edp-100ml-3-4-oz-by-rasasi-embrace-your-style-with-this-perfume-for-men"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Rasasi/Hawas-Ice-89050.html"
+        }
+      ],
+      "discrepancies": [
+        "La tienda oficial de Rasasi bloquea el acceso automatizado; la imagen proviene de un distribuidor."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "hawas-malibu",
+    "name": "Hawas Malibu",
+    "aka": [],
+    "brand": "Rasasi",
+    "line": "Hawas",
+    "family": "citricos",
+    "alsoIn": [],
+    "genderByBrand": null,
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2025,
+    "notes": {
+      "top": [
+        "pina",
+        "naranja",
+        "toronja"
+      ],
+      "heart": [
+        "iris",
+        "ambar",
+        "lavanda"
+      ],
+      "base": [
+        "haba-tonka",
+        "almizcle",
+        "pachuli",
+        "cashmeran"
+      ]
+    },
+    "keyNotes": [
+      "pina",
+      "toronja",
+      "iris"
+    ],
+    "description": "Tropical y luminoso: piña, naranja y toronja; un corazón suave de iris y lavanda, y un fondo cálido de haba tonka y almizcle.",
+    "image": "hawas-malibu",
+    "alt": "Frasco de Hawas Malibu de Rasasi con degradado de negro a turquesa y tapa negra",
+    "animation": {
+      "motifs": [
+        "splash",
+        "drops"
+      ],
+      "palette": [
+        "#f0c64a",
+        "#f39a2a",
+        "#f08a6a",
+        "#6fd0c8"
+      ]
+    },
+    "order": 2,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Intense Oud (distribuidor)",
+          "url": "https://www.intenseoud.com/products/hawas-malibu-eau-de-parfum-spray-100ml-3-4-oz-by-rasasi"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Rasasi/Hawas-Malibu-112707.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía resumía el corazón y el fondo de forma vaga («acordes frescos», «amaderadas»)."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "mandarin-sky",
+    "name": "Odyssey Mandarin Sky",
+    "aka": [],
+    "brand": "Armaf",
+    "line": "Odyssey",
+    "family": "citricos",
+    "alsoIn": [],
+    "genderByBrand": "masculino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2023,
+    "notes": {
+      "top": [
+        "salvia",
+        "mandarina",
+        "naranja",
+        "azafran"
+      ],
+      "heart": [
+        "caramelo",
+        "haba-tonka",
+        "tagetes"
+      ],
+      "base": [
+        "vetiver",
+        "cedro",
+        "ambroxan"
+      ]
+    },
+    "keyNotes": [
+      "mandarina",
+      "caramelo",
+      "haba-tonka"
+    ],
+    "description": "Mandarina y naranja con salvia y azafrán, que se endulzan con caramelo y haba tonka sobre un fondo de vetiver y cedro.",
+    "image": "mandarin-sky",
+    "alt": "Frasco de Odyssey Mandarin Sky de Armaf con funda turquesa y tapa naranja",
+    "animation": {
+      "motifs": [
+        "splash",
+        "drip"
+      ],
+      "palette": [
+        "#f28c28",
+        "#f39a2a",
+        "#c98b3e",
+        "#5fd3e0"
+      ]
+    },
+    "order": 3,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Armaf (tienda oficial)",
+          "url": "https://armaf.com/products/odyssey-mega-for-men"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Armaf/Odyssey-Mandarin-Sky-83132.html"
+        }
+      ],
+      "discrepancies": [
+        "Existen también las versiones Elixir y Vintage Edition; esta ficha corresponde a la original."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "odyssey-limoni",
+    "name": "Odyssey Limoni",
+    "aka": [
+      "Odyssey Limón"
+    ],
+    "brand": "Armaf",
+    "line": "Odyssey",
+    "family": "citricos",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "60, 100 y 200 ml",
+    "year": 2024,
+    "notes": {
+      "top": [
+        "limon",
+        "naranja-dulce",
+        "bergamota",
+        "mandarina"
+      ],
+      "heart": [
+        "jengibre",
+        "azahar",
+        "notas-marinas"
+      ],
+      "base": [
+        "ambar",
+        "almizcle",
+        "te-azul"
+      ]
+    },
+    "keyNotes": [
+      "limon",
+      "jengibre",
+      "notas-marinas"
+    ],
+    "description": "Cítricos brillantes (limón, naranja dulce, bergamota) con jengibre y un aire marino; cierra con té, ámbar y almizcle.",
+    "image": "odyssey-limoni",
+    "alt": "Frasco de Odyssey Limoni de Armaf con funda verde lima estampada con hojas y tapa amarilla",
+    "animation": {
+      "motifs": [
+        "splash",
+        "breeze"
+      ],
+      "palette": [
+        "#f2e04a",
+        "#d6ef4a",
+        "#7fb8d0",
+        "#ffffff"
+      ]
+    },
+    "order": 4,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Armaf (tienda oficial)",
+          "url": "https://armaf.com/products/armaf-odyssey-limoni-fresh-edition"
+        }
+      ],
+      "discrepancies": [
+        "Nombre oficial: «Odyssey Limoni».",
+        "La infografía inventaba lima, menta, pimienta negra y cedro."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "musk-mood",
+    "name": "Musk Mood",
+    "aka": [],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "atalcados",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": null,
+    "notes": {
+      "top": [
+        "citricos",
+        "frutas"
+      ],
+      "heart": [
+        "almizcle-blanco",
+        "notas-florales",
+        "vainilla"
+      ],
+      "base": [
+        "almizcle-blanco",
+        "sandalo"
+      ]
+    },
+    "keyNotes": [
+      "almizcle-blanco",
+      "notas-florales",
+      "sandalo"
+    ],
+    "description": "Almizcle blanco en primer plano, con un inicio frutal y cítrico, flores suaves y un fondo de sándalo.",
+    "image": "musk-mood",
+    "alt": "Frasco transparente de Musk Mood de Lattafa con cintas plateadas cruzadas y tapa dorada",
+    "animation": {
+      "motifs": [
+        "haze",
+        "petals"
+      ],
+      "palette": [
+        "#f6f3ee",
+        "#e8d9e2",
+        "#c9a27a",
+        "#ffffff"
+      ]
+    },
+    "order": 1,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/musk-mood"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Musk-Mood-74235.html"
+        }
+      ],
+      "discrepancies": []
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "musk-so-poudree",
+    "name": "Musk So Poudrée",
+    "aka": [
+      "Musk So Poudre"
+    ],
+    "brand": "Lattafa",
+    "line": "Thameen Collection",
+    "family": "atalcados",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": null,
+    "notes": {
+      "top": [
+        "notas-empolvadas",
+        "notas-florales"
+      ],
+      "heart": [
+        "notas-empolvadas",
+        "notas-amaderadas"
+      ],
+      "base": [
+        "almizcle",
+        "ambar"
+      ]
+    },
+    "keyNotes": [
+      "notas-empolvadas",
+      "almizcle"
+    ],
+    "description": "Almizcle empolvado, limpio y suave, con matices florales y un fondo cálido de ámbar.",
+    "image": "musk-so-poudree",
+    "alt": "Frasco de Musk So Poudrée de Lattafa: vidrio claro redondeado con etiqueta turquesa y tapa facetada azul",
+    "animation": {
+      "motifs": [
+        "haze",
+        "petals"
+      ],
+      "palette": [
+        "#e7dce0",
+        "#ffffff",
+        "#cdb6d9",
+        "#9fd6d6"
+      ]
+    },
+    "order": 2,
+    "published": true,
+    "verification": {
+      "status": "partial",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa (sitio oficial; sin pirámide)",
+          "url": "https://lattafa.com/product/musk-so-poudree/"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Musk-So-Poudree-80261.html"
+        }
+      ],
+      "discrepancies": [
+        "La pirámide publicada es genérica en todas las fuentes; se usa una descripción conservadora."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "peace-love",
+    "name": "Peace & Love",
+    "aka": [],
+    "brand": "Lattafa Pride",
+    "line": null,
+    "family": "atalcados",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2024,
+    "notes": {
+      "top": [
+        "bergamota",
+        "almendra",
+        "grosella-negra"
+      ],
+      "heart": [
+        "rosa",
+        "nardo"
+      ],
+      "base": [
+        "sandalo",
+        "heliotropo",
+        "vainilla"
+      ]
+    },
+    "keyNotes": [
+      "almendra",
+      "rosa",
+      "heliotropo"
+    ],
+    "description": "Bergamota y almendra con un toque de grosella negra, rosa y nardo en el corazón, y un fondo empolvado de heliotropo, sándalo y vainilla.",
+    "image": "peace-love",
+    "alt": "Frasco blanco de Peace & Love de Lattafa Pride con un pergamino dorado en relieve",
+    "animation": {
+      "motifs": [
+        "haze",
+        "petals"
+      ],
+      "palette": [
+        "#cdb6d9",
+        "#d9c2a0",
+        "#d9788e",
+        "#fbf6ee"
+      ]
+    },
+    "order": 3,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/peace-love"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Peace-Love-100386.html"
+        }
+      ],
+      "discrepancies": [
+        "Las notas de la infografía (pera, notas frescas, ámbar) no corresponden."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "ameerat-prive-rose",
+    "name": "Ameerat Al Arab Privé Rose",
+    "aka": [
+      "Amerat Privé Rose"
+    ],
+    "brand": "Asdaaf (Lattafa)",
+    "line": null,
+    "family": "atalcados",
+    "alsoIn": [],
+    "genderByBrand": "femenino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2023,
+    "notes": {
+      "top": [
+        "fresa",
+        "uva",
+        "naranja"
+      ],
+      "heart": [
+        "rosa",
+        "almizcle-blanco",
+        "gardenia",
+        "jazmin",
+        "lirio",
+        "ylang-ylang"
+      ],
+      "base": [
+        "haba-tonka",
+        "ambar",
+        "sandalo"
+      ]
+    },
+    "keyNotes": [
+      "fresa",
+      "rosa",
+      "almizcle-blanco"
+    ],
+    "description": "Frutal y floral: fresa, uva y naranja sobre rosa y almizcle blanco, con un fondo suave de haba tonka y sándalo.",
+    "image": "ameerat-prive-rose",
+    "alt": "Frasco rectangular rosa pálido de Ameerat Al Arab Privé Rose con placa y tapa cobre",
+    "animation": {
+      "motifs": [
+        "haze",
+        "drops"
+      ],
+      "palette": [
+        "#f3d6de",
+        "#d8344a",
+        "#d9788e",
+        "#f6f3ee"
+      ]
+    },
+    "order": 4,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa (sitio oficial)",
+          "url": "https://lattafa.com/product/ameerat-al-arab-prive-rose/"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Asdaaf/Ameerat-Al-Arab-Prive-Rose-81967.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía incluía lichi y peonía; no son notas oficiales (el lichi solo aparece en reseñas de usuarios)."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "bharara-king",
+    "name": "King",
+    "aka": [
+      "Bharara King"
+    ],
+    "brand": "Bharara",
+    "line": null,
+    "family": "ambarados",
+    "alsoIn": [],
+    "genderByBrand": "masculino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2021,
+    "notes": {
+      "top": [
+        "naranja",
+        "bergamota",
+        "limon"
+      ],
+      "heart": [
+        "tutti-frutti"
+      ],
+      "base": [
+        "almizcle-blanco",
+        "ambar",
+        "vainilla"
+      ]
+    },
+    "keyNotes": [
+      "naranja",
+      "tutti-frutti",
+      "ambar"
+    ],
+    "description": "Cítricos luminosos y un corazón frutal que se asienta en almizcle blanco, ámbar y vainilla.",
+    "image": "bharara-king",
+    "alt": "Frasco de Bharara King: vidrio ahumado con etiqueta negra y tapa cobre",
+    "animation": {
+      "motifs": [
+        "glow",
+        "splash"
+      ],
+      "palette": [
+        "#f39a2a",
+        "#d9912f",
+        "#e86a5a",
+        "#f6f3ee"
+      ]
+    },
+    "order": 1,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Bharara (tienda oficial)",
+          "url": "https://www.bhararabeauty.com/products/bharara-king"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Bharara/King-74184.html"
+        }
+      ],
+      "discrepancies": [
+        "La foto oficial tiene fondo fotográfico; el recorte deja ver algo del fondo a través del vidrio."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "royal-amber",
+    "name": "Royal Amber",
+    "aka": [
+      "Orientica Amber"
+    ],
+    "brand": "Orientica",
+    "line": "Luxury Collection",
+    "family": "ambarados",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": null,
+    "year": 2021,
+    "notes": {
+      "top": [
+        "bergamota",
+        "notas-verdes"
+      ],
+      "heart": [
+        "notas-dulces",
+        "melon",
+        "pina",
+        "ambar"
+      ],
+      "base": [
+        "almizcle",
+        "notas-amaderadas",
+        "vainilla"
+      ]
+    },
+    "keyNotes": [
+      "melon",
+      "pina",
+      "ambar"
+    ],
+    "description": "Ámbar frutal: bergamota y notas verdes, un corazón jugoso de melón y piña con ámbar, y un fondo de vainilla y almizcle.",
+    "image": "royal-amber",
+    "alt": "Frasco de Orientica Royal Amber: vidrio dorado con enrejado ornamental y cristales rojos",
+    "animation": {
+      "motifs": [
+        "glow",
+        "drops"
+      ],
+      "palette": [
+        "#e0a052",
+        "#f2b77a",
+        "#f0c64a",
+        "#f6d08a"
+      ]
+    },
+    "order": 2,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Orientica (tienda oficial; sin pirámide publicada)",
+          "url": "https://www.orienticaperfumes.com/en-us/products/royal-amber"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Orientica-Premium/Royal-Amber-69362.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía lo llamaba «Orientica Amber». Existen también «Exclusive Royal Amber» (2024) y «Royal Amber Parfum Concentré»; esta ficha corresponde al original."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "ishq-gold",
+    "name": "Ishq Al Shuyukh Gold",
+    "aka": [],
+    "brand": "Lattafa Pride",
+    "line": null,
+    "family": "cuero",
+    "alsoIn": [],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2022,
+    "notes": {
+      "top": [
+        "caramelo",
+        "azafran"
+      ],
+      "heart": [
+        "ante",
+        "cuero",
+        "haba-tonka"
+      ],
+      "base": [
+        "vainilla",
+        "ambar",
+        "almizcle"
+      ]
+    },
+    "keyNotes": [
+      "azafran",
+      "cuero",
+      "caramelo"
+    ],
+    "description": "Caramelo y azafrán sobre un corazón de ante y cuero, con un fondo cálido de vainilla, ámbar y almizcle.",
+    "image": "ishq-gold",
+    "alt": "Frasco negro de Ishq Al Shuyukh Gold con una daga dorada en relieve y tapa dorada",
+    "animation": {
+      "motifs": [
+        "sheen",
+        "embers"
+      ],
+      "palette": [
+        "#9a7050",
+        "#c2462a",
+        "#c98b3e",
+        "#e3c29b"
+      ]
+    },
+    "order": 1,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/ishq-al-shuyukh-gold"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Ishq-Al-Shuyukh-Gold-81121.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía añadía cítricos, cardamomo, rosa y oud; no aparecen en la pirámide oficial."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "art-of-universe",
+    "name": "Art of Universe",
+    "aka": [
+      "Art of the Universe"
+    ],
+    "brand": "Lattafa Pride",
+    "line": null,
+    "family": "nicho",
+    "alsoIn": [
+      "citricos"
+    ],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2025,
+    "notes": {
+      "top": [
+        "mandarina",
+        "bergamota",
+        "menta",
+        "jengibre"
+      ],
+      "heart": [
+        "pera",
+        "azahar"
+      ],
+      "base": [
+        "almizcle",
+        "ambar",
+        "cedro"
+      ]
+    },
+    "keyNotes": [
+      "mandarina",
+      "menta",
+      "pera"
+    ],
+    "description": "Cítrico y aromático: mandarina y bergamota con menta y jengibre, pera y azahar en el corazón, y un fondo seco de cedro y ámbar.",
+    "image": "art-of-universe",
+    "alt": "Frasco de Art of Universe de Lattafa Pride: placa plateada con un planeta Tierra y marco azul",
+    "animation": {
+      "motifs": [
+        "splash",
+        "breeze"
+      ],
+      "palette": [
+        "#f28c28",
+        "#7fc4a0",
+        "#d6d27a",
+        "#3a5fb8"
+      ]
+    },
+    "order": 1,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/art-of-universe"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Art-Of-Universe-101314.html"
+        }
+      ],
+      "discrepancies": [
+        "Nombre oficial sin «the».",
+        "La infografía inventaba pimienta rosa, azafrán, oud y resinas."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "infinity-gold",
+    "name": "Infinity Gold",
+    "aka": [],
+    "brand": "Armaf",
+    "line": "Infinity",
+    "family": "nicho",
+    "alsoIn": [
+      "florales"
+    ],
+    "genderByBrand": "femenino",
+    "concentration": "Eau de Parfum",
+    "presentation": "105 ml",
+    "year": 2024,
+    "notes": {
+      "top": [
+        "pera",
+        "lavanda",
+        "rosa"
+      ],
+      "heart": [
+        "ylang-ylang",
+        "jazmin"
+      ],
+      "base": [
+        "vainilla",
+        "almizcle",
+        "musgo"
+      ]
+    },
+    "keyNotes": [
+      "pera",
+      "ylang-ylang",
+      "vainilla"
+    ],
+    "description": "Floral almizclado: pera, lavanda y rosa, un corazón de ylang-ylang y jazmín, y un fondo de vainilla, almizcle y musgo.",
+    "image": "infinity-gold",
+    "alt": "Frasco blanco de Armaf Infinity Gold con un aro dorado al centro y tapa dorada",
+    "animation": {
+      "motifs": [
+        "petals",
+        "glow"
+      ],
+      "palette": [
+        "#d6d27a",
+        "#f0d56a",
+        "#e9d3a8",
+        "#ffffff"
+      ]
+    },
+    "order": 2,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Armaf (tienda oficial)",
+          "url": "https://armaf.com/products/infinity-spr"
+        }
+      ],
+      "discrepancies": [
+        "Aparecía en Ambarados y en Nicho sin marca. Su perfil oficial es floral almizclado: familia principal Nicho y secundaria Florales.",
+        "Las notas de la infografía eran genéricas."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "connoisseur-man",
+    "name": "Connoisseur Man",
+    "aka": [
+      "Connoisseur"
+    ],
+    "brand": "Armaf",
+    "line": "Connoisseur",
+    "family": "nicho",
+    "alsoIn": [
+      "amaderados"
+    ],
+    "genderByBrand": "masculino",
+    "concentration": "Eau de Parfum",
+    "presentation": null,
+    "year": 2024,
+    "notes": {
+      "top": [
+        "manzana-verde",
+        "toronja",
+        "jengibre",
+        "aldehidos"
+      ],
+      "heart": [
+        "geranio",
+        "lavanda",
+        "salvia"
+      ],
+      "base": [
+        "olibano",
+        "haba-tonka",
+        "pachuli",
+        "cedro"
+      ]
+    },
+    "keyNotes": [
+      "manzana-verde",
+      "lavanda",
+      "olibano"
+    ],
+    "description": "Fougère moderno: manzana verde, toronja y jengibre; geranio, lavanda y salvia; y un fondo de incienso, haba tonka y cedro.",
+    "image": "connoisseur-man",
+    "alt": "Frasco negro de Armaf Connoisseur Man con letras doradas y tapa metálica rectangular",
+    "animation": {
+      "motifs": [
+        "breeze",
+        "smoke"
+      ],
+      "palette": [
+        "#8cc04a",
+        "#8c7fb8",
+        "#cfc6b4",
+        "#a67b52"
+      ]
+    },
+    "order": 3,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Armaf (tienda oficial)",
+          "url": "https://armaf.com/products/connoisseur-spr-1"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Armaf/Connoisseur-Man-98721.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía (iris, cuero, oud) no correspondía. El negocio confirmó la versión Man."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "orchestra-tempo-tune",
+    "name": "Orchestra Tempo Tune",
+    "aka": [
+      "Orchestra"
+    ],
+    "brand": "Armaf",
+    "line": "Orchestra",
+    "family": "nicho",
+    "alsoIn": [
+      "ambarados"
+    ],
+    "genderByBrand": null,
+    "concentration": "Eau de Parfum",
+    "presentation": null,
+    "year": 2026,
+    "notes": {
+      "top": [
+        "ralladura-naranja",
+        "aldehidos"
+      ],
+      "heart": [
+        "lavanda",
+        "geranio",
+        "miel"
+      ],
+      "base": [
+        "ambar",
+        "pachuli",
+        "almizcle"
+      ]
+    },
+    "keyNotes": [
+      "ralladura-naranja",
+      "miel",
+      "ambar"
+    ],
+    "description": "Ralladura de naranja y aldehídos, un corazón de lavanda y miel, y un fondo ambarado con pachulí.",
+    "image": "orchestra-tempo-tune",
+    "alt": "Frasco rectangular de Armaf Orchestra Tempo Tune con etiqueta azul marino y tapa dorada",
+    "animation": {
+      "motifs": [
+        "glow",
+        "drip"
+      ],
+      "palette": [
+        "#f39a2a",
+        "#dca33c",
+        "#8c7fb8",
+        "#d9912f"
+      ]
+    },
+    "order": 4,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Armaf (tienda oficial)",
+          "url": "https://armaf.com/products/orchestra-tempo-tune"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Armaf/Orchestra-Tempo-Tune-131084.html"
+        }
+      ],
+      "discrepancies": [
+        "«Orchestra» es una línea con varias versiones; el negocio confirmó Tempo Tune. Las notas de la infografía no correspondían."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "topaz-malaky",
+    "name": "Mosaic Topaz Malaky",
+    "aka": [
+      "Topaz Malaki"
+    ],
+    "brand": "Armaf",
+    "line": "Mosaic",
+    "family": "nicho",
+    "alsoIn": [
+      "ambarados"
+    ],
+    "genderByBrand": null,
+    "concentration": "Eau de Parfum",
+    "presentation": null,
+    "year": null,
+    "notes": {
+      "top": [
+        "bergamota",
+        "azafran",
+        "pimienta-rosa"
+      ],
+      "heart": [
+        "rosa",
+        "oud",
+        "pachuli"
+      ],
+      "base": [
+        "ambar",
+        "sandalo",
+        "almizcle",
+        "vainilla"
+      ]
+    },
+    "keyNotes": [
+      "azafran",
+      "rosa",
+      "oud"
+    ],
+    "description": "Oriental con oud: azafrán y pimienta rosa, un corazón de rosa y oud, y un fondo de ámbar, sándalo y vainilla.",
+    "image": "topaz-malaky",
+    "alt": "Frasco alto de Armaf Mosaic Topaz Malaky con textura plateada, medallón dorado y tapa dorada",
+    "animation": {
+      "motifs": [
+        "smoke",
+        "petals"
+      ],
+      "palette": [
+        "#c2462a",
+        "#d9788e",
+        "#4a3326",
+        "#d9912f"
+      ]
+    },
+    "order": 5,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Armaf (tienda oficial)",
+          "url": "https://armaf.com/products/mosaic-topaz-malaky"
+        }
+      ],
+      "discrepancies": [
+        "Nombre oficial: «Mosaic Topaz Malaky». La pirámide oficial coincide en buena parte con la infografía; algunos minoristas publican otra distinta (mango, ylang, nardo), que se descartó."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "kingdom-women",
+    "name": "The Kingdom Women",
+    "aka": [
+      "Kingdom W",
+      "The Kingdom for Women"
+    ],
+    "brand": "Lattafa",
+    "line": "The Kingdom",
+    "family": "nicho",
+    "alsoIn": [
+      "florales"
+    ],
+    "genderByBrand": "femenino",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2024,
+    "notes": {
+      "top": [
+        "pera",
+        "peonia",
+        "grosella-negra"
+      ],
+      "heart": [
+        "praline",
+        "jazmin",
+        "haba-tonka"
+      ],
+      "base": [
+        "vainilla",
+        "almizcle",
+        "sandalo",
+        "ambar"
+      ]
+    },
+    "keyNotes": [
+      "pera",
+      "peonia",
+      "praline"
+    ],
+    "description": "Frutal, floral y goloso: pera, peonía y cassis; praliné y jazmín; y un fondo de vainilla, sándalo y ámbar.",
+    "image": "kingdom-women",
+    "alt": "Frasco alto de vidrio rosado de The Kingdom Women de Lattafa con tapa rosa",
+    "animation": {
+      "motifs": [
+        "petals",
+        "drip"
+      ],
+      "palette": [
+        "#ec9fb3",
+        "#d6d27a",
+        "#a8703f",
+        "#f7f1dc"
+      ]
+    },
+    "order": 6,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial; sin pirámide publicada)",
+          "url": "https://www.lattafa-usa.com/products/the-kingdom-women"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/The-Kingdom-For-Women-98648.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía («Kingdom W») usaba notas de la versión masculina (incienso, cuero, oud). El negocio confirmó que es la versión femenina."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "petra",
+    "name": "Petra",
+    "aka": [],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "nicho",
+    "alsoIn": [
+      "dulces"
+    ],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2025,
+    "notes": {
+      "top": [
+        "ciruela",
+        "ron"
+      ],
+      "heart": [
+        "nardo",
+        "coco"
+      ],
+      "base": [
+        "praline",
+        "almizcle",
+        "vainilla"
+      ]
+    },
+    "keyNotes": [
+      "ron",
+      "coco",
+      "nardo"
+    ],
+    "description": "Un verano mediterráneo: ciruela y ron, nardo con coco, y un fondo cremoso de praliné y vainilla.",
+    "image": "petra",
+    "alt": "Frasco de Petra de Lattafa: vidrio redondeado dorado sobre base de porcelana azul y blanca",
+    "animation": {
+      "motifs": [
+        "drip",
+        "petals"
+      ],
+      "palette": [
+        "#8a4a22",
+        "#f4efe6",
+        "#6a2a4a",
+        "#3a5fb8"
+      ]
+    },
+    "order": 7,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/petra"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Petra-107089.html"
+        }
+      ],
+      "discrepancies": [
+        "Las notas de la infografía (frutos rojos, rosa, azafrán, ámbar) no corresponden."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "arabian-sky",
+    "name": "Éter Arabian Sky",
+    "aka": [
+      "Éter",
+      "Arabian Sky"
+    ],
+    "brand": "Armaf",
+    "line": "Éter",
+    "family": "nicho",
+    "alsoIn": [
+      "cuero"
+    ],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2024,
+    "notes": {
+      "top": [
+        "pimienta",
+        "limon",
+        "naranja",
+        "bergamota",
+        "toronja",
+        "pina"
+      ],
+      "heart": [
+        "lavanda",
+        "geranio",
+        "ylang-ylang",
+        "caramelo"
+      ],
+      "base": [
+        "pachuli",
+        "vetiver",
+        "cedro",
+        "almizcle",
+        "cuero",
+        "ambar"
+      ]
+    },
+    "keyNotes": [
+      "pina",
+      "caramelo",
+      "cuero"
+    ],
+    "description": "Cítricos y piña con un toque de pimienta, lavanda y caramelo en el corazón, y un fondo de cuero, vetiver y ámbar.",
+    "image": "arabian-sky",
+    "alt": "Frasco turquesa de Armaf Éter Arabian Sky con vetas doradas y tapa en forma de corona dorada",
+    "animation": {
+      "motifs": [
+        "sheen",
+        "splash"
+      ],
+      "palette": [
+        "#5fc8c8",
+        "#f0c64a",
+        "#c98b3e",
+        "#5a3a28"
+      ]
+    },
+    "order": 8,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Armaf (tienda oficial)",
+          "url": "https://armaf.com/products/eter-arabian-sky"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Armaf/Arabian-Sky-92894.html"
+        }
+      ],
+      "discrepancies": [
+        "La infografía decía solo «Éter» (es una línea). El negocio confirmó Arabian Sky. Tiene cuero en el fondo, por eso aparece también en Cuero."
+      ]
+    },
+    "imageSource": "oficial"
+  },
+  {
+    "id": "atheeri",
+    "name": "Atheeri",
+    "aka": [],
+    "brand": "Lattafa",
+    "line": null,
+    "family": "nicho",
+    "alsoIn": [
+      "florales"
+    ],
+    "genderByBrand": "unisex",
+    "concentration": "Eau de Parfum",
+    "presentation": "100 ml",
+    "year": 2025,
+    "notes": {
+      "top": [
+        "pasiflora",
+        "gota-rocio"
+      ],
+      "heart": [
+        "orquidea",
+        "jazmin"
+      ],
+      "base": [
+        "vainilla",
+        "amberwood"
+      ]
+    },
+    "keyNotes": [
+      "pasiflora",
+      "orquidea",
+      "vainilla"
+    ],
+    "description": "Etéreo y floral: pasiflora y un aire de rocío, orquídea y jazmín, y un fondo cremoso de vainilla y amberwood.",
+    "image": "atheeri",
+    "alt": "Frasco de Atheeri de Lattafa: vidrio dorado con un panal y una abeja en relieve",
+    "animation": {
+      "motifs": [
+        "petals",
+        "glow"
+      ],
+      "palette": [
+        "#c77ab8",
+        "#cfe6ee",
+        "#f0d56a",
+        "#e9d3a8"
+      ]
+    },
+    "order": 9,
+    "published": true,
+    "verification": {
+      "status": "verified",
+      "checkedAt": "2026-09-25",
+      "sources": [
+        {
+          "label": "Lattafa USA (distribuidor oficial)",
+          "url": "https://www.lattafa-usa.com/products/atheeri"
+        },
+        {
+          "label": "Fragrantica",
+          "url": "https://www.fragrantica.com/perfume/Lattafa-Perfumes/Atheeri-105152.html"
+        }
+      ],
+      "discrepancies": [
+        "Las notas de la infografía (bergamota, azahar, ylang, sándalo) no corresponden."
+      ]
+    },
+    "imageSource": "oficial"
+  }
+]

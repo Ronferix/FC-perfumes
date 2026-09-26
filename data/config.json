@@ -1,0 +1,13 @@
+{
+  "brandName": "Perfumes FC",
+  "area": "Zona metropolitana de Guadalajara",
+  "year": 2026,
+  "whatsapp": {
+    "phone": "",
+    "_comment": "Número con lada internacional, solo dígitos (ej. 5213312345678). Vacío = modo demo: el enlace abre WhatsApp y deja elegir el contacto.",
+    "perfumeMessage": "Hola, quería información sobre el perfume {perfume}.",
+    "generalMessage": "Hola, quería información sobre sus perfumes.",
+    "adviceMessage": "Hola, me gustaría una recomendación de perfume."
+  },
+  "autoplaySeconds": 9
+}

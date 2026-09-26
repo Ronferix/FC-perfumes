@@ -1,0 +1,4 @@
+Cormorant Garamond — Copyright 2015 The Cormorant Project Authors. SIL Open Font License 1.1.
+Manrope — Copyright 2018 The Manrope Project Authors. SIL Open Font License 1.1.
+https://openfontlicense.org
+Subconjunto "latin" (incluye acentos y ñ del español). Autohospedadas: la web no contacta a Google.

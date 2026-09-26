@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colección — Perfumes FC</title>
+  <meta name="description" content="Recorre la colección de Perfumes FC por familias olfativas: dulces, amaderados, florales, especiados, cítricos, atalcados, ambarados, cuero y nicho. Notas de cada perfume y contacto directo por WhatsApp.">
+  <meta name="theme-color" content="#f4eee4">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_MX">
+  <meta property="og:site_name" content="Perfumes FC">
+  <meta property="og:title" content="Colección — Perfumes FC">
+  <meta property="og:description" content="Una galería olfativa: explora perfumes por familias y descubre sus notas.">
+  <meta property="og:image" content="assets/img/brand/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/brand/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="data/families.json" as="fetch" crossorigin>
+  <link rel="preload" href="data/perfumes.json" as="fetch" crossorigin>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/catalog.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body class="cat">
+  <a class="skip-link" href="#app">Saltar a la colección</a>
+
+  <header class="cat-bar">
+    <a class="brand" href="index.html" aria-label="Perfumes FC, volver al inicio">
+      <img class="brand__ink" src="assets/img/brand/monogram-ink.webp" width="30" height="31" alt="">
+      <img class="brand__cream" src="assets/img/brand/monogram-cream.webp" width="30" height="31" alt="">
+      <span>Perfumes</span>
+    </a>
+    <nav class="crumbs" aria-label="Ubicación"><ol></ol></nav>
+    <nav class="bar-nav" aria-label="Principal">
+      <a class="bar-link" href="index.html#contacto">Contacto</a>
+      <a class="bar-home" href="index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>Inicio</a>
+    </nav>
+  </header>
+
+  <main id="app" class="stage" data-view="loading" tabindex="-1">
+    <div class="stage__bg" aria-hidden="true"><div class="bg-layer"></div><div class="bg-layer"></div></div>
+    <canvas class="stage__fx" aria-hidden="true"></canvas>
+
+    <!-- Galería de familias -->
+    <section id="view-gallery" class="view view--gallery" aria-roledescription="carrusel" aria-label="Familias olfativas" hidden>
+      <div class="g-slide">
+        <p class="g-count eyebrow"><span class="g-i">01</span> / <span class="g-n">09</span></p>
+        <h1 class="g-name display" tabindex="-1"></h1>
+        <p class="g-concept"></p>
+        <p class="g-desc"></p>
+        <div class="g-actions">
+          <a class="btn g-cta" href="#/">Explorar familia <span class="arrow" aria-hidden="true">→</span></a>
+          <span class="g-num"></span>
+        </div>
+      </div>
+      <div class="g-bottles" aria-hidden="true"></div>
+      <div class="g-nav" role="group" aria-label="Navegación entre familias">
+        <div class="g-controls">
+          <button class="g-btn g-prev" type="button" aria-label="Familia anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <button class="g-btn g-play" type="button" aria-label="Pausar el recorrido automático"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12" stroke="currentColor" stroke-width="1.5"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button>
+          <button class="g-btn g-next" type="button" aria-label="Familia siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        </div>
+        <div class="g-tabs-wrap">
+          <ol class="g-tabs"></ol>
+          <div class="g-progress" aria-hidden="true"><span></span></div>
+        </div>
+        <a class="g-list" href="#/lista">Ver como lista</a>
+      </div>
+      <p class="visually-hidden g-live" aria-live="polite"></p>
+    </section>
+
+    <!-- Familia abierta -->
+    <section id="view-family" class="view view--family" hidden></section>
+
+    <!-- Ficha de perfume -->
+    <section id="view-perfume" class="view view--perfume" hidden></section>
+
+    <!-- Lista accesible -->
+    <section id="view-list" class="view view--list" hidden></section>
+
+    <p class="stage__status" role="status"></p>
+  </main>
+
+  <noscript>
+    <style>.cat-bar .crumbs, .stage { display: none !important; } body.cat { overflow: auto; }</style>
+    <!-- prerender:noscript -->
+    <div class="ns">
+      <h1 class="display">Colección</h1>
+      <p class="muted">Pregúntanos por cualquier perfume: el enlace abre WhatsApp con el nombre ya escrito.</p>
+      <section><h2>Dulces</h2><ul>
+        <li><strong>Yara Tous</strong> — Lattafa. Mango · Coco · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Yara%20Tous%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Eclaire</strong> — Lattafa. Caramelo · Leche · Miel. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Eclaire%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Vanilla Freak</strong> — Lattafa. Acorde de cupcake · Almendra · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Vanilla%20Freak%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Berry On Top</strong> — Lattafa. Fresa · Crema chantilly · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Berry%20On%20Top%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Khamrah</strong> — Lattafa. Canela · Dátil · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Khamrah%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Yara Elixir</strong> — Lattafa. Fresa (s&#x27;mores) · Jazmín · Caramelo. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Yara%20Elixir%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Petra</strong> — Lattafa. Ron · Coco · Nardo (tuberosa). <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Petra%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+      </ul></section>
+      <section><h2>Amaderados</h2><ul>
+        <li><strong>Ameer Al Arab</strong> — Asdaaf (Lattafa). Albahaca · Cardamomo · Sándalo. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Ameer%20Al%20Arab%20de%20Asdaaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Hayaati</strong> — Lattafa. Manzana · Canela · Notas amaderadas. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Hayaati%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Amber Oud Bleu Edition</strong> — Al Haramain. Toronja · Menta · Sándalo. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Amber%20Oud%20Bleu%20Edition%20de%20Al%20Haramain." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Fusion Accord</strong> — Hamidi. Piña · Abedul · Musgo de roble. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Fusion%20Accord%20de%20Hamidi." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Nitro Green</strong> — Dumont. Lavandín · Hojas de cedro · Acorde terroso. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Nitro%20Green%20de%20Dumont." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Ishq Al Shuyukh Silver</strong> — Lattafa Pride. Limón · Piña · Cedro. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Ishq%20Al%20Shuyukh%20Silver%20de%20Lattafa%20Pride." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Shaheen Silver</strong> — Lattafa Pride. Grosella negra (cassis) · Pachulí · Musgo de roble. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Shaheen%20Silver%20de%20Lattafa%20Pride." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Connoisseur Man</strong> — Armaf. Manzana verde · Lavanda · Olíbano (incienso). <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Connoisseur%20Man%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+      </ul></section>
+      <section><h2>Florales</h2><ul>
+        <li><strong>Yara</strong> — Lattafa. Orquídea · Heliotropo · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Yara%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Yara Elixir</strong> — Lattafa. Fresa (s&#x27;mores) · Jazmín · Caramelo. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Yara%20Elixir%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Fakhar Rose</strong> — Lattafa. Granada · Nardo (tuberosa) · Rosa. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Fakhar%20Rose%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Queen of Arabia</strong> — Lattafa Pride. Vainilla · Ámbar. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Queen%20of%20Arabia%20de%20Lattafa%20Pride." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Fusion Concord</strong> — Hamidi. Durazno · Nardo (tuberosa) · Praliné. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Fusion%20Concord%20de%20Hamidi." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Ameerat Al Arab Blue</strong> — Asdaaf (Lattafa). Información por confirmar. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Ameerat%20Al%20Arab%20Blue%20de%20Asdaaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Infinity Gold</strong> — Armaf. Pera · Ylang-ylang · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Infinity%20Gold%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>The Kingdom Women</strong> — Lattafa. Pera · Peonía · Praliné. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20The%20Kingdom%20Women%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Atheeri</strong> — Lattafa. Pasiflora · Orquídea · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Atheeri%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+      </ul></section>
+      <section><h2>Especiados</h2><ul>
+        <li><strong>Khamrah</strong> — Lattafa. Canela · Dátil · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Khamrah%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Khamrah Qahwa</strong> — Lattafa. Cardamomo · Café · Praliné. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Khamrah%20Qahwa%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Asad Bourbon</strong> — Lattafa. Pimienta rosa · Cacao · Vainilla bourbon. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Asad%20Bourbon%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Checkmate Knight</strong> — Armaf. Información por confirmar. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Checkmate%20Knight%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>9 PM Rebel</strong> — Afnan. Piña · Manzana Granny Smith · Caramelo. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%209%20PM%20Rebel%20de%20Afnan." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Oud Saffron</strong> — Orientica. Azafrán · Oud · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Oud%20Saffron%20de%20Orientica." rel="noopener">Preguntar por WhatsApp</a></li>
+      </ul></section>
+      <section><h2>Cítricos</h2><ul>
+        <li><strong>Hawas Ice</strong> — Rasasi. Manzana · Limón · Anís estrellado. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Hawas%20Ice%20de%20Rasasi." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Hawas Malibu</strong> — Rasasi. Piña · Toronja · Iris. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Hawas%20Malibu%20de%20Rasasi." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Odyssey Mandarin Sky</strong> — Armaf. Mandarina · Caramelo · Haba tonka. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Odyssey%20Mandarin%20Sky%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Odyssey Limoni</strong> — Armaf. Limón · Jengibre · Notas marinas. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Odyssey%20Limoni%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Art of Universe</strong> — Lattafa Pride. Mandarina · Menta · Pera. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Art%20of%20Universe%20de%20Lattafa%20Pride." rel="noopener">Preguntar por WhatsApp</a></li>
+      </ul></section>
+      <section><h2>Atalcados</h2><ul>
+        <li><strong>Musk Mood</strong> — Lattafa. Almizcle blanco · Notas florales · Sándalo. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Musk%20Mood%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Musk So Poudrée</strong> — Lattafa. Notas empolvadas · Almizcle. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Musk%20So%20Poudr%C3%A9e%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Peace &amp; Love</strong> — Lattafa Pride. Almendra · Rosa · Heliotropo. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Peace%20%26%20Love%20de%20Lattafa%20Pride." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Ameerat Al Arab Privé Rose</strong> — Asdaaf (Lattafa). Fresa · Rosa · Almizcle blanco. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Ameerat%20Al%20Arab%20Priv%C3%A9%20Rose%20de%20Asdaaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Yara</strong> — Lattafa. Orquídea · Heliotropo · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Yara%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+      </ul></section>
+      <section><h2>Ambarados / Orientales</h2><ul>
+        <li><strong>King</strong> — Bharara. Naranja · Tutti frutti · Ámbar. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20King%20de%20Bharara." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Royal Amber</strong> — Orientica. Melón · Piña · Ámbar. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Royal%20Amber%20de%20Orientica." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Khamrah Qahwa</strong> — Lattafa. Cardamomo · Café · Praliné. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Khamrah%20Qahwa%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Asad Bourbon</strong> — Lattafa. Pimienta rosa · Cacao · Vainilla bourbon. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Asad%20Bourbon%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Orchestra Tempo Tune</strong> — Armaf. Ralladura de naranja · Miel · Ámbar. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Orchestra%20Tempo%20Tune%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Mosaic Topaz Malaky</strong> — Armaf. Azafrán · Rosa · Oud. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Mosaic%20Topaz%20Malaky%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Oud Saffron</strong> — Orientica. Azafrán · Oud · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Oud%20Saffron%20de%20Orientica." rel="noopener">Preguntar por WhatsApp</a></li>
+      </ul></section>
+      <section><h2>Cuero</h2><ul>
+        <li><strong>Ishq Al Shuyukh Gold</strong> — Lattafa Pride. Azafrán · Cuero · Caramelo. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Ishq%20Al%20Shuyukh%20Gold%20de%20Lattafa%20Pride." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Éter Arabian Sky</strong> — Armaf. Piña · Caramelo · Cuero. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20%C3%89ter%20Arabian%20Sky%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+      </ul></section>
+      <section><h2>Nicho</h2><ul>
+        <li><strong>Art of Universe</strong> — Lattafa Pride. Mandarina · Menta · Pera. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Art%20of%20Universe%20de%20Lattafa%20Pride." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Infinity Gold</strong> — Armaf. Pera · Ylang-ylang · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Infinity%20Gold%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Connoisseur Man</strong> — Armaf. Manzana verde · Lavanda · Olíbano (incienso). <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Connoisseur%20Man%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Orchestra Tempo Tune</strong> — Armaf. Ralladura de naranja · Miel · Ámbar. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Orchestra%20Tempo%20Tune%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Mosaic Topaz Malaky</strong> — Armaf. Azafrán · Rosa · Oud. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Mosaic%20Topaz%20Malaky%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>The Kingdom Women</strong> — Lattafa. Pera · Peonía · Praliné. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20The%20Kingdom%20Women%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Petra</strong> — Lattafa. Ron · Coco · Nardo (tuberosa). <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Petra%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Éter Arabian Sky</strong> — Armaf. Piña · Caramelo · Cuero. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20%C3%89ter%20Arabian%20Sky%20de%20Armaf." rel="noopener">Preguntar por WhatsApp</a></li>
+        <li><strong>Atheeri</strong> — Lattafa. Pasiflora · Orquídea · Vainilla. <a href="https://wa.me/?text=Hola%2C%20quer%C3%ADa%20informaci%C3%B3n%20sobre%20el%20perfume%20Atheeri%20de%20Lattafa." rel="noopener">Preguntar por WhatsApp</a></li>
+      </ul></section>
+    </div>
+    <!-- /prerender:noscript -->
+  </noscript>
+
+  <script type="module" src="assets/js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+[
+  {
+    "id": "dulces",
+    "name": "Dulces",
+    "concept": "Antojo",
+    "tagline": "Aromas que se disfrutan despacio, como algo que se derrite.",
+    "description": "Caramelo, vainilla, frutas y notas de repostería. Cálidos, cercanos y fáciles de querer.",
+    "theme": {
+      "mode": "light",
+      "bg": "#f4e7d7",
+      "bg2": "#e3c29b",
+      "ink": "#2b1d14",
+      "muted": "#6a5343",
+      "accent": "#a8652f",
+      "titleStyle": "italic"
+    },
+    "motion": {
+      "motifs": [
+        "drip",
+        "drops"
+      ],
+      "palette": [
+        "#c98b4e",
+        "#f3dcb8",
+        "#8a4f2a",
+        "#e9b27a"
+      ],
+      "tempo": 0.55,
+      "light": "Cálida y baja, de tarde de pastelería"
+    },
+    "starter": "eclaire"
+  },
+  {
+    "id": "amaderados",
+    "name": "Amaderados",
+    "concept": "Arraigo",
+    "tagline": "Presencia tranquila, sin prisa.",
+    "description": "Maderas, hierbas aromáticas y especias suaves. Aromas que se sienten firmes y serenos.",
+    "theme": {
+      "mode": "dark",
+      "bg": "#1d1813",
+      "bg2": "#3b2c1e",
+      "ink": "#efe6d8",
+      "muted": "#b9a993",
+      "accent": "#b58a55",
+      "titleStyle": "roman"
+    },
+    "motion": {
+      "motifs": [
+        "motes",
+        "breeze"
+      ],
+      "palette": [
+        "#c9a27a",
+        "#8a6a4a",
+        "#e6d2b0",
+        "#6d6a42"
+      ],
+      "tempo": 0.4,
+      "light": "Contraluz lateral entre sombras"
+    },
+    "starter": "hayaati"
+  },
+  {
+    "id": "florales",
+    "name": "Florales",
+    "concept": "Apertura",
+    "tagline": "Flores con luz de mañana.",
+    "description": "Jazmín, azahar, rosa y nardo. Desde lo delicado hasta lo exuberante.",
+    "theme": {
+      "mode": "light",
+      "bg": "#f6eaea",
+      "bg2": "#e9cdd3",
+      "ink": "#2e1d22",
+      "muted": "#6e4f58",
+      "accent": "#a8506a",
+      "titleStyle": "italic"
+    },
+    "motion": {
+      "motifs": [
+        "petals",
+        "haze"
+      ],
+      "palette": [
+        "#f2c9d3",
+        "#fbf3e8",
+        "#d9788e",
+        "#f7e3b8"
+      ],
+      "tempo": 0.6,
+      "light": "Natural y difusa"
+    },
+    "starter": "yara"
+  },
+  {
+    "id": "especiados",
+    "name": "Especiados",
+    "concept": "Despertar",
+    "tagline": "Calor que se siente de cerca.",
+    "description": "Canela, cardamomo, azafrán y pimienta. Energía cálida, con carácter.",
+    "theme": {
+      "mode": "dark",
+      "bg": "#24120c",
+      "bg2": "#5c2a16",
+      "ink": "#f4e3d0",
+      "muted": "#c9a88e",
+      "accent": "#d9893a",
+      "titleStyle": "roman"
+    },
+    "motion": {
+      "motifs": [
+        "embers",
+        "smoke"
+      ],
+      "palette": [
+        "#e8913a",
+        "#c2462a",
+        "#f6c16a",
+        "#8b5a2b"
+      ],
+      "tempo": 0.8,
+      "light": "Brasa y puntos de luz cálida"
+    },
+    "starter": "khamrah"
+  },
+  {
+    "id": "citricos",
+    "name": "Cítricos",
+    "concept": "Claridad",
+    "tagline": "Energía limpia para el día.",
+    "description": "Limón, mandarina, bergamota y toronja. Frescura luminosa que despierta.",
+    "theme": {
+      "mode": "light",
+      "bg": "#f5f4e0",
+      "bg2": "#d8e8bb",
+      "ink": "#1d2716",
+      "muted": "#4f5e3e",
+      "accent": "#6f8d1c",
+      "titleStyle": "roman"
+    },
+    "motion": {
+      "motifs": [
+        "splash",
+        "breeze"
+      ],
+      "palette": [
+        "#f2d93a",
+        "#9cc04a",
+        "#f28c28",
+        "#ffffff"
+      ],
+      "tempo": 1,
+      "light": "Mediodía, alta y luminosa"
+    },
+    "starter": "hawas-ice"
+  },
+  {
+    "id": "atalcados",
+    "name": "Atalcados",
+    "concept": "Piel limpia",
+    "tagline": "Un aroma que abraza sin imponerse.",
+    "description": "Almizcles suaves y notas empolvadas. Sensación de ropa limpia y piel tibia.",
+    "theme": {
+      "mode": "light",
+      "bg": "#f4f0ef",
+      "bg2": "#e2d9e2",
+      "ink": "#2c2630",
+      "muted": "#625868",
+      "accent": "#8d7894",
+      "titleStyle": "italic"
+    },
+    "motion": {
+      "motifs": [
+        "haze",
+        "petals"
+      ],
+      "palette": [
+        "#ffffff",
+        "#ead9e2",
+        "#d8cde0",
+        "#f3e7da"
+      ],
+      "tempo": 0.3,
+      "light": "Bruma, velo difuso"
+    },
+    "starter": "musk-mood"
+  },
+  {
+    "id": "ambarados",
+    "name": "Ambarados / Orientales",
+    "shortName": "Ambarados",
+    "concept": "Resplandor",
+    "tagline": "Calidez envolvente, de luz dorada.",
+    "description": "Ámbar, vainilla, resinas y frutos maduros. Profundos, cálidos y seductores.",
+    "theme": {
+      "mode": "dark",
+      "bg": "#29150a",
+      "bg2": "#7a3c13",
+      "ink": "#f7e6cc",
+      "muted": "#d7b894",
+      "accent": "#e0a052",
+      "titleStyle": "roman"
+    },
+    "motion": {
+      "motifs": [
+        "glow",
+        "smoke"
+      ],
+      "palette": [
+        "#e0a052",
+        "#b8641c",
+        "#f6d08a",
+        "#7a2e12"
+      ],
+      "tempo": 0.45,
+      "light": "Dorada, desde dentro de la resina"
+    },
+    "starter": "royal-amber"
+  },
+  {
+    "id": "cuero",
+    "name": "Cuero",
+    "concept": "Carácter",
+    "tagline": "Seguridad sin levantar la voz.",
+    "description": "Ante, cuero, azafrán y maderas. Pocos perfumes, mucha personalidad.",
+    "theme": {
+      "mode": "dark",
+      "bg": "#1b120c",
+      "bg2": "#4a2c1b",
+      "ink": "#f1e4d4",
+      "muted": "#c4a88e",
+      "accent": "#b9794a",
+      "titleStyle": "caps"
+    },
+    "motion": {
+      "motifs": [
+        "sheen",
+        "motes"
+      ],
+      "palette": [
+        "#b9794a",
+        "#6b4128",
+        "#e3c29b",
+        "#3a2418"
+      ],
+      "tempo": 0.5,
+      "light": "Rasante, de estudio"
+    },
+    "starter": "ishq-gold"
+  },
+  {
+    "id": "nicho",
+    "name": "Nicho",
+    "concept": "Curiosidad",
+    "tagline": "Composiciones poco comunes, para quien disfruta descubrir.",
+    "description": "Perfumes con una idea propia: combinaciones inesperadas pensadas para amantes de la perfumería.",
+    "theme": {
+      "mode": "dark",
+      "bg": "#121110",
+      "bg2": "#2d2925",
+      "ink": "#efe9df",
+      "muted": "#b3aa9c",
+      "accent": "#c9a86a",
+      "titleStyle": "caps"
+    },
+    "motion": {
+      "motifs": [
+        "glow",
+        "motes"
+      ],
+      "palette": [
+        "#c9a86a",
+        "#f1e3c2",
+        "#7d6a4a",
+        "#ffffff"
+      ],
+      "tempo": 0.4,
+      "light": "De galería, foco cenital"
+    },
+    "starter": "atheeri"
+  }
+]
