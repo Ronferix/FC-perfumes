@@ -12,3 +12,6 @@ __pycache__/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Grafo de conocimiento de graphify (se regenera con: graphify update .)
+graphify-out/
