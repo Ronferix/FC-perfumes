@@ -355,7 +355,8 @@
         "Las notas de la infografía (mandarina, naranja, maderas) no corresponden al producto."
       ]
     },
-    "imageSource": "ia"
+    "imageSource": "ia",
+    "studio": true
   },
   {
     "id": "ameer-al-arab",
