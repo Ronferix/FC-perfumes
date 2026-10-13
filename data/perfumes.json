@@ -73,7 +73,8 @@
         "La infografía «Dulces» decía «lirio» en el corazón; la nota oficial es nardo (tuberosa) y mahonial."
       ]
     },
-    "imageSource": "ia"
+    "imageSource": "ia",
+    "studio": true
   },
   {
     "id": "yara-tous",
@@ -999,7 +1000,8 @@
       ],
       "discrepancies": []
     },
-    "imageSource": "ia"
+    "imageSource": "ia",
+    "studio": true
   },
   {
     "id": "fakhar-rose",
