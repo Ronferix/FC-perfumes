@@ -49,6 +49,13 @@ PLAY = ('<svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9
         '<svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>')
 
 
+def sc_img(p):
+    """Foto fija del perfume: la de estudio (frasco + ingredientes) si existe, si no el frasco solo."""
+    if p.get("studio"):
+        return f'<img class="studio" src="assets/img/estudio/{p['id']}-760.webp" alt="{e(p['alt'])} junto a sus ingredientes" loading="lazy">'
+    return f'<img src="assets/img/perfumes/{p['image']}-840.webp" width="420" height="560" alt="{e(p['alt'])}" loading="lazy">'
+
+
 def showcase_html():
     """Primera diapositiva estática (funciona sin JS); showcase.js cambia de familia con las flechas."""
     by = {p["id"]: p for p in perfumes}
@@ -58,7 +65,7 @@ def showcase_html():
         <div class="sc-stage">
           <button class="g-btn sc-prev" type="button" aria-label="Familia anterior">{ARROW_L}</button>
           <a class="sc-perfume" href="catalogo.html#/{f['id']}/{p['id']}">
-            <span class="sc-visual"><img class="ing-bottle" src="assets/img/perfumes/{p['image']}-840.webp" width="420" height="560" alt="{e(p['alt'])}" loading="lazy"></span>
+            <span class="sc-visual">{sc_img(p)}</span>
             <span class="sc-pname">{e(p['name'])}</span>
             <span class="sc-pbrand">{e(p['brand'])}</span>
           </a>

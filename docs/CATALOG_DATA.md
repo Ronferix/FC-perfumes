@@ -154,7 +154,13 @@ La base es común a todas las familias: Cormorant Garamond en los títulos, Manr
 
 Los valores exactos están en `data/families.json` (`theme` y `motion`).
 
-## 5. Animación de cada perfume y por qué
+La luz se dibuja detrás de las partículas con degradados CSS (`assets/css/atmos.css`), sin imágenes. En `theme`, `light` elige el tipo de luz (`pasteleria`, `contraluz`, `difusa`, `brasa`, `mediodia`, `bruma`, `resina`, `rasante`, `cenital`), `glow` es su color y `texture` es la superficie (`papel`, `veta`, `talco`, `piel` o `ninguna`). El perfume enfocado solo tiñe esa luz con el color más intenso de su paleta (`animation.palette`); el estudio sigue siendo el de la familia.
+
+En pantallas de 900 px o menos, cada familia se recorre como carrusel: un perfume al centro, con su luz y sus partículas. El botón «Ver todos» abre la cuadrícula completa.
+
+## 5. Partículas del fondo de cada perfume y por qué
+
+El perfume se muestra en foto fija; lo que se anima es el fondo. Cuando un perfume está enfocado, las partículas del fondo toman sus motivos y su paleta (`animation` en `perfumes.json`).
 
 Cada ficha combina un motivo principal y uno secundario, elegidos a partir de sus **notas verificadas** (columna «notas que lo justifican»). La paleta sale de los colores de esas notas y, en algunos casos, del color real del frasco.
 
@@ -221,7 +227,7 @@ Generados en Gemini (Nano Banana) a partir de la foto oficial de cada frasco, so
 - Integrados: Khamrah, Yara Tous, Vanilla Freak, Berry On Top y Yara Elixir.
 - En revisión (`_ia/revisar/`): Eclaire, porque el cuerpo salió color crema en vez de rosa pálido, y Fakhar Rose, porque el texto árabe pequeño quedó borroso. Se mantiene la foto oficial hasta aprobarlos.
 - Rechazado: Yara, porque Gemini añadió los textos «For Her» y «Rose Edition», que no existen en el frasco. Desde entonces el prompt prohíbe añadir texto.
-- Pendientes: 36 (ver `_ia/PROMPTS.md`).
+- Las fotos de estudio (frasco + ingredientes) se planean en `_ia/PROMPTS.md` (`python tools/ia_prompts.py`).
 
 ## 7. Logotipo
 

@@ -1,103 +1,184 @@
 """
-Genera _ia/PROMPTS.md (prompts para Gemini/Veo), las hojas de ingredientes y los
-cuadros iniciales de video. Uso: python tools/ia_prompts.py
+Plan y prompts de las fotos de estudio (frasco + ingredientes) para Gemini.
+Uso: python tools/ia_prompts.py
+
+Escribe:
+  _ia/PROMPTS.md            el plan (tabla) y el prompt de cada perfume, en orden de familia
+  _ia/estudio/plan.json     lo mismo en datos (id, familia, croma, ingredientes, referencia, prompt)
+  _ia/estudio/ref/<id>.png  la foto real del frasco sobre blanco, lista para adjuntar en Gemini
+
+Reglas (decididas con el negocio, 12-oct-2026):
+- Siempre se adjunta la foto real del frasco: Gemini no debe inventar el frasco.
+- Fondo de croma plano para recortarlo con tools/estudio.py. Azul #0000FF por omisión; verde #00FF00
+  si el frasco tiene azul, turquesa o morado; magenta #FF00FF si además lleva ingredientes verdes.
+  El prompt prohíbe ese color en el frasco y en los ingredientes.
+- Solo ingredientes de sus notas verificadas, sólidos y dentro del cuadro con margen.
+- La luz es la de su familia; el fondo del sitio la completa.
 """
+import colorsys
 import json
 from pathlib import Path
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 IA = ROOT / "_ia"
+REF = IA / "estudio" / "ref"
 load = lambda n: json.loads((ROOT / "data" / f"{n}.json").read_text(encoding="utf-8"))
-F, N = load("families"), load("notes")
-PF = {p["id"]: p for p in load("perfumes")}
-ING = json.loads((ROOT / "tools" / "ingredients.json").read_text(encoding="utf-8"))
-for d in ("referencias", "cuadros-video", "entrada/frascos", "entrada/ingredientes", "entrada/videos"):
+F, N, P = load("families"), load("notes"), load("perfumes")
+ING = json.loads((ROOT / "tools" / "ingredients.json").read_text(encoding="utf-8"))   # img de la nota → descripción en inglés
+for d in ("referencias", "entrada/frascos", "estudio/ref"):
     (IA / d).mkdir(parents=True, exist_ok=True)
 
-# Frascos que ya tienen imagen de estudio generada con IA
-AI_DONE = {p["id"] for p in PF.values() if p.get("imageSource") == "ia"}
-PENDING = sorted(p["id"] for p in PF.values() if p.get("image") and p["id"] not in AI_DONE)
-
-BOTTLE_PROMPT = ("Use the attached photo as the exact product reference. Recreate this exact perfume bottle as a premium studio product "
-    "photograph. Keep the bottle 100% faithful to the reference: identical shape, cap, label, logo, colors, materials and proportions. "
-    "Reproduce only the text that is visible in the reference, exactly as written; never add any other words, slogans or labels. "
-    "Do not redesign, add or remove anything. Full bottle, front view, centered, camera at bottle height, the bottle fills about 80% "
-    "of the frame height. Background: pure seamless white (#FFFFFF), completely uniform, no gradient, no floor, no reflection, no cast "
-    "shadow, no box, no props. Soft high-end studio lighting with crisp specular highlights. Photorealistic, sharp, high resolution, vertical 3:4.")
-
 LIGHT_EN = {
-    "dulces": "warm low late-afternoon light with glossy highlights", "amaderados": "moody side backlight with soft shadows",
-    "florales": "soft diffuse morning daylight", "especiados": "warm ember glow with small points of light",
-    "citricos": "bright high midday light with fresh sparkles", "atalcados": "hazy veiled soft light, no hard shadows",
-    "ambarados": "golden sunset light glowing through amber", "cuero": "raking studio light revealing texture",
-    "nicho": "gallery spotlight from above on a dark set",
+    "dulces": "warm, low late-afternoon studio light from the left, glossy highlights",
+    "amaderados": "moody lateral backlight with deep soft shadows between the objects",
+    "florales": "soft, diffuse morning daylight",
+    "especiados": "warm ember-like key light with a subtle amber rim light",
+    "citricos": "bright, high midday light with fresh sparkling highlights",
+    "atalcados": "hazy, veiled soft light with no hard shadows",
+    "ambarados": "golden sunset light glowing through amber",
+    "cuero": "raking studio light from the left that reveals texture",
+    "nicho": "dramatic gallery spotlight from above",
 }
-POS = ["top-left", "top-right", "bottom-left", "bottom-right"]
-ids = list(ING)
-SHEETS = [ids[i:i + 4] for i in range(0, len(ids), 4)]
-(IA / "hojas-ingredientes.json").write_text(json.dumps(SHEETS, indent=1), encoding="utf-8")
+KEYS = {
+    "azul": ("pure solid chroma-key blue #0000FF", "blue, cyan, turquoise, purple, lilac or violet", "blue"),
+    "verde": ("pure solid chroma-key green #00FF00", "green, lime, olive or mint-green (no leaves, stems or green herbs)", "green"),
+    "magenta": ("pure solid chroma-key magenta #FF00FF", "magenta, pink, fuchsia, purple or violet", "magenta"),
+}
+
+# Ingredientes que chocan con su croma: se piden en una variante real de otro color (o sin hojas)
+ADJUST = {
+    "azul": {"bunch of purple grapes": "bunch of deep red grapes",
+             "bundle of lavender stems": "small bundle of dried lavender in muted grey-mauve tones",
+             "dark purple plums, one halved": "dark red plums, one halved",
+             "purple heliotrope flower cluster": "small cluster of pale cream-white heliotrope flowers",
+             "purple passion flower": "cream-white passion flower"},
+    "magenta": {"bundle of lavender stems": "small bundle of dried lavender in muted grey tones",
+                "dark purple plums, one halved": "dark red plums, one halved",
+                "pink grapefruit cut in half": "grapefruit cut in half with ruby-red flesh",
+                "pink peppercorns": "red peppercorns",
+                "purple violet flowers": "small white violet flowers"},
+    "verde": {" with green leaves": "", " with leaves": "", "dried patchouli leaves": "dried dark brown patchouli leaves",
+              "sage leaves sprig": "dried grey sage leaves", "tuberose white flower stem": "tuberose white flowers without green stem",
+              "pineapple with a cut slice": "pineapple slices without the green crown"},
+}
 
 
-def sheet_prompt(sh):
-    items = "; ".join(f"{POS[j]}: {ING[x]}" for j, x in enumerate(sh))
-    return (f"Studio photograph of {len(sh)} separate ingredients arranged in a 2x2 grid, each one alone and centered in its own quadrant "
-            f"with generous empty white space around it; nothing touches, overlaps or crosses the middle lines. {items}. Pure seamless white "
-            "background (#FFFFFF), no shadows, no reflections, no props, no text, no labels. Soft diffuse studio light, photorealistic, "
-            "high detail, slight 3/4 top angle, square 1:1.")
+def adjust(items, key):
+    out = []
+    for it in items:
+        for a, b in ADJUST.get(key, {}).items():
+            it = it.replace(a, b)
+        out.append(it)
+    return out
+
+def hue_family(r, g, b):
+    h, s, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
+    if s < .25 or v < .15:
+        return None
+    d = h * 360
+    return "blue" if 170 <= d < 260 else "purple" if 260 <= d < 300 else "green" if 75 <= d < 170 else "pink" if d >= 300 or d < 15 else None
 
 
-def video_prompt(f, p):
-    def names(k):
-        out = []
-        for n in p["notes"][k]:
-            d = ING.get(N[n].get("img"))
-            if d and d not in out:
-                out.append(d)
-        return ", ".join(out[:4])
-    return (f"Keep the perfume bottle from the first frame perfectly still, centered and unchanged for the whole video: same shape, label, "
-            f"text and colors; do not add any text. Solid flat background color {f['theme']['bg']} filling the entire frame for the whole "
-            "video, no floor, no horizon, no vignette. Real ingredients from the perfume's notes float gently into frame and drift slowly "
-            f"around the bottle in three calm waves: first {names('top')}; then {names('heart')}; finally {names('base')}. Ingredients stay "
-            f"beside and behind the bottle, never covering the label. {LIGHT_EN[f['id']]}, "
-            "slow motion, locked-off static camera, shallow depth of field, photorealistic luxury perfume commercial. The last second returns "
-            "to a composition similar to the first frame so the clip can loop.")
+def bottle_colors(p):
+    """% del frasco (píxeles opacos) en cada familia de color."""
+    im = Image.open(ROOT / f"assets/img/perfumes/{p['image']}-420.webp").convert("RGBA")
+    im.thumbnail((140, 190))
+    c, t = {}, 0
+    for r, g, b, a in im.get_flattened_data():
+        if a < 200:
+            continue
+        t += 1
+        f = hue_family(r, g, b)
+        if f:
+            c[f] = c.get(f, 0) + 1
+    return {k: round(100 * v / t) for k, v in c.items()}
 
 
-# Cuadros iniciales de video: el frasco (imagen actual) sobre el color de su familia, 16:9
+def ingredients(p, n=7):
+    """Ingredientes visibles de sus notas (notas clave primero), sin repetir; el almizcle (algodón) no se ve."""
+    out, notes = [], []
+    for k in [*p.get("keyNotes", []), *[x for ph in (p.get("notes") or {}).values() for x in ph]]:
+        img = N.get(k, {}).get("img")
+        d = ING.get(img)
+        if d and d not in out and img != "algodon":
+            out.append(d)
+            notes.append(k)
+    return out[:n], notes[:n]
+
+
+def choose_key(p, notes):
+    c = bottle_colors(p)
+    if c.get("blue", 0) + c.get("purple", 0) < 10:
+        return "azul", c
+    ing = {hue_family(*(int(N[x]["color"][i:i + 2], 16) for i in (1, 3, 5))) for x in notes if N.get(x, {}).get("color")}
+    if c.get("green", 0) >= 10 or "green" in ing:
+        return ("magenta" if c.get("pink", 0) < 10 else "revisar"), c
+    return "verde", c
+
+
+def prompt(p, f, items, key):
+    bg, banned, word = KEYS["azul" if key == "revisar" else key]
+    return ("Use the attached photo as the exact product reference. Create a premium, professional perfume advertising still life: "
+            "this exact perfume bottle surrounded by its real ingredients. BOTTLE: keep it 100% faithful to the reference — identical shape, "
+            "cap, label, logo, colors, materials and proportions. Reproduce only the text visible in the reference, exactly as written; never "
+            "add words, logos or labels. Front view, centered, camera at bottle height, the bottle is about 62% of the frame height and is "
+            f"never covered: its label stays fully visible. INGREDIENTS (only these): {'; '.join(items)}. Arrange them around the bottle in a "
+            "compact, balanced composition: a few in front at the lower corners slightly overlapping the base of the bottle, others beside "
+            "and slightly behind it, with natural depth of field. Every ingredient is solid with crisp, clean edges. FRAMING: the whole "
+            "group, every ingredient included, sits fully inside the frame with a clear margin of empty background on all four sides; "
+            f"nothing touches or is cut off by the edges of the image. LIGHT: {LIGHT_EN[f['id']]}, soft shadows only between the objects. "
+            f"BACKGROUND: {bg}, perfectly flat and uniform, filling every part of the frame behind the objects — no gradient, no floor, no "
+            "table, no horizon, no vignette, no cast shadow or reflection on the background. COLOR RULE: do not use "
+            f"{banned} anywhere in the ingredients, and no {word} rim light or {word} reflections on the bottle or the ingredients (metal "
+            "and glossy surfaces reflect warm neutral tones only). No smoke, mist, powder, water drops, splashes or glass props. "
+            "Photorealistic, high-end commercial photography, sharp, high resolution, vertical 3:4.")
+
+
+def reference(p):
+    """Foto real del frasco aplanada sobre blanco (Gemini no recibe bien la transparencia)."""
+    src = next((IA / "referencias" / f"{p['id']}{e}" for e in (".png", ".jpg", ".jpeg", ".webp") if (IA / "referencias" / f"{p['id']}{e}").exists()),
+               ROOT / f"assets/img/perfumes/{p['image']}-840.webp")
+    im = Image.open(src).convert("RGBA")
+    bg = Image.new("RGB", im.size, "white")
+    bg.paste(im, mask=im.getchannel("A"))
+    out = REF / f"{p['id']}.png"
+    bg.save(out)
+    return out.relative_to(ROOT).as_posix()
+
+
+PLAN = []
 for f in F:
-    p = PF[f["starter"]]
-    can = Image.new("RGBA", (1920, 1080), f["theme"]["bg"])
-    b = Image.open(ROOT / f"assets/img/perfumes/{p['image']}-840.webp")
-    b = b.resize((int(b.width * 1080 * .9 / b.height), int(1080 * .9)), Image.LANCZOS)
-    can.alpha_composite(b, ((1920 - b.width) // 2, 1080 - b.height - 20))
-    can.convert("RGB").save(IA / "cuadros-video" / f"{p['id']}.jpg", quality=92)
+    for p in sorted((x for x in P if x["family"] == f["id"] and x.get("published", True)), key=lambda x: x["order"]):
+        if not p.get("image"):
+            PLAN.append({"id": p["id"], "family": f["id"], "status": "sin foto del frasco"})
+            continue
+        items, notes = ingredients(p)
+        key, colors = choose_key(p, notes)
+        items = adjust(items, key)
+        PLAN.append({"id": p["id"], "name": p["name"], "family": f["id"], "key": key, "bottle_colors": colors,
+                     "ingredients": items, "reference": reference(p), "prompt": prompt(p, f, items, key),
+                     "status": "hecha" if p.get("studio") else "pendiente"})
+(IA / "estudio" / "plan.json").write_text(json.dumps(PLAN, indent=1, ensure_ascii=False), encoding="utf-8")
 
-L = ["# Prompts de IA — Perfumes FC", "",
-     "Carpeta de trabajo para generar imágenes y videos con Google (Gemini «Nano Banana» y Veo/Flow). **No se publica**: la web no usa esta carpeta.", "",
-     "- `referencias/`: fotos oficiales de los frascos pendientes; súbelas a Gemini como referencia.",
-     "- `cuadros-video/`: cuadro inicial de cada video (frasco real sobre el color de su familia).",
-     "- `entrada/frascos/`, `entrada/ingredientes/`, `entrada/videos/`: deja aquí los resultados, nombrados como se indica, y ejecuta `python tools/importar_ia.py`.", "",
-     "## 1. Frascos de estudio (Gemini → Imágenes, relación 3:4)", "",
-     "Adjunta `referencias/<id>` y usa este prompt tal cual. Guarda el resultado como `entrada/frascos/<id>.png` (o .jpeg).", "",
-     "```", BOTTLE_PROMPT, "```", "",
-     "Revisa que el texto de la etiqueta y los colores coincidan con la referencia; si Gemini inventa algo, regenera.", "",
-     f"Frascos pendientes ({len(PENDING)}): " + ", ".join(PENDING) + ".", "",
-     "## 2. Ingredientes (Gemini → Imágenes, relación 1:1)", "",
-     "Cada imagen trae 4 ingredientes en cuadrícula 2×2 (se corta automáticamente en cuatro). Guarda cada resultado como `entrada/ingredientes/hoja-XX.png`.", ""]
-for i, sh in enumerate(SHEETS, 1):
-    L += [f"**Hoja {i:02d}** — {', '.join(sh)}", "```", sheet_prompt(sh), "```", ""]
-L += ["## 3. Videos de la portada (Veo 3 en Flow o en Gemini → Videos)", "",
-      "1. Entra a **Flow** (labs.google/flow) con tu cuenta Pro, o en Gemini elige **Videos**. Flow da más control y más créditos.",
-      "2. Elige **Frames to Video** (de cuadro a video) y sube `cuadros-video/<id>.jpg`: así se conserva el frasco real.",
-      "3. Formato **16:9**, 8 segundos. El audio no importa: la web lo reproduce silenciado.",
-      "4. Pega el prompt. Si el frasco se deforma o aparece texto nuevo, regenera.",
-      "5. Guarda el MP4 como `entrada/videos/<id>.mp4`.", "",
-      "El fondo debe ser **exactamente el color indicado** para que el video se funda con la sección (Veo no genera fondos transparentes).", ""]
-for f in F:
-    p = PF[f["starter"]]
-    L += [f"### {f['name']} → {p['name']} ({p['brand']}) — `{p['id']}` · fondo `{f['theme']['bg']}`", "```", video_prompt(f, p), "```", ""]
+L = ["# Fotos de estudio — plan y prompts", "",
+     "Carpeta de trabajo; **no se publica**. Generado por `python tools/ia_prompts.py`.", "",
+     "Por cada perfume, en un chat nuevo de Gemini: adjunta `_ia/estudio/ref/<id>.png`, pega su prompt y guarda el resultado como "
+     "`_ia/estudio/<id>.png`. Luego `python tools/estudio.py <id>`, revisa `_ia/estudio/revisar/<id>.png`, marca `\"studio\": true` "
+     "en `data/perfumes.json` y ejecuta `python tools/prerender.py`.", "",
+     "| # | Perfume | Familia | Fondo | Ingredientes | Estado |", "|---|---|---|---|---|---|"]
+for i, x in enumerate(PLAN, 1):
+    L.append(f"| {i} | {x.get('name', x['id'])} | {x['family']} | {x.get('key', '—')} | {len(x.get('ingredients', []))} | {x['status']} |")
+L.append("")
+for x in PLAN:
+    if "prompt" in x:
+        L += [f"## {x['name']} — `{x['id']}` · {x['family']} · fondo {x['key']}", "", f"Referencia: `{x['reference']}`", "", "```", x["prompt"], "```", ""]
+L += ["## Frascos sin foto", "",
+      "Para un perfume sin foto, primero hace falta su frasco: adjunta la foto oficial y guarda el resultado sobre blanco en "
+      "`_ia/entrada/frascos/<id>.png`; `python tools/importar_ia.py` lo recorta y lo publica.", ""]
 (IA / "PROMPTS.md").write_text("\n".join(L), encoding="utf-8")
 
-# Copia las referencias de los frascos pendientes (desde la carpeta de fotos oficiales, si existe)
-print(f"OK: {len(SHEETS)} hojas de ingredientes, {len(PENDING)} frascos pendientes")
+cnt = {}
+for x in PLAN:
+    cnt[x.get("key", x["status"])] = cnt.get(x.get("key", x["status"]), 0) + 1
+print(f"OK: {len(PLAN)} perfumes · " + ", ".join(f"{k}: {v}" for k, v in cnt.items()))

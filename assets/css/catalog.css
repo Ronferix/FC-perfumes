@@ -95,19 +95,21 @@ body[data-mode="dark"] .brand__cream { display: block; }
 .g-slide.in > :nth-child(5) { animation-delay: .26s; }
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 
-.g-bottles { position: relative; align-self: stretch; z-index: 1; transform: translate3d(var(--px, 0), var(--py, 0), 0); transition: transform .8s var(--ease); }
+.g-bottles { position: relative; align-self: stretch; z-index: 1; }
 .g-bottles img, .g-bottles .plate { position: absolute; bottom: 12%; height: auto; }
 .g-bottles .gb-c { width: 40%; left: 30%; z-index: 2; filter: drop-shadow(0 34px 38px rgba(0, 0, 0, .28)); }
 .g-bottles .gb-l, .g-bottles .gb-r { width: 29%; bottom: 17%; filter: drop-shadow(0 24px 28px rgba(0, 0, 0, .22)) saturate(.9); opacity: .92; }
+.g-bottles .gb-c.studio { width: 62%; left: 19%; bottom: 8%; filter: drop-shadow(0 30px 34px rgba(0, 0, 0, .24)); }
+/* con foto de estudio al centro, los frascos vecinos se abren hacia los lados y quedan detrás */
+.g-bottles:has(.gb-c.studio) :is(.gb-l, .gb-r) { width: 22%; bottom: 22%; z-index: 0; opacity: .85; }
+.g-bottles:has(.gb-c.studio) .gb-l { left: -2%; }
+.g-bottles:has(.gb-c.studio) .gb-r { right: -2%; }
 .g-bottles .gb-l { left: 4%; }
 .g-bottles .gb-r { right: 4%; }
 .g-bottles.in img { animation: bottleIn 1.2s var(--ease) both; }
 .g-bottles.in .gb-l { animation-delay: .12s; }
 .g-bottles.in .gb-r { animation-delay: .2s; }
 @keyframes bottleIn { from { opacity: 0; transform: translateY(40px) scale(.97); } to { opacity: 1; transform: none; } }
-.g-bottles .gb-c { animation: none; }
-.g-bottles.in .gb-c { animation: bottleIn 1.2s var(--ease) both, float 9s var(--ease-soft) 1.2s infinite; }
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
 .g-nav {
   grid-column: 1 / -1; position: relative; z-index: 3;
@@ -152,9 +154,10 @@ body[data-mode="dark"] .brand__cream { display: block; }
   background: radial-gradient(70% 55% at 50% 62%, color-mix(in srgb, var(--bg2) 70%, transparent), transparent 75%);
   border-bottom: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
 }
-.card__stage img, .card__stage .plate { position: absolute; inset: 6% 8% 3%; width: 84%; height: 91%; object-fit: contain; transition: transform .8s var(--ease), filter .8s var(--ease); }
+.card__stage img, .card__stage .plate { position: absolute; inset: 6% 8% 3%; width: 84%; height: 91%; object-fit: contain; transition: filter .6s var(--ease); }
 .card__stage .plate { font-size: .9rem; }
-.card__link:hover img, .card__link:focus-visible img { transform: translateY(-10px) scale(1.03); }
+/* foto de estudio (frasco + ingredientes, casi cuadrada): ocupa todo el ancho de la tarjeta, apoyada abajo */
+.card__stage img.studio { inset: auto 0 2%; width: 100%; height: 96%; object-position: 50% 100%; }
 .f-track:hover .card__link:not(:hover) img { filter: saturate(.75) brightness(.92); }
 .card__name { display: block; margin-top: 1rem; font-family: var(--serif); font-size: 1.6rem; line-height: 1.05; }
 .card__brand { display: block; margin-top: .3rem; font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
@@ -169,14 +172,47 @@ body[data-mode="dark"] .brand__cream { display: block; }
   .f-track { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; padding: 1.5rem var(--gutter) 4rem; align-items: start; gap: 2rem 1rem; }
   .card { width: auto; }
   .card__name { font-size: 1.3rem; }
+
+  /* Carrusel: un perfume al centro y los vecinos asomando; menos scroll vertical */
+  .view--family[data-layout="carousel"] .f-track {
+    --cw: min(64vw, 300px, calc(32svh * .75));
+    display: flex; align-items: flex-start; gap: .8rem;
+    overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+    padding: 1rem calc((100% - var(--cw)) / 2) .25rem; scrollbar-width: none;
+  }
+  .view--family[data-layout="carousel"] .f-track::-webkit-scrollbar { display: none; }
+  /* (la opacidad va en el enlace: la animación de entrada de .card fija la suya) */
+  .view--family[data-layout="carousel"] .card { width: var(--cw); scroll-snap-align: center; scroll-snap-stop: always; transition: scale .5s var(--ease); }
+  .view--family[data-layout="carousel"] .card__link { transition: opacity .5s var(--ease); }
+  .view--family[data-layout="carousel"] .card:not(.is-active) { scale: .88; }
+  .view--family[data-layout="carousel"] .card:not(.is-active) .card__link { opacity: .5; }
+  .view--family[data-layout="carousel"] .card__notes, .view--family[data-layout="carousel"] .card__also { transition: opacity .4s; }
+  .view--family[data-layout="carousel"] .card:not(.is-active) :is(.card__notes, .card__also) { opacity: 0; }
+
+  .view--family[data-layout="carousel"] .f-count { display: none; }   /* el contador «1 / 7» ya lo dice */
+  .view--family[data-layout="carousel"] .card__name { margin-top: .7rem; }
+  .f-ctrl { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .4rem var(--gutter) 1rem; position: relative; z-index: 2; }
+  .f-steps { display: flex; align-items: center; gap: .6rem; }
+  .f-pos { min-width: 3.6em; text-align: center; font-size: .74rem; letter-spacing: .16em; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .f-steps .g-btn:disabled { opacity: .3; cursor: default; }
+  .f-all { font: inherit; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); background: none; border: 1px solid currentColor; border-radius: 999px; padding: .65rem 1.1rem; cursor: pointer; }
+
+  /* Cuadrícula completa («Ver todos»): el botón para volver al carrusel queda a la mano */
+  .view--family[data-layout="grid"] .f-steps { display: none; }
+  .view--family[data-layout="grid"] .f-ctrl { position: sticky; bottom: 0; justify-content: center; padding-block: .8rem 1.2rem; pointer-events: none; }
+  .view--family[data-layout="grid"] .f-all { pointer-events: auto; background: var(--ink); color: var(--bg); border-color: var(--ink); box-shadow: 0 10px 30px rgba(0, 0, 0, .18); }
+  .view--family[data-layout="grid"] .f-track { padding-bottom: 1rem; }
 }
+@media (min-width: 901px) { .f-ctrl { display: none; } }
+@media (max-width: 900px) and (prefers-reduced-motion: reduce) { .view--family .card { transition: none; } }
 
 /* ---------- Ficha de perfume ---------- */
 .p { min-height: 100%; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); position: relative; }
 .p-visual { position: sticky; top: 0; height: calc(100svh - var(--bar-h)); display: grid; place-items: center; padding: 2rem; z-index: 2; }
-.p-stage { position: relative; width: min(100%, 640px); height: min(100%, 780px); }
-.p-bottle { view-transition-name: bottle; animation: float 9s var(--ease-soft) infinite; }
-.p-stage .ing-bottle { height: 70%; bottom: 12%; }
+.p-stage { position: relative; width: min(100%, 680px); height: min(100%, 820px); }
+/* foto fija de estudio (o el frasco solo): sin animación, apoyada en la luz de la familia */
+.p-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 30px 34px rgba(0, 0, 0, .22)); }
+.p-stage .plate { position: absolute; inset: 10% 15%; }
 .p-visual .plate { width: min(70%, 360px); }
 .p-info { view-transition-name: p-info; padding: clamp(2rem, 7vh, 5rem) var(--gutter) 4rem clamp(1rem, 3vw, 3rem); position: relative; z-index: 2; max-width: 40rem; }
 .p-info > * { animation: rise .8s var(--ease) both; }

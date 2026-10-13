@@ -41,6 +41,13 @@ export function bottleImg(p, { sizes = "(max-width: 700px) 60vw, 22vw", eager = 
   if (!p.image) return plate(p);
   return `<img class="${cls}" src="${bottleSrc(p, 420)}" srcset="${bottleSrc(p, 420)} 420w, ${bottleSrc(p, 840)} 840w" sizes="${sizes}" width="420" height="560" alt="${esc(p.alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
 }
+export function studioSrc(p, w = 760) { return `assets/img/estudio/${p.id}-${w}.webp`; }
+/** Foto de estudio fija: frasco con sus ingredientes, recortada (tools/estudio.py). Sin ella, el frasco solo. */
+export function studioImg(p, { sizes = "(max-width: 900px) 90vw, 45vw", eager = false, cls = "" } = {}) {
+  if (!p.studio) return bottleImg(p, { sizes, eager, cls });
+  const src = (w) => studioSrc(p, w);
+  return `<img class="studio ${cls}" src="${src(760)}" srcset="${src(420)} 420w, ${src(760)} 760w" sizes="${sizes}" alt="${esc(p.alt)} junto a sus ingredientes" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+}
 export function plate(p) {
   return `<div class="plate" role="img" aria-label="${esc(p.name)}: fotografía pendiente"><div><strong>${esc(p.name)}</strong><span>Fotografía pendiente</span></div></div>`;
 }

@@ -6,9 +6,8 @@
      #/dulces           familia abierta
      #/dulces/khamrah   ficha de perfume
    ========================================================================== */
-import { loadData, waPerfume, bottleImg, bottleSrc, esc, noteName, plate, WA_ICON } from "./data.js";
+import { loadData, waPerfume, bottleSrc, studioSrc, studioImg, esc, noteName, WA_ICON } from "./data.js";
 import { Atmosphere } from "./fx.js";
-import { IngredientStage, loadIngredients } from "./ingredients.js";
 
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const desktop = matchMedia("(min-width: 901px)");
@@ -17,9 +16,9 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 
 const app = $("#app");
 const views = { gallery: $("#view-gallery"), family: $("#view-family"), perfume: $("#view-perfume"), list: $("#view-list") };
-const LIST_THEME = { mode: "light", bg: "#f4eee4", bg2: "#e6dccc", ink: "#1d1814", muted: "#6b6158", accent: "#a9834a", titleStyle: "roman" };
+const LIST_THEME = { mode: "light", bg: "#f4eee4", bg2: "#e6dccc", ink: "#1d1814", muted: "#6b6158", accent: "#a9834a", titleStyle: "roman", light: "difusa", glow: "#ffffff", texture: "papel" };
 
-let D, fx, available = new Set(), ing = null;
+let D, fx;
 const state = { view: null, gi: 0, fam: null, perf: null, playing: !reduced, first: true };
 
 init();
@@ -32,7 +31,6 @@ async function init() {
     return;
   }
   $(".stage__status").textContent = "";
-  available = await loadIngredients();
   fx = new Atmosphere($(".stage__fx"));
   buildGallery();
   buildList();
@@ -80,7 +78,6 @@ function render(r) {
   if (r.view === "list") { applyTheme(LIST_THEME, "lista"); fx.setMood({ motifs: ["haze"], palette: ["#ffffff", "#e6dccc", "#f3e7da"], tempo: 0.3, mode: "light" }); }
 
   renderCrumbs(r);
-  if (r.view !== "perfume") { ing?.destroy(); ing = null; }
   document.title = [r.perf?.name, r.fam?.name, r.view === "list" ? "Lista" : null, "Colección — Perfumes FC"].filter(Boolean).join(" · ");
 
   if (!state.first) {
@@ -110,12 +107,32 @@ function applyTheme(t, key) {
   $('meta[name="theme-color"]').content = t.bg;
   if (app.dataset.themeKey === key) return;
   app.dataset.themeKey = key;
+  // La luz de estudio de la familia (assets/css/atmos.css); se funde con la anterior
   const layers = $$(".bg-layer");
   const on = layers.find((l) => l.classList.contains("is-on"));
   const next = layers.find((l) => l !== on);
-  next.style.background = `radial-gradient(85% 70% at 70% 62%, ${t.bg2} 0%, transparent 68%), radial-gradient(60% 55% at 8% 0%, ${t.bg2}66 0%, transparent 70%), ${t.bg}`;
+  ["bg", "bg2", "glow"].forEach((k) => next.style.setProperty(`--${k}`, t[k] || t.bg2));
+  next.style.setProperty("--tint", t.glow || t.bg2);
+  Object.assign(next.dataset, { light: t.light || "", tex: t.texture || "", mode: t.mode });
   next.classList.add("is-on");
   on?.classList.remove("is-on");
+}
+/** El perfume enfocado tiñe la luz de la familia; sin perfume vuelve a la luz propia */
+function tint(p) {
+  const l = $(".bg-layer.is-on");
+  if (l) l.style.setProperty("--tint", p ? tintOf(p) : l.style.getPropertyValue("--glow"));
+}
+/** De la paleta del perfume, el color más intenso (el que más se nota en la luz) */
+function tintOf(p) {
+  const chroma = (h) => { const n = parseInt(h.slice(1), 16), c = [n >> 16, (n >> 8) & 255, n & 255]; return Math.max(...c) - Math.min(...c); };
+  return [...(p.animation?.palette || [])].sort((a, b) => chroma(b) - chroma(a))[0] || "#ffffff";
+}
+/** Dónde está el frasco: lo usan las partículas y la luz del fondo */
+function focus(x, y) {
+  fx.setFocus(x, y);
+  const bg = $(".stage__bg");
+  bg.style.setProperty("--fx", `${x * 100}%`);
+  bg.style.setProperty("--fy", `${y * 100}%`);
 }
 const familyMood = (f) => ({ ...f.motion, mode: f.theme.mode });
 const perfumeMood = (p, f) => ({ motifs: p.animation.motifs, palette: p.animation.palette, tempo: f.motion.tempo, mode: f.theme.mode });
@@ -145,13 +162,6 @@ function buildGallery() {
   g.addEventListener("pointerdown", (e) => { if (e.pointerType !== "mouse") x0 = e.clientX; });
   g.addEventListener("pointerup", (e) => { if (x0 === null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 50) userNav(state.gi + (dx < 0 ? 1 : -1)); });
 
-  // Parallax sutil de los frascos
-  if (!reduced) g.addEventListener("pointermove", (e) => {
-    if (e.pointerType !== "mouse") return;
-    const b = $(".g-bottles"); const r = g.getBoundingClientRect();
-    b.style.setProperty("--px", `${((e.clientX - r.left) / r.width - 0.5) * -14}px`);
-    b.style.setProperty("--py", `${((e.clientY - r.top) / r.height - 0.5) * -10}px`);
-  });
 }
 
 function userNav(i) {
@@ -166,7 +176,8 @@ function showFamily(i, { animate = true, announce = false } = {}) {
   const f = D.families[i];
   state.fam = f;
   applyTheme(f.theme, f.id);
-  fx.setFocus(desktop.matches ? 0.72 : 0.5, desktop.matches ? 0.55 : 0.62);
+  tint(null);
+  focus(desktop.matches ? 0.72 : 0.5, desktop.matches ? 0.55 : 0.62);
   fx.setMood(familyMood(f));
 
   const count = D.inFamily(f.id).length;
@@ -179,11 +190,13 @@ function showFamily(i, { animate = true, announce = false } = {}) {
   $(".g-cta").setAttribute("aria-label", `Explorar la familia ${f.name}`);
   $(".g-num").textContent = `${count} perfume${count === 1 ? "" : "s"}`;
 
-  const ps = D.inFamily(f.id).filter((p) => p.image).slice(0, 3);
-  const [c, l, r] = ps;
+  // al centro, el perfume con foto de estudio (frasco + ingredientes); a los lados, frascos
+  const withImg = D.inFamily(f.id).filter((p) => p.image);
+  const c = withImg.find((p) => p.studio) || withImg[0];
+  const [l, r] = withImg.filter((p) => p !== c);
   const bottles = $(".g-bottles");
   bottles.innerHTML = [l && `<img class="gb-l" src="${bottleSrc(l, 420)}" alt="" width="420" height="560">`,
-    c && `<img class="gb-c" src="${bottleSrc(c, 840)}" alt="" width="420" height="560">`,
+    c && (c.studio ? `<img class="gb-c studio" src="${studioSrc(c, 760)}" alt="">` : `<img class="gb-c" src="${bottleSrc(c, 840)}" alt="" width="420" height="560">`),
     r && `<img class="gb-r" src="${bottleSrc(r, 420)}" alt="" width="420" height="560">`].filter(Boolean).join("");
 
   if (animate && !reduced) { [slide, bottles].forEach((el) => { el.classList.remove("in"); void el.offsetWidth; el.classList.add("in"); }); }
@@ -233,9 +246,11 @@ function brandLabel(p) { return p.brand; }
 
 function renderFamily(f, fromPerf) {
   applyTheme(f.theme, f.id);
-  fx.setFocus(0.6, 0.5);
+  tint(null);
+  focus(0.6, 0.5);
   fx.setMood(familyMood(f));
   const list = D.inFamily(f.id);
+  views.family.dataset.layout = state.grid ? "grid" : "carousel";
   views.family.innerHTML = `
     <div class="f-wrap">
       <header class="f-head">
@@ -253,7 +268,7 @@ function renderFamily(f, fromPerf) {
         ${list.map((p, i) => `
           <li class="card" style="--i:${i}">
             <a class="card__link" href="#/${f.id}/${p.id}" data-id="${p.id}">
-              <span class="card__stage">${bottleImg(p, { sizes: "(max-width: 900px) 45vw, 272px" })}</span>
+              <span class="card__stage">${studioImg(p, { sizes: "(max-width: 900px) 64vw, 272px" })}</span>
               <span class="card__name">${esc(p.name)}</span>
               <span class="card__brand">${esc(brandLabel(p))}</span>
               ${p.keyNotes.length ? `<span class="card__notes">${esc(notesLine(p))}</span>` : `<span class="card__notes">Información por confirmar</span>`}
@@ -261,15 +276,71 @@ function renderFamily(f, fromPerf) {
             </a>
           </li>`).join("")}
       </ol>
+      <div class="f-ctrl" role="group" aria-label="Recorrer los perfumes de ${esc(f.name)}">
+        <div class="f-steps">
+          <button class="g-btn f-prev" type="button" aria-label="Perfume anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+          <p class="f-pos" aria-hidden="true"><span class="f-i">1</span> / ${list.length}</p>
+          <button class="g-btn f-next" type="button" aria-label="Perfume siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        </div>
+        <button class="f-all" type="button" aria-pressed="${!!state.grid}">${state.grid ? "Ver en carrusel" : `Ver todos <span aria-hidden="true">(${list.length})</span>`}</button>
+      </div>
+      <p class="visually-hidden f-live" aria-live="polite"></p>
     </div>`;
 
   const track = $(".f-track", views.family);
-  // La animación del fondo adopta la del perfume enfocado
-  track.addEventListener("pointerover", (e) => { const a = e.target.closest(".card__link"); if (a) fx.setMood(perfumeMood(D.perfById[a.dataset.id], f)); });
-  track.addEventListener("focusin", (e) => { const a = e.target.closest(".card__link"); if (a) fx.setMood(perfumeMood(D.perfById[a.dataset.id], f)); });
-  track.addEventListener("pointerleave", () => fx.setMood(familyMood(f)));
-  // Elemento compartido: el frasco "viaja" a la ficha
-  track.addEventListener("click", (e) => { const a = e.target.closest(".card__link"); const img = a?.querySelector("img"); if (img) img.style.viewTransitionName = "bottle"; });
+  const cards = $$(".card", track);
+  // En pantallas estrechas la familia es un carrusel; «Ver todos» abre la cuadrícula completa
+  const carousel = () => !desktop.matches && views.family.dataset.layout === "carousel";
+  let active = -1, sraf = 0;
+  const setActive = (k, announce = false) => {
+    if (k === active) return;
+    active = k;
+    cards.forEach((c, j) => c.classList.toggle("is-active", j === k));
+    $(".f-i", views.family).textContent = k + 1;
+    $(".f-prev", views.family).disabled = k === 0;
+    $(".f-next", views.family).disabled = k === cards.length - 1;
+    if (!carousel()) return;
+    const p = list[k];
+    tint(p); fx.setMood(perfumeMood(p, f));
+    if (announce) $(".f-live", views.family).textContent = `${p.name}, ${k + 1} de ${list.length}`;
+  };
+  const measure = () => {
+    const mid = track.scrollLeft + track.clientWidth / 2;
+    let best = 0, dist = Infinity;
+    cards.forEach((c, j) => { const d = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid); if (d < dist) { dist = d; best = j; } });
+    setActive(best);
+  };
+  const goTo = (k, smooth = true) => {
+    k = Math.max(0, Math.min(cards.length - 1, k));
+    const c = cards[k];
+    track.scrollTo({ left: c.offsetLeft - (track.clientWidth - c.offsetWidth) / 2, behavior: smooth && !reduced ? "smooth" : "auto" });
+    setActive(k, true);
+  };
+  track.addEventListener("scroll", () => { cancelAnimationFrame(sraf); sraf = requestAnimationFrame(measure); }, { passive: true });
+  $(".f-prev", views.family).addEventListener("click", () => goTo(active - 1));
+  $(".f-next", views.family).addEventListener("click", () => goTo(active + 1));
+  $(".f-all", views.family).addEventListener("click", (e) => {
+    state.grid = !state.grid;
+    views.family.dataset.layout = state.grid ? "grid" : "carousel";
+    e.currentTarget.setAttribute("aria-pressed", state.grid);
+    e.currentTarget.innerHTML = state.grid ? "Ver en carrusel" : `Ver todos <span aria-hidden="true">(${list.length})</span>`;
+    if (state.grid) { tint(null); fx.setMood(familyMood(f)); track.scrollIntoView({ block: "start", behavior: reduced ? "auto" : "smooth" }); }
+    else { const k = active; active = -1; goTo(k, false); views.family.scrollTop = 0; }
+  });
+
+  // La animación y la luz del fondo adoptan las del perfume enfocado
+  const hover = (p) => { if (carousel()) return; tint(p); fx.setMood(p ? perfumeMood(p, f) : familyMood(f)); };
+  track.addEventListener("pointerover", (e) => { const a = e.target.closest(".card__link"); if (a) hover(D.perfById[a.dataset.id]); });
+  track.addEventListener("focusin", (e) => { const a = e.target.closest(".card__link"); if (!a) return; if (carousel()) goTo(cards.indexOf(a.parentElement)); else hover(D.perfById[a.dataset.id]); });
+  track.addEventListener("pointerleave", () => hover(null));
+  // En el carrusel, tocar un perfume de los lados lo trae al centro; el del centro abre su ficha
+  track.addEventListener("click", (e) => {
+    const a = e.target.closest(".card__link"); if (!a) return;
+    const k = cards.indexOf(a.parentElement);
+    if (carousel() && k !== active) { e.preventDefault(); goTo(k); return; }
+    // Elemento compartido: el frasco "viaja" a la ficha
+    const img = a.querySelector("img"); if (img) img.style.viewTransitionName = "bottle";
+  });
   // Rueda vertical → desplazamiento horizontal (solo escritorio)
   track.addEventListener("wheel", (e) => {
     if (!desktop.matches || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
@@ -280,19 +351,19 @@ function renderFamily(f, fromPerf) {
   $(".f-left", views.family).addEventListener("click", () => track.scrollBy({ left: -step(), behavior: reduced ? "auto" : "smooth" }));
   $(".f-right", views.family).addEventListener("click", () => track.scrollBy({ left: step(), behavior: reduced ? "auto" : "smooth" }));
 
-  if (fromPerf) {
-    const a = $(`.card__link[data-id="${fromPerf.id}"]`, views.family);
-    if (a) {
-      a.scrollIntoView({ block: "nearest", inline: "center" });
-      const img = a.querySelector("img"); if (img) img.style.viewTransitionName = "bottle";
-    }
-  }
+  const back = fromPerf && $(`.card__link[data-id="${fromPerf.id}"]`, views.family);
+  if (back) {
+    if (carousel()) goTo(cards.indexOf(back.parentElement), false);
+    else back.scrollIntoView({ block: "nearest", inline: "center" });
+    const img = back.querySelector("img"); if (img) img.style.viewTransitionName = "bottle";
+  } else requestAnimationFrame(measure);
 }
 
 /* ---------------------------------------------------------------- ficha */
 function renderPerfume(f, p) {
   applyTheme(f.theme, f.id);
-  fx.setFocus(desktop.matches ? 0.28 : 0.5, desktop.matches ? 0.5 : 0.3);
+  tint(p);
+  focus(desktop.matches ? 0.28 : 0.5, desktop.matches ? 0.5 : 0.3);
   fx.setMood(perfumeMood(p, f));
   const list = D.inFamily(f.id);
   const i = list.indexOf(p);
@@ -318,7 +389,7 @@ function renderPerfume(f, p) {
   views.perfume.innerHTML = `
     <article class="p" aria-labelledby="p-name">
       <div class="p-visual">
-        ${p.image ? `<div class="p-stage"></div>` : plate(p)}
+        <div class="p-stage">${studioImg(p, { cls: "p-photo", eager: true, sizes: "(max-width: 900px) 92vw, 46vw" })}</div>
       </div>
       <div class="p-info">
         <p class="eyebrow p-brand">${esc([p.brand, p.line].filter(Boolean).join(" · "))}</p>
@@ -337,21 +408,8 @@ function renderPerfume(f, p) {
       <a class="p-close" href="#/${f.id}" aria-label="Cerrar y volver a ${esc(f.name)}">×</a>
     </article>`;
 
-  ing?.destroy(); ing = null;
-  const st = $(".p-stage", views.perfume);
-  if (st) {
-    ing = new IngredientStage(st, p, { notes: D.notes, available, bottleClass: "p-bottle", sizes: "(max-width: 900px) 70vw, 40vw", captions: false });
-    // la fase activa también se resalta en la pirámide de notas
-    const sync = () => { const k = st.dataset.phase; $$(".p-pyr section", views.perfume).forEach((s) => s.classList.toggle("is-active", s.dataset.phase === k)); };
-    sync(); new MutationObserver(sync).observe(st, { attributes: true, attributeFilter: ["data-phase"] });
-  }
-  if (!reduced && desktop.matches) {
-    const img = $(".p-bottle", views.perfume);
-    views.perfume.onpointermove = img ? (e) => {
-      const x = e.clientX / innerWidth - 0.5, y = e.clientY / innerHeight - 0.5;
-      img.style.translate = `${x * -12}px ${y * -8}px`;
-    } : null;
-  }
+  // Foto fija (sin animación): el frasco viaja desde su tarjeta con la transición de vista
+  const img = $(".p-photo", views.perfume); if (img) img.style.viewTransitionName = "bottle";
 }
 
 /* ---------------------------------------------------------------- lista */

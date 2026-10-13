@@ -1,20 +1,18 @@
 /* ==========================================================================
    Carrusel «Familias» de la portada: nombre de la familia y, debajo, su
-   perfume para empezar (families.json → starter) con tamaños fijos para
+   perfume para empezar (families.json → starter, en foto fija) con tamaños fijos para
    que la sección no salte al cambiar. Navegación manual: flechas, teclado y deslizar.
    El HTML de la primera diapositiva viene prerenderizado (funciona sin JS).
    ========================================================================== */
-import { esc } from "./data.js";
-import { IngredientStage, loadIngredients } from "./ingredients.js";
+import { esc, studioImg } from "./data.js";
 
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const $ = (s, r) => r.querySelector(s);
 
-export async function initShowcase(root, D) {
+export function initShowcase(root, D) {
   const stage = $(".sc-stage", root);
-  const available = await loadIngredients();
   const n = D.families.length;
-  let i = 0, ing = null;
+  let i = 0;
 
   function show(idx, animate = true) {
     i = ((idx % n) + n) % n;
@@ -28,10 +26,8 @@ export async function initShowcase(root, D) {
     $(".sc-pname", root).textContent = p.name;
     $(".sc-pbrand", root).textContent = p.brand;
 
-    const visual = $(".sc-visual", root);
-    ing?.destroy();
-    visual.className = "sc-visual";
-    ing = new IngredientStage(visual, p, { notes: D.notes, available, captions: false, cycle: false, sizes: "(max-width: 860px) 55vw, 24vw" });
+    // foto fija: el frasco con sus ingredientes si ya tiene foto de estudio, si no el frasco solo
+    $(".sc-visual", root).innerHTML = studioImg(p, { sizes: "(max-width: 860px) 64vw, 360px" });
 
     if (animate && !reduced) [$(".sc-name", root), link].forEach((el) => { el.classList.remove("in"); void el.offsetWidth; el.classList.add("in"); });
   }

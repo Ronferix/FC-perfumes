@@ -12,7 +12,10 @@
       "ink": "#2b1d14",
       "muted": "#6a5343",
       "accent": "#a8652f",
-      "titleStyle": "italic"
+      "titleStyle": "italic",
+      "light": "pasteleria",
+      "glow": "#f1a85c",
+      "texture": "papel"
     },
     "motion": {
       "motifs": [
@@ -43,7 +46,10 @@
       "ink": "#efe6d8",
       "muted": "#b9a993",
       "accent": "#b58a55",
-      "titleStyle": "roman"
+      "titleStyle": "roman",
+      "light": "contraluz",
+      "glow": "#e2b47a",
+      "texture": "veta"
     },
     "motion": {
       "motifs": [
@@ -74,7 +80,10 @@
       "ink": "#2e1d22",
       "muted": "#6e4f58",
       "accent": "#a8506a",
-      "titleStyle": "italic"
+      "titleStyle": "italic",
+      "light": "difusa",
+      "glow": "#ffd9e0",
+      "texture": "ninguna"
     },
     "motion": {
       "motifs": [
@@ -105,7 +114,10 @@
       "ink": "#f4e3d0",
       "muted": "#c9a88e",
       "accent": "#d9893a",
-      "titleStyle": "roman"
+      "titleStyle": "roman",
+      "light": "brasa",
+      "glow": "#ff8a2a",
+      "texture": "ninguna"
     },
     "motion": {
       "motifs": [
@@ -136,7 +148,10 @@
       "ink": "#1d2716",
       "muted": "#4f5e3e",
       "accent": "#6f8d1c",
-      "titleStyle": "roman"
+      "titleStyle": "roman",
+      "light": "mediodia",
+      "glow": "#fff3b0",
+      "texture": "ninguna"
     },
     "motion": {
       "motifs": [
@@ -167,7 +182,10 @@
       "ink": "#2c2630",
       "muted": "#625868",
       "accent": "#8d7894",
-      "titleStyle": "italic"
+      "titleStyle": "italic",
+      "light": "bruma",
+      "glow": "#ffffff",
+      "texture": "talco"
     },
     "motion": {
       "motifs": [
@@ -199,7 +217,10 @@
       "ink": "#f7e6cc",
       "muted": "#d7b894",
       "accent": "#e0a052",
-      "titleStyle": "roman"
+      "titleStyle": "roman",
+      "light": "resina",
+      "glow": "#f5a742",
+      "texture": "ninguna"
     },
     "motion": {
       "motifs": [
@@ -230,7 +251,10 @@
       "ink": "#f1e4d4",
       "muted": "#c4a88e",
       "accent": "#b9794a",
-      "titleStyle": "caps"
+      "titleStyle": "caps",
+      "light": "rasante",
+      "glow": "#e9b98a",
+      "texture": "piel"
     },
     "motion": {
       "motifs": [
@@ -261,7 +285,10 @@
       "ink": "#efe9df",
       "muted": "#b3aa9c",
       "accent": "#c9a86a",
-      "titleStyle": "caps"
+      "titleStyle": "caps",
+      "light": "cenital",
+      "glow": "#f3e2b8",
+      "texture": "ninguna"
     },
     "motion": {
       "motifs": [

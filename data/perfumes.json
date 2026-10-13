@@ -143,7 +143,8 @@
         "La infografía traducía cashmeran como «madera de cachemira»; es un material almizclado, no una madera."
       ]
     },
-    "imageSource": "ia"
+    "imageSource": "ia",
+    "studio": true
   },
   {
     "id": "eclaire",
@@ -212,7 +213,8 @@
         "La infografía añadía «maderas» en el fondo; no aparece en la pirámide oficial."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "vanilla-freak",

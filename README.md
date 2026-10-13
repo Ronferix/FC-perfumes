@@ -42,12 +42,14 @@ docs/                 CATALOG_DATA.md (verificación y mantenimiento), DIAGNOSTI
   3. Ejecuta `python tools/prerender.py`.
 - **Cambiar la selección de la portada:** en `tools/prerender.py`, cambia la lista `PICKS`.
 
-## Imágenes y videos con IA (Gemini / Veo)
+## Imágenes con IA (Gemini)
 
-- `_ia/PROMPTS.md` tiene los prompts de los frascos de estudio, las 20 hojas de ingredientes y los videos de la portada. Para regenerarlo: `python tools/ia_prompts.py`.
-- Deja los resultados en `_ia/entrada/frascos/<id>`, `_ia/entrada/ingredientes/hoja-XX` o `_ia/entrada/videos/<id>.mp4`.
-- Después ejecuta `python tools/importar_ia.py` y luego `python tools/prerender.py`. El importador recorta el fondo blanco, corta las hojas en cuatro ingredientes, optimiza las imágenes y actualiza `perfumes.json` y `assets/img/ingredients/manifest.json`.
-- Los ingredientes se animan solos alrededor del frasco (salida → corazón → fondo) en cuanto existe su imagen. Si un perfume tiene `video`, se muestra el video.
+- **Fotos de estudio (decisión del 12-oct-2026: sin videos ni animaciones en los perfumes).** Cada perfume se muestra en una foto fija: su frasco con sus ingredientes, generada con Gemini sobre un color de croma y recortada. Se usa en la ficha, en las tarjetas de cada colección, al centro de la galería de familias y en la portada. Sin ella, se muestra el frasco solo. El fondo de cada familia (luz y partículas) sigue animado.
+  1. `python tools/ia_prompts.py` escribe el plan y el prompt de cada perfume en `_ia/PROMPTS.md`, y deja en `_ia/estudio/ref/<id>.png` la foto real del frasco para adjuntar. Siempre se adjunta: Gemini no debe inventar el frasco.
+  2. El fondo es azul #0000FF. Si el frasco tiene azul, turquesa o morado, el fondo es verde #00FF00; si además lleva ingredientes verdes, es magenta #FF00FF. El prompt prohíbe ese color en los ingredientes y los pide en otra variante real si chocan (por ejemplo, ciruelas rojas sobre azul).
+  3. Guarda la imagen de Gemini como `_ia/estudio/<id>.png` y ejecuta `python tools/estudio.py <id>`. Detecta el color del fondo, lo recorta y publica `assets/img/estudio/<id>-420.webp` y `-760.webp`. Revisa `_ia/estudio/revisar/<id>.png` (sobre gris y sobre el fondo de su familia).
+  4. Marca el perfume con `"studio": true` en `data/perfumes.json` y ejecuta `python tools/prerender.py`.
+- Frascos sin foto: deja el resultado sobre blanco en `_ia/entrada/frascos/<id>.png` y ejecuta `python tools/importar_ia.py`, que lo recorta y actualiza `perfumes.json`.
 - `_ia/` es solo de trabajo: no la subas al hosting.
 
 Después de cualquier cambio en `/data`, ejecuta `python tools/prerender.py`. Así se actualizan el índice de familias de la portada, la selección y la lista que funciona sin JavaScript.
