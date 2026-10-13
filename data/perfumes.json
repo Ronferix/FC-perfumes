@@ -283,7 +283,8 @@
         "Las notas de la infografía (cacao, jazmín, ámbar, maderas) no corresponden al producto."
       ]
     },
-    "imageSource": "ia"
+    "imageSource": "ia",
+    "studio": true
   },
   {
     "id": "berry-on-top",

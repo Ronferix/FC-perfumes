@@ -122,7 +122,7 @@ def prompt(p, f, items, key):
     return ("Use the attached photo as the exact product reference. Create a premium, professional perfume advertising still life: "
             "this exact perfume bottle surrounded by its real ingredients. BOTTLE: keep it 100% faithful to the reference — identical shape, "
             "cap, label, logo, colors, materials and proportions. Reproduce only the text visible in the reference, exactly as written; never "
-            "add words, logos or labels. Front view, centered, camera at bottle height, the bottle is about 62% of the frame height and is "
+            "add words, logos or labels to the bottle. Front view, centered, camera at bottle height, the bottle is about 62% of the frame height and is "
             f"never covered: its label stays fully visible. INGREDIENTS (only these): {'; '.join(items)}. Arrange them around the bottle in a "
             "compact, balanced composition: a few in front at the lower corners slightly overlapping the base of the bottle, others beside "
             "and slightly behind it, with natural depth of field. Every ingredient is solid with crisp, clean edges. FRAMING: the whole "
