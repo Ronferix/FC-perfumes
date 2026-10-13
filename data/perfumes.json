@@ -2873,7 +2873,8 @@
         "Las notas de la infografía (frutos rojos, rosa, azafrán, ámbar) no corresponden."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "arabian-sky",

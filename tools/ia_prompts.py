@@ -59,7 +59,7 @@ ADJUST = {
                 "pink peppercorns": "red peppercorns",
                 "purple violet flowers": "small white violet flowers"},
     "verde": {" with green leaves": "", " with leaves": "", "dried patchouli leaves": "dried dark brown patchouli leaves",
-              "sage leaves sprig": "dried grey sage leaves", "tuberose white flower stem": "tuberose white flowers without green stem",
+              "sage leaves sprig": "dried grey sage leaves", "tuberose white flower stem": "tuberose white flowers without green stem or buds",
               "pineapple with a cut slice": "pineapple slices without the green crown"},
 }
 
@@ -107,8 +107,14 @@ def ingredients(p, n=7):
     return out[:n], notes[:n]
 
 
+# Excepciones revisadas a ojo: azules apagados que la medición no alcanza a ver
+KEY_OVERRIDE = {"petra": "verde"}   # estampado floral azul grisáceo en la base
+
+
 def choose_key(p, notes):
     c = bottle_colors(p)
+    if p["id"] in KEY_OVERRIDE:
+        return KEY_OVERRIDE[p["id"]], c
     if c.get("blue", 0) + c.get("purple", 0) < 10:
         return "azul", c
     ing = {hue_family(*(int(N[x]["color"][i:i + 2], 16) for i in (1, 3, 5))) for x in notes if N.get(x, {}).get("color")}
