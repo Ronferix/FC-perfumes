@@ -102,7 +102,7 @@ def ingredients(p, n=7):
     for k in [*p.get("keyNotes", []), *[x for ph in (p.get("notes") or {}).values() for x in ph]]:
         img = N.get(k, {}).get("img")
         d = ING.get(img)
-        if d and d not in out and img != "algodon":
+        if d and d not in out and img != "algodon" and "splash" not in d:   # algodón y agua no se ven / no se recortan
             out.append(d)
             notes.append(k)
     return out[:n], notes[:n]
@@ -110,7 +110,8 @@ def ingredients(p, n=7):
 
 # Excepciones revisadas a ojo: azules apagados que la medición no alcanza a ver
 KEY_OVERRIDE = {"petra": "verde",        # estampado floral azul grisáceo en la base
-                "nitro-green": "azul"}   # verde oscuro, no azul: el magenta teñía de rosa la tapa dorada
+                "nitro-green": "azul",   # verde oscuro, no azul: el magenta teñía de rosa la tapa dorada
+                "fakhar-rose": "verde"}  # disco lila en la tapa
 
 
 def choose_key(p, notes):
@@ -130,7 +131,13 @@ LABEL_TEXT = {"ameer-al-arab": "the Arabic calligraphy أمير العرب, then
               "amber-oud-bleu": "HARAMAIN, then AMBER OUD, then BLEU EDITION",
               "nitro-green": "NITRO, then POUR HOMME, then green",
               "shaheen-silver": "the Arabic calligraphy شاهين, then SHAHEEN, then SILVER, then Lattafa, then PRIDE",
-              "fusion-accord": "HAMIDI, then FUSION, then ACCORD"}
+              "fusion-accord": "HAMIDI, then FUSION, then ACCORD",
+              "fusion-concord": "HAMIDI, then FUSION, then CONCORD",
+              "yara": "the Arabic calligraphy يارا, then YARA, then Lattafa",
+              "fakhar-rose": "the Arabic calligraphy فخر لطافة, then Fakhar Lattafa in script",
+              "infinity-gold": "INFINITY, then EAU DE PARFUM",
+              "kingdom-women": "the Arabic calligraphy المملكة, then THE KINGDOM",
+              "atheeri": "the Arabic calligraphy أثيري, then ATHEERI, then Lattafa"}
 # Detalles del frasco que Gemini tiende a perder
 BOTTLE_EXTRA = {"amber-oud-bleu": "The thick deep royal-blue glass on the sides and edges of the bottle is clearly visible and vivid, exactly as in the reference.",
                 "nitro-green": "The bottle is dark green glass wrapped in dark green leather with a gold collar and a hanging leather tag, exactly as in the reference."}

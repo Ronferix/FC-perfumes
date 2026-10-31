@@ -938,7 +938,8 @@
         "Aparecía dos veces (Florales como «Yara Rose» y Atalcados como «Yara»); ahora es una sola ficha con familia secundaria."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "yara-elixir",
@@ -1084,7 +1085,8 @@
       ],
       "discrepancies": []
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "queen-of-arabia",
@@ -1140,7 +1142,8 @@
         "Nombre oficial: «Queen of Arabia»."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "fusion-concord",
