@@ -1217,7 +1217,8 @@
         "Nombre oficial: «Fusion Concord»."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "ameerat-blue",
@@ -2517,7 +2518,8 @@
         "Las notas de la infografía eran genéricas."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "connoisseur-man",
@@ -2814,7 +2816,8 @@
         "La infografía («Kingdom W») usaba notas de la versión masculina (incienso, cuero, oud). El negocio confirmó que es la versión femenina."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "petra",

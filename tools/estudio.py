@@ -59,6 +59,9 @@ def cut(pid):
     a = rgba.getchannel("A")
     # motas casi transparentes fuera; el contorno pierde 1 px (ahí vive el halo del croma mezclado) y se suaviza
     a = a.point(lambda v: 0 if v < 12 else v).filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.6))
+    # velos del fondo (viñeta o luz cenital que oscurece el croma): fuera todo lo que no esté a ≤12 px de algo sólido
+    near = a.point(lambda v: 255 if v > 160 else 0).resize((im.width // 4, im.height // 4)).filter(ImageFilter.MaxFilter(7)).resize(im.size)
+    a = ImageChops.multiply(a, near.point(lambda v: 255 if v > 0 else 0))
     rgba.putalpha(a)
     box = a.point(lambda v: 255 if v > 40 else 0).getbbox()
     pad = round(max(im.size) * 0.02)
