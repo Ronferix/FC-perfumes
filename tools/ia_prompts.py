@@ -52,7 +52,8 @@ ADJUST = {
              "bundle of lavender stems": "small bundle of dried lavender in muted grey-mauve tones",
              "dark purple plums, one halved": "dark red plums, one halved",
              "purple heliotrope flower cluster": "small cluster of pale cream-white heliotrope flowers",
-             "purple passion flower": "cream-white passion flower"},
+             "purple passion flower": "cream-white passion flower",
+             "purple violet flowers": "small white violet flowers"},
     "magenta": {"bundle of lavender stems": "small bundle of dried lavender in muted grey tones",
                 "dark purple plums, one halved": "dark red plums, one halved",
                 "pink grapefruit cut in half": "grapefruit cut in half with ruby-red flesh",
@@ -108,7 +109,8 @@ def ingredients(p, n=7):
 
 
 # Excepciones revisadas a ojo: azules apagados que la medición no alcanza a ver
-KEY_OVERRIDE = {"petra": "verde"}   # estampado floral azul grisáceo en la base
+KEY_OVERRIDE = {"petra": "verde",        # estampado floral azul grisáceo en la base
+                "nitro-green": "azul"}   # verde oscuro, no azul: el magenta teñía de rosa la tapa dorada
 
 
 def choose_key(p, notes):
@@ -125,9 +127,13 @@ def choose_key(p, notes):
 
 # Texto exacto de la etiqueta cuando Gemini lo cambia (copiado de la foto oficial)
 LABEL_TEXT = {"ameer-al-arab": "the Arabic calligraphy أمير العرب, then AMEER AL ARAB, then ASDAAF",
-              "amber-oud-bleu": "HARAMAIN, then AMBER OUD, then BLEU EDITION"}
+              "amber-oud-bleu": "HARAMAIN, then AMBER OUD, then BLEU EDITION",
+              "nitro-green": "NITRO, then POUR HOMME, then green",
+              "shaheen-silver": "the Arabic calligraphy شاهين, then SHAHEEN, then SILVER, then Lattafa, then PRIDE",
+              "fusion-accord": "HAMIDI, then FUSION, then ACCORD"}
 # Detalles del frasco que Gemini tiende a perder
-BOTTLE_EXTRA = {"amber-oud-bleu": "The thick deep royal-blue glass on the sides and edges of the bottle is clearly visible and vivid, exactly as in the reference."}
+BOTTLE_EXTRA = {"amber-oud-bleu": "The thick deep royal-blue glass on the sides and edges of the bottle is clearly visible and vivid, exactly as in the reference.",
+                "nitro-green": "The bottle is dark green glass wrapped in dark green leather with a gold collar and a hanging leather tag, exactly as in the reference."}
 
 
 def prompt(p, f, items, key):

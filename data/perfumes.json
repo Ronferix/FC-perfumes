@@ -722,7 +722,8 @@
         "Las notas de la infografía (toronja, limón, manzana, menta) no corresponden."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "ishq-silver",
@@ -792,7 +793,8 @@
         "Las notas de la infografía (lavanda, cuero, geranio, azafrán, oud) no corresponden."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "shaheen-silver",
@@ -861,7 +863,8 @@
         "Las notas de la infografía (piña, cuero, iris, violeta) no corresponden."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "yara",
