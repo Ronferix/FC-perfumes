@@ -2590,7 +2590,8 @@
         "La infografía (iris, cuero, oud) no correspondía. El negocio confirmó la versión Man."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "orchestra-tempo-tune",
