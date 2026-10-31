@@ -575,7 +575,8 @@
         "La infografía lo llamaba «Al Haramain Blue» con notas (limón, lavanda, romero) que no corresponden. El negocio confirmó que es Amber Oud Bleu."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "fusion-accord",
@@ -651,7 +652,8 @@
         "La infografía usaba notas cítricas genéricas que no corresponden."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "nitro-green",

@@ -124,16 +124,21 @@ def choose_key(p, notes):
 
 
 # Texto exacto de la etiqueta cuando Gemini lo cambia (copiado de la foto oficial)
-LABEL_TEXT = {"ameer-al-arab": "the Arabic calligraphy أمير العرب, then AMEER AL ARAB, then ASDAAF"}
+LABEL_TEXT = {"ameer-al-arab": "the Arabic calligraphy أمير العرب, then AMEER AL ARAB, then ASDAAF",
+              "amber-oud-bleu": "HARAMAIN, then AMBER OUD, then BLEU EDITION"}
+# Detalles del frasco que Gemini tiende a perder
+BOTTLE_EXTRA = {"amber-oud-bleu": "The thick deep royal-blue glass on the sides and edges of the bottle is clearly visible and vivid, exactly as in the reference."}
 
 
 def prompt(p, f, items, key):
     bg, banned, word = KEYS["azul" if key == "revisar" else key]
     label = f" The label reads exactly: {LABEL_TEXT[p['id']]}; spell it letter by letter as written." if p["id"] in LABEL_TEXT else ""
+    label += f" {BOTTLE_EXTRA[p['id']]}" if p["id"] in BOTTLE_EXTRA else ""
     return ("Use the attached photo as the exact product reference. Create a premium, professional perfume advertising still life: "
             "this exact perfume bottle surrounded by its real ingredients. BOTTLE: keep it 100% faithful to the reference — identical shape, "
             "cap, label, logo, colors, materials and proportions. Reproduce only the text visible in the reference, exactly as written; never "
-            "add words, logos or labels to the bottle. Front view, centered, camera at bottle height, the bottle is about 62% of the frame height and is "
+            "add words, logos or labels to the bottle. The bottle stands upright on an invisible surface; front view at a slight three-quarter "
+            "angle, camera at bottle height (not a flat lay, not a top-down view), centered, the bottle is about 62% of the frame height and is "
             f"never covered: its label stays fully visible.{label} INGREDIENTS (only these): {'; '.join(items)}. Arrange them around the bottle in a "
             "compact, balanced composition: a few in front at the lower corners slightly overlapping the base of the bottle, others beside "
             "and slightly behind it, with natural depth of field. Every ingredient is solid with crisp, clean edges. FRAMING: the whole "
