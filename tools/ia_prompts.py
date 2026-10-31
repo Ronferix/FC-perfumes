@@ -123,13 +123,18 @@ def choose_key(p, notes):
     return "verde", c
 
 
+# Texto exacto de la etiqueta cuando Gemini lo cambia (copiado de la foto oficial)
+LABEL_TEXT = {"ameer-al-arab": "the Arabic calligraphy أمير العرب, then AMEER AL ARAB, then ASDAAF"}
+
+
 def prompt(p, f, items, key):
     bg, banned, word = KEYS["azul" if key == "revisar" else key]
+    label = f" The label reads exactly: {LABEL_TEXT[p['id']]}; spell it letter by letter as written." if p["id"] in LABEL_TEXT else ""
     return ("Use the attached photo as the exact product reference. Create a premium, professional perfume advertising still life: "
             "this exact perfume bottle surrounded by its real ingredients. BOTTLE: keep it 100% faithful to the reference — identical shape, "
             "cap, label, logo, colors, materials and proportions. Reproduce only the text visible in the reference, exactly as written; never "
             "add words, logos or labels to the bottle. Front view, centered, camera at bottle height, the bottle is about 62% of the frame height and is "
-            f"never covered: its label stays fully visible. INGREDIENTS (only these): {'; '.join(items)}. Arrange them around the bottle in a "
+            f"never covered: its label stays fully visible.{label} INGREDIENTS (only these): {'; '.join(items)}. Arrange them around the bottle in a "
             "compact, balanced composition: a few in front at the lower corners slightly overlapping the base of the bottle, others beside "
             "and slightly behind it, with natural depth of field. Every ingredient is solid with crisp, clean edges. FRAMING: the whole "
             "group, every ingredient included, sits fully inside the frame with a clear margin of empty background on all four sides; "
@@ -137,7 +142,7 @@ def prompt(p, f, items, key):
             f"BACKGROUND: {bg}, perfectly flat and uniform, filling every part of the frame behind the objects — no gradient, no floor, no "
             "table, no horizon, no vignette, no cast shadow or reflection on the background. COLOR RULE: do not use "
             f"{banned} anywhere in the ingredients, and no {word} rim light or {word} reflections on the bottle or the ingredients (metal "
-            "and glossy surfaces reflect warm neutral tones only). No smoke, mist, powder, water drops, splashes or glass props. "
+            "and glossy surfaces keep their own color, silver stays silver and gold stays gold, with neutral reflections only). No smoke, mist, powder, water drops, splashes or glass props. "
             "Photorealistic, high-end commercial photography, sharp, high resolution, vertical 3:4.")
 
 

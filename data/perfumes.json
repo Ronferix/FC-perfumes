@@ -430,7 +430,8 @@
         "Las pirámides publicadas varían entre fuentes; se usa la del sitio oficial de Lattafa. Confirmar con foto del frasco que vende el negocio."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "hayaati",
@@ -498,7 +499,8 @@
       ],
       "discrepancies": []
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "amber-oud-bleu",
