@@ -115,7 +115,8 @@ KEY_OVERRIDE = {"petra": "verde",        # estampado floral azul grisáceo en la
                 "oud-saffron": "verde",  # gemas azules en la rejilla
                 "musk-mood": "verde",    # listones lila azulado
                 "royal-amber": "verde",  # vidrio transparente: el fondo se ve a través de él
-                "bharara-king": "verde"} # vidrio gris translúcido
+                "bharara-king": "verde", # vidrio gris translúcido
+                "yara": "verde"}         # moño de cromo: reflejaba el azul y quedaba hueco
 
 
 def choose_key(p, notes):
