@@ -1822,7 +1822,8 @@
         "Existen también las versiones Elixir y Vintage Edition; esta ficha corresponde a la original."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "odyssey-limoni",
@@ -1892,7 +1893,8 @@
         "La infografía inventaba lima, menta, pimienta negra y cedro."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "musk-mood",
