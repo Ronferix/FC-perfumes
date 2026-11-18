@@ -1678,7 +1678,8 @@
         "La tienda oficial de Rasasi bloquea el acceso automatizado; la imagen proviene de un distribuidor."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "hawas-malibu",
@@ -1749,7 +1750,8 @@
         "La infografía resumía el corazón y el fondo de forma vaga («acordes frescos», «amaderadas»)."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "mandarin-sky",
