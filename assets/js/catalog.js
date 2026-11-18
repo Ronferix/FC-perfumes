@@ -209,14 +209,10 @@ function showFamily(i, { animate = true, announce = false } = {}) {
   $(".g-cta").setAttribute("aria-label", `Explorar la familia ${f.name}`);
   $(".g-num").textContent = `${count} perfume${count === 1 ? "" : "s"}`;
 
-  // al centro, el perfume con foto de estudio (frasco + ingredientes); a los lados, frascos
-  const withImg = D.inFamily(f.id).filter((p) => p.image);
-  const c = withImg.find((p) => p.studio) || withImg[0];
-  const [l, r] = withImg.filter((p) => p !== c);
+  // tres perfumes de la familia; primero los que ya tienen foto de estudio (frasco + ingredientes)
+  const [c, l, r] = galleryPicks(f);
   const bottles = $(".g-bottles");
-  bottles.innerHTML = [l && `<img class="gb-l" src="${bottleSrc(l, 420)}" alt="" width="420" height="560">`,
-    c && (c.studio ? `<img class="gb-c studio" src="${studioSrc(c, 760)}" alt="">` : `<img class="gb-c" src="${bottleSrc(c, 840)}" alt="" width="420" height="560">`),
-    r && `<img class="gb-r" src="${bottleSrc(r, 420)}" alt="" width="420" height="560">`].filter(Boolean).join("");
+  bottles.innerHTML = [l && galleryImg(l, "gb-l", false), c && galleryImg(c, "gb-c", true), r && galleryImg(r, "gb-r", false)].filter(Boolean).join("");
 
   if (animate && !reduced) { [slide, bottles].forEach((el) => { el.classList.remove("in"); void el.offsetWidth; el.classList.add("in"); }); }
   else { slide.classList.remove("in"); bottles.classList.add("in"); }
@@ -227,9 +223,17 @@ function showFamily(i, { animate = true, announce = false } = {}) {
   if (state.view === "gallery" && location.hash && location.hash !== "#/") history.replaceState(null, "", "#/");
 
   // precarga discreta de la siguiente familia
-  D.inFamily(D.families[(i + 1) % n].id).filter((p) => p.image).slice(0, 3).forEach((p, k) => { const im = new Image(); im.src = bottleSrc(p, k === 0 ? 840 : 420); });
+  galleryPicks(D.families[(i + 1) % n]).forEach((p, k) => { const im = new Image(); im.src = gallerySrc(p, k === 0); });
   resetProgress();
 }
+function galleryPicks(f) {
+  const withImg = D.inFamily(f.id).filter((p) => p.image);
+  return [...withImg.filter((p) => p.studio), ...withImg.filter((p) => !p.studio)].slice(0, 3);
+}
+const gallerySrc = (p, big) => (p.studio ? studioSrc(p, big ? 760 : 420) : bottleSrc(p, big ? 840 : 420));
+const galleryImg = (p, cls, big) => p.studio
+  ? `<img class="${cls} studio" src="${gallerySrc(p, big)}" alt="">`
+  : `<img class="${cls}" src="${gallerySrc(p, big)}" alt="" width="420" height="560">`;
 
 /* ---------- reproducción automática ---------- */
 const hold = new Set();

@@ -104,6 +104,10 @@ body[data-mode="dark"] .brand__cream { display: block; }
 .g-bottles:has(.gb-c.studio) :is(.gb-l, .gb-r) { width: 22%; bottom: 22%; z-index: 0; opacity: .85; }
 .g-bottles:has(.gb-c.studio) .gb-l { left: -2%; }
 .g-bottles:has(.gb-c.studio) .gb-r { right: -2%; }
+/* vecinos que también tienen foto de estudio: más anchos que un frasco solo, asomando detrás del centro */
+.g-bottles:has(.gb-c.studio) :is(.gb-l, .gb-r).studio { width: 38%; bottom: 13%; opacity: .9; }
+.g-bottles:has(.gb-c.studio) .gb-l.studio { left: 0; }
+.g-bottles:has(.gb-c.studio) .gb-r.studio { right: 0; }
 .g-bottles .gb-l { left: 4%; }
 .g-bottles .gb-r { right: 4%; }
 .g-bottles.in img { animation: bottleIn 1.2s var(--ease) both; }
