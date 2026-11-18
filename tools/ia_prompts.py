@@ -111,7 +111,9 @@ def ingredients(p, n=7):
 # Excepciones revisadas a ojo: azules apagados que la medición no alcanza a ver
 KEY_OVERRIDE = {"petra": "verde",        # estampado floral azul grisáceo en la base
                 "nitro-green": "azul",   # verde oscuro, no azul: el magenta teñía de rosa la tapa dorada
-                "fakhar-rose": "verde"}  # disco lila en la tapa
+                "fakhar-rose": "verde",  # disco lila en la tapa
+                "oud-saffron": "verde",  # gemas azules en la rejilla
+                "musk-mood": "verde"}    # listones lila azulado
 
 
 def choose_key(p, notes):
@@ -137,7 +139,19 @@ LABEL_TEXT = {"ameer-al-arab": "the Arabic calligraphy أمير العرب, then
               "fakhar-rose": "the Arabic calligraphy فخر لطافة, then Fakhar Lattafa in script",
               "infinity-gold": "INFINITY, then EAU DE PARFUM",
               "kingdom-women": "the Arabic calligraphy المملكة, then THE KINGDOM",
-              "atheeri": "the Arabic calligraphy أثيري, then ATHEERI, then Lattafa"}
+              "atheeri": "the Arabic calligraphy أثيري, then ATHEERI, then Lattafa",
+              "khamrah-qahwa": "the Arabic calligraphy خمرة, then KHAMRAH, then QAHWA, then Lattafa",
+              "asad-bourbon": "the Arabic calligraphy أسد, then ASAD, then BOURBON, then Lattafa",
+              "9pm-rebel": "a large red 9 with pm, then REBEL",
+              "oud-saffron": "ORIENTICA, then OUD SAFFRON",
+              "royal-amber": "ORIENTICA, then ROYAL AMBER",
+              "hawas-ice": "the Arabic calligraphy هوس, then HAWAS, then For Him, then ICE",
+              "hawas-malibu": "the Arabic calligraphy هوس, then HAWAS, then For Him, then MALIBU",
+              "odyssey-limoni": "ODYSSEY LIMONI",
+              "peace-love": "Peace & Love in script",
+              "bharara-king": "BHARARA, then KING",
+              "ishq-gold": "the Arabic calligraphy عشق الشيوخ, then ISHQ AL SHUYUKH, then GOLD",
+              "orchestra-tempo-tune": "ARMAF, then TEMPO TUNE, then ORCHESTRA"}
 # Detalles del frasco que Gemini tiende a perder
 BOTTLE_EXTRA = {"amber-oud-bleu": "The thick deep royal-blue glass on the sides and edges of the bottle is clearly visible and vivid, exactly as in the reference.",
                 "nitro-green": "The bottle is dark green glass wrapped in dark green leather with a gold collar and a hanging leather tag, exactly as in the reference."}

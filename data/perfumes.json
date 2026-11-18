@@ -1335,7 +1335,8 @@
       ],
       "discrepancies": []
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "asad-bourbon",
@@ -3039,6 +3040,7 @@
         "Las notas de la infografía (bergamota, azahar, ylang, sándalo) no corresponden."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   }
 ]
