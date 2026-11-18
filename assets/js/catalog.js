@@ -56,9 +56,20 @@ function parse() {
 function route(initial = false) {
   const r = parse();
   if (!initial && !reduced && document.startViewTransition) {
+    shareBottle(r);
     const vt = document.startViewTransition(() => render(r));
-    vt.finished.finally(() => $$(".card img").forEach((i) => (i.style.viewTransitionName = "")));
+    vt.finished.finally(() => $$(".card img, .p-photo").forEach((i) => (i.style.viewTransitionName = "")));
   } else render(r);
+}
+
+/** Elemento compartido: el frasco "viaja" solo entre la tarjeta y la ficha del MISMO perfume
+    (entre dos perfumes distintos no hay nada que conectar). Aquí se nombra el lado de salida;
+    render() nombra el de llegada. */
+function shareBottle(r) {
+  let img = null;
+  if (state.view === "family" && r.view === "perfume") img = $(`.card__link[data-id="${r.perf.id}"] img`, views.family);
+  if (state.view === "perfume" && r.view === "family" && r.fam === state.fam) img = $(".p-photo", views.perfume);
+  if (img) img.style.viewTransitionName = "bottle";
 }
 
 function render(r) {
@@ -74,7 +85,7 @@ function render(r) {
   } else stopAuto();
 
   if (r.view === "family") { state.fam = r.fam; renderFamily(r.fam, prev === "perfume" ? state.perf : null); }
-  if (r.view === "perfume") { state.fam = r.fam; state.perf = r.perf; renderPerfume(r.fam, r.perf); }
+  if (r.view === "perfume") { state.fam = r.fam; state.perf = r.perf; renderPerfume(r.fam, r.perf, prev === "family"); }
   if (r.view === "list") { applyTheme(LIST_THEME, "lista"); fx.setMood({ motifs: ["haze"], palette: ["#ffffff", "#e6dccc", "#f3e7da"], tempo: 0.3, mode: "light" }); }
 
   renderCrumbs(r);
@@ -251,6 +262,7 @@ function renderFamily(f, fromPerf) {
   fx.setMood(familyMood(f));
   const list = D.inFamily(f.id);
   views.family.dataset.layout = state.grid ? "grid" : "carousel";
+  views.family.classList.toggle("is-back", !!fromPerf);   // al volver de una ficha, sin entrada escalonada
   views.family.innerHTML = `
     <div class="f-wrap">
       <header class="f-head">
@@ -337,9 +349,7 @@ function renderFamily(f, fromPerf) {
   track.addEventListener("click", (e) => {
     const a = e.target.closest(".card__link"); if (!a) return;
     const k = cards.indexOf(a.parentElement);
-    if (carousel() && k !== active) { e.preventDefault(); goTo(k); return; }
-    // Elemento compartido: el frasco "viaja" a la ficha
-    const img = a.querySelector("img"); if (img) img.style.viewTransitionName = "bottle";
+    if (carousel() && k !== active) { e.preventDefault(); goTo(k); }
   });
   // Rueda vertical → desplazamiento horizontal (solo escritorio)
   track.addEventListener("wheel", (e) => {
@@ -360,7 +370,7 @@ function renderFamily(f, fromPerf) {
 }
 
 /* ---------------------------------------------------------------- ficha */
-function renderPerfume(f, p) {
+function renderPerfume(f, p, fromFamily = false) {
   applyTheme(f.theme, f.id);
   tint(p);
   focus(desktop.matches ? 0.28 : 0.5, desktop.matches ? 0.5 : 0.3);
@@ -408,8 +418,8 @@ function renderPerfume(f, p) {
       <a class="p-close" href="#/${f.id}" aria-label="Cerrar y volver a ${esc(f.name)}">×</a>
     </article>`;
 
-  // Foto fija (sin animación): el frasco viaja desde su tarjeta con la transición de vista
-  const img = $(".p-photo", views.perfume); if (img) img.style.viewTransitionName = "bottle";
+  // Foto fija (sin animación): el frasco llega desde su tarjeta con la transición de vista
+  const img = fromFamily && $(".p-photo", views.perfume); if (img) img.style.viewTransitionName = "bottle";
 }
 
 /* ---------------------------------------------------------------- lista */
