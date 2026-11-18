@@ -1408,7 +1408,8 @@
         "Fragrantica lo clasifica como masculino; el sitio oficial de Lattafa lo presenta como unisex."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "checkmate-knight",
@@ -1531,7 +1532,8 @@
         "La infografía decía «amberwood»; la ficha oficial dice ámbar gris."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "oud-saffron",
