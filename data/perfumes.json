@@ -2246,7 +2246,8 @@
         "La foto oficial tiene fondo fotográfico; el recorte deja ver algo del fondo a través del vidrio."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "royal-amber",
@@ -2318,7 +2319,8 @@
         "La infografía lo llamaba «Orientica Amber». Existen también «Exclusive Royal Amber» (2024) y «Royal Amber Parfum Concentré»; esta ficha corresponde al original."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "ishq-gold",

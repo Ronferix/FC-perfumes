@@ -113,7 +113,9 @@ KEY_OVERRIDE = {"petra": "verde",        # estampado floral azul grisáceo en la
                 "nitro-green": "azul",   # verde oscuro, no azul: el magenta teñía de rosa la tapa dorada
                 "fakhar-rose": "verde",  # disco lila en la tapa
                 "oud-saffron": "verde",  # gemas azules en la rejilla
-                "musk-mood": "verde"}    # listones lila azulado
+                "musk-mood": "verde",    # listones lila azulado
+                "royal-amber": "verde",  # vidrio transparente: el fondo se ve a través de él
+                "bharara-king": "verde"} # vidrio gris translúcido
 
 
 def choose_key(p, notes):
@@ -155,6 +157,8 @@ LABEL_TEXT = {"ameer-al-arab": "the Arabic calligraphy أمير العرب, then
 # Detalles del frasco que Gemini tiende a perder
 BOTTLE_EXTRA = {"amber-oud-bleu": "The thick deep royal-blue glass on the sides and edges of the bottle is clearly visible and vivid, exactly as in the reference.",
                 "nitro-green": "The bottle is dark green glass wrapped in dark green leather with a gold collar and a hanging leather tag, exactly as in the reference.",
+                "royal-amber": "The bottle is filled with deep golden amber liquid that fully fills it, so the glass reads as solid warm amber and the background is never visible through it.",
+                "bharara-king": "The bottle is dark smoky grey-black glass, fully opaque-looking: the background is never visible through it.",
                 "oud-saffron": "The ornate cage and the cap are polished cool SILVER chrome (neutral silver, not rose gold, not copper, not gold), with small deep-blue gems, over black glass, exactly as in the reference."}
 
 
