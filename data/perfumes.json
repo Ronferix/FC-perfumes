@@ -2099,7 +2099,8 @@
         "Las notas de la infografía (pera, notas frescas, ámbar) no corresponden."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "ameerat-prive-rose",
@@ -2174,7 +2175,8 @@
         "La infografía incluía lichi y peonía; no son notas oficiales (el lichi solo aparece en reseñas de usuarios)."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "bharara-king",
