@@ -57,7 +57,8 @@ function route(initial = false) {
   const r = parse();
   if (!initial && !reduced && document.startViewTransition) {
     shareBottle(r);
-    const vt = document.startViewTransition(() => render(r));
+    // se espera a que la foto de llegada esté decodificada: si no, el frasco viaja vacío y la foto aparece después
+    const vt = document.startViewTransition(async () => { render(r); await bottleDecoded(); });
     vt.finished.finally(() => $$(".card img, .p-photo").forEach((i) => (i.style.viewTransitionName = "")));
   } else render(r);
 }
@@ -70,6 +71,13 @@ function shareBottle(r) {
   if (state.view === "family" && r.view === "perfume") img = $(`.card__link[data-id="${r.perf.id}"] img`, views.family);
   if (state.view === "perfume" && r.view === "family" && r.fam === state.fam) img = $(".p-photo", views.perfume);
   if (img) img.style.viewTransitionName = "bottle";
+}
+/** La foto del frasco que llega, decodificada (con tope para no detener la navegación) */
+function bottleDecoded(ms = 450) {
+  const img = $$(".view:not([hidden]) img").find((i) => i.style.viewTransitionName === "bottle");
+  if (!img || (img.complete && img.naturalWidth)) return Promise.resolve();
+  img.loading = "eager";                                   // las tarjetas cargan en diferido
+  return Promise.race([img.decode().catch(() => {}), new Promise((res) => setTimeout(res, ms))]);
 }
 
 function render(r) {
