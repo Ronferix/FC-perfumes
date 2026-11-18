@@ -1605,7 +1605,8 @@
         "La infografía lo llamaba «Orientica Saffron» y lo ponía en Cuero con notas de cuero, rosa y jazmín que no corresponden. Nombre oficial: «Oud Saffron». Se movió a Especiados."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "hawas-ice",

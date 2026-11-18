@@ -154,7 +154,8 @@ LABEL_TEXT = {"ameer-al-arab": "the Arabic calligraphy أمير العرب, then
               "orchestra-tempo-tune": "ARMAF, then TEMPO TUNE, then ORCHESTRA"}
 # Detalles del frasco que Gemini tiende a perder
 BOTTLE_EXTRA = {"amber-oud-bleu": "The thick deep royal-blue glass on the sides and edges of the bottle is clearly visible and vivid, exactly as in the reference.",
-                "nitro-green": "The bottle is dark green glass wrapped in dark green leather with a gold collar and a hanging leather tag, exactly as in the reference."}
+                "nitro-green": "The bottle is dark green glass wrapped in dark green leather with a gold collar and a hanging leather tag, exactly as in the reference.",
+                "oud-saffron": "The ornate cage and the cap are polished cool SILVER chrome (neutral silver, not rose gold, not copper, not gold), with small deep-blue gems, over black glass, exactly as in the reference."}
 
 
 def prompt(p, f, items, key):
