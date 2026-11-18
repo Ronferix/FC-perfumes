@@ -1960,7 +1960,8 @@
       ],
       "discrepancies": []
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "musk-so-poudree",
@@ -2028,7 +2029,8 @@
         "La pirámide publicada es genérica en todas las fuentes; se usa una descripción conservadora."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "peace-love",
