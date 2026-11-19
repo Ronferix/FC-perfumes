@@ -2389,7 +2389,8 @@
         "La infografía añadía cítricos, cardamomo, rosa y oud; no aparecen en la pirámide oficial."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "art-of-universe",
@@ -2464,7 +2465,8 @@
         "La infografía inventaba pimienta rosa, azafrán, oud y resinas."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "infinity-gold",
