@@ -14,7 +14,7 @@ import json
 import statistics
 import sys
 from pathlib import Path
-from PIL import Image, ImageChops, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "_ia" / "estudio"
@@ -41,6 +41,7 @@ def key_color(im):
     name, bg = max(((k, statistics.median(d.getpixel(p) for p in pts)) for k, d in doms.items()), key=lambda kv: kv[1])
     hi, lo = bg * 0.85, 45                                             # ≥ hi fondo (y su sombra); ≤ lo objeto
     alpha = doms[name].point(lambda v: 255 if v <= lo else 0 if v >= hi else round(255 * (hi - v) / (hi - lo)))
+    alpha = fill_enclosed(alpha, doms[name].point(lambda v: 255 if v >= hi else 0))
     # quitar el reflejo del fondo (metales, bordes): el croma nunca más de 4 por encima de los otros canales
     over = lambda c, ref: ImageChops.subtract(c, ref.point(lambda v: min(255, v + 4)))   # exceso ≥ 0
     if name == "azul":
@@ -51,6 +52,26 @@ def key_color(im):
         ex = over(ImageChops.darker(r, b), g)                          # magenta: r y b bajan juntos
         r, b = ImageChops.subtract(r, ex), ImageChops.subtract(b, ex)
     return Image.merge("RGBA", (r, g, b, alpha)), name
+
+
+def fill_enclosed(alpha, pure_bg, gap=4):
+    """Metal pulido o vidrio que refleja el croma queda semitransparente aunque esté dentro del objeto
+    (p. ej. la placa plateada de Oud Saffron). Se vuelve opaco todo lo semitransparente que no conecta
+    con el borde de la imagen y está a más de `gap` px del fondo puro; los huecos reales (el aro de
+    Infinity, el espacio entre ingredientes) son fondo puro y se respetan."""
+    w, h = alpha.size
+    S = 2                                                              # a media resolución: más rápido
+    m = alpha.resize((w // S, h // S)).point(lambda v: 255 if v < 250 else 0).convert("L")
+    for x in range(0, m.width, 3):                                    # inundar desde los bordes
+        for y in (0, m.height - 1):
+            if m.getpixel((x, y)) == 255: ImageDraw.floodfill(m, (x, y), 128)
+    for y in range(0, m.height, 3):
+        for x in (0, m.width - 1):
+            if m.getpixel((x, y)) == 255: ImageDraw.floodfill(m, (x, y), 128)
+    enclosed = m.point(lambda v: 255 if v == 255 else 0).resize((w, h))
+    near_bg = pure_bg.filter(ImageFilter.MaxFilter(2 * gap + 1))
+    fix = ImageChops.subtract(enclosed, near_bg)
+    return ImageChops.lighter(alpha, fix.point(lambda v: 255 if v > 127 else 0))
 
 
 def cut(pid):

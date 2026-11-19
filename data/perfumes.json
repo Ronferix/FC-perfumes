@@ -1232,11 +1232,31 @@
     "concentration": null,
     "presentation": null,
     "year": null,
-    "notes": null,
-    "keyNotes": [],
-    "description": "Estamos confirmando la información de este perfume. Escríbenos y te contamos cómo es.",
-    "image": null,
-    "alt": "",
+    "notes": {
+      "top": [
+        "bergamota",
+        "salvia",
+        "jengibre"
+      ],
+      "heart": [
+        "geranio",
+        "cashmeran",
+        "manzana"
+      ],
+      "base": [
+        "ambar",
+        "almizcle",
+        "sandalo"
+      ]
+    },
+    "keyNotes": [
+      "bergamota",
+      "geranio",
+      "ambar"
+    ],
+    "description": "Fresco y suave: bergamota, salvia y jengibre que abren paso a geranio y manzana, sobre ámbar, almizcle y sándalo.",
+    "image": "ameerat-blue",
+    "alt": "Frasco de Ameerat Al Arab Blue de Asdaaf: terciopelo azul claro con etiqueta y tapa doradas",
     "animation": {
       "motifs": [
         "breeze",
@@ -1252,8 +1272,8 @@
     "order": 6,
     "published": true,
     "verification": {
-      "status": "unverified",
-      "checkedAt": "2026-09-25",
+      "status": "partial",
+      "checkedAt": "2026-11-18",
       "sources": [
         {
           "label": "Perfums Arabics (minorista)",
@@ -1261,9 +1281,12 @@
         }
       ],
       "discrepancies": [
-        "No existe ficha oficial ni especializada. El minorista que lo vende usa la foto de «Ameer Al Arab Imperium» (frasco azul, 2024), que tiene otra pirámide (bergamota, salvia, jengibre / geranio, cashmeran, manzana / ámbar, almizcle, sándalo). Falta foto del frasco que vende el negocio para confirmar."
+        "El negocio confirmó el frasco con una foto (18-nov-2026): es el de «Ameer Al Arab Imperium» de Asdaaf (terciopelo azul, 2024). Se usa la pirámide publicada para ese frasco.",
+        "No existe ficha oficial con el nombre «Ameerat Al Arab Blue»."
       ]
-    }
+    },
+    "imageSource": "negocio",
+    "studio": true
   },
   {
     "id": "khamrah-qahwa",
@@ -1423,11 +1446,31 @@
     "concentration": null,
     "presentation": null,
     "year": null,
-    "notes": null,
-    "keyNotes": [],
-    "description": "Estamos confirmando la versión exacta de este perfume. Escríbenos y te contamos cómo es.",
-    "image": null,
-    "alt": "",
+    "notes": {
+      "top": [
+        "bergamota",
+        "limon",
+        "lavanda"
+      ],
+      "heart": [
+        "cedro",
+        "cardamomo",
+        "pachuli"
+      ],
+      "base": [
+        "ambar",
+        "vetiver",
+        "haba-tonka"
+      ]
+    },
+    "keyNotes": [
+      "lavanda",
+      "cardamomo",
+      "haba-tonka"
+    ],
+    "description": "Aromático y especiado: bergamota, limón y lavanda; cedro y cardamomo en el corazón, sobre ámbar, vetiver y haba tonka.",
+    "image": "checkmate-knight",
+    "alt": "Frasco de Checkmate Knight de Armaf: vidrio negro escalonado con tapa de caballo de ajedrez dorado",
     "animation": {
       "motifs": [
         "embers",
@@ -1443,8 +1486,8 @@
     "order": 4,
     "published": true,
     "verification": {
-      "status": "unverified",
-      "checkedAt": "2026-09-25",
+      "status": "partial",
+      "checkedAt": "2026-11-18",
       "sources": [
         {
           "label": "Armaf (sitio oficial: solo Black Knight y White Knight)",
@@ -1457,9 +1500,11 @@
       ],
       "discrepancies": [
         "La infografía lo atribuía a French Avenue; es de Armaf.",
-        "El sitio oficial de Armaf solo lista Checkmate Black Knight y Checkmate White Knight (2026). Algunos minoristas venden un «Checkmate Knight» con otra pirámide (bergamota, limón, lavanda / cedro, cardamomo, pachulí / ámbar, vetiver, haba tonka). Falta foto del frasco para saber cuál es."
+        "El negocio confirmó el frasco con una foto (18-nov-2026): frasco negro con caballo dorado y la leyenda «KNIGHT». Se usa la pirámide que publican los minoristas para ese frasco; el sitio oficial de Armaf solo lista Black Knight y White Knight."
       ]
-    }
+    },
+    "imageSource": "negocio",
+    "studio": true
   },
   {
     "id": "9pm-rebel",

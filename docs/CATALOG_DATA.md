@@ -6,7 +6,7 @@ Fuente de verdad del contenido: `data/*.json`. Este documento explica **de dónd
 ## 1. Resumen
 
 - **9 familias** y **43 perfumes únicos**. Las 9 infografías sumaban 48 entradas, con 5 duplicados.
-- **38 ✅ verificados**, **3 ⚠️ parciales** (Ameer Al Arab, Queen of Arabia, Musk So Poudrée) y **2 ❓ sin confirmar** (Ameerat Al Arab Blue, Checkmate Knight).
+- **38 ✅ verificados** y **5 ⚠️ parciales** (Ameer Al Arab, Queen of Arabia, Musk So Poudrée, Ameerat Al Arab Blue y Checkmate Knight). El negocio confirmó con fotos los frascos de Ameerat Al Arab Blue y Checkmate Knight el 18-nov-2026.
 - El negocio resolvió 8 ambigüedades el 25-sep-2026 (Ameerat negro, Ameerat Blue, Amber Oud Bleu, Checkmate Knight, Connoisseur Man, Orchestra Tempo Tune, The Kingdom Women, Éter Arabian Sky).
 - Decisiones del negocio:
   - El nombre público es **Perfumes FC**.
@@ -77,7 +77,7 @@ Leyenda: ✅ información oficial o especializada coincidente · ⚠️ producto
 | Fakhar Rose <br><small>(también: Fakhar Women)</small> | Lattafa | ✅ Verificado | [Lattafa USA (distribuidor oficial)](https://www.lattafa-usa.com/products/fakhar)<br>[Fragrantica](https://www.fragrantica.com/perfume/Lattafa-Perfumes/Fakhar-Rose-70466.html) | — |
 | Queen of Arabia <br><small>(también: Queen Arabia)</small> | Lattafa Pride | ⚠️ Parcial | [Lattafa USA (distribuidor oficial)](https://www.lattafa-usa.com/products/queen-of-arabia)<br>[Fragrantica](https://www.fragrantica.com/perfume/Lattafa-Perfumes/Queen-Of-Arabia-113075.html) | Las fuentes oficiales no coinciden: Lattafa USA publica ylang-ylang, nuez moscada, toronja / jazmín, rosa, flores blancas / vainilla, ámbar, maderas suaves; lattafa.com y Fragrantica publican coco, sal / sándalo, heliotropo / vainilla, ámbar. Solo coinciden vainilla y ámbar, así que no se muestra pirámide.<br>Nombre oficial: «Queen of Arabia». |
 | Fusion Concord <br><small>(también: Hamidi Concord)</small> | Hamidi | ✅ Verificado | [Hamidi (tienda oficial; sin pirámide publicada)](https://hamidiperfume.com/products/hamidi-fusion-concord-exclusive)<br>[Fragrantica](https://www.fragrantica.com/perfume/Hamidi/Concord-88249.html) | Estaba en Amaderados; su pirámide es floral, así que se movió a Florales.<br>Nombre oficial: «Fusion Concord». |
-| Ameerat Al Arab Blue | Asdaaf (Lattafa) | ❓ Sin confirmar | [Perfums Arabics (minorista)](https://perfumsarabics.com/products/ameerat-al-arab-blue) | No existe ficha oficial ni especializada. El minorista que lo vende usa la foto de «Ameer Al Arab Imperium» (frasco azul, 2024), que tiene otra pirámide (bergamota, salvia, jengibre / geranio, cashmeran, manzana / ámbar, almizcle, sándalo). Falta foto del frasco que vende el negocio para confirmar. |
+| Ameerat Al Arab Blue | Asdaaf (Lattafa) | ⚠️ Parcial | [Perfums Arabics (minorista)](https://perfumsarabics.com/products/ameerat-al-arab-blue) | No existe ficha oficial ni especializada. El minorista que lo vende usa la foto de «Ameer Al Arab Imperium» (frasco azul, 2024), que tiene otra pirámide (bergamota, salvia, jengibre / geranio, cashmeran, manzana / ámbar, almizcle, sándalo). El 18-nov-2026 el negocio confirmó con foto que vende ese frasco (Imperium); se usa su pirámide. |
 
 ### Especiados
 
@@ -86,7 +86,7 @@ Leyenda: ✅ información oficial o especializada coincidente · ⚠️ producto
 | Khamrah | Lattafa | ✅ Verificado | [Lattafa USA (distribuidor oficial)](https://www.lattafa-usa.com/products/khamrah)<br>[Fragrantica](https://www.fragrantica.com/perfume/Lattafa-Perfumes/Khamrah-75805.html) | La infografía «Dulces» decía «lirio» en el corazón; la nota oficial es nardo (tuberosa) y mahonial. |
 | Khamrah Qahwa | Lattafa | ✅ Verificado | [Lattafa USA (distribuidor oficial)](https://www.lattafa-usa.com/products/khamrah-qahwa)<br>[Fragrantica](https://www.fragrantica.com/perfume/Lattafa-Perfumes/Khamrah-Qahwa-88175.html) | — |
 | Asad Bourbon | Lattafa | ✅ Verificado | [Lattafa (sitio oficial)](https://lattafa.com/product/asad-bourbon/)<br>[Fragrantica](https://www.fragrantica.com/perfume/Lattafa-Perfumes/Asad-Bourbon-101124.html) | Fragrantica lo clasifica como masculino; el sitio oficial de Lattafa lo presenta como unisex. |
-| Checkmate Knight | Armaf | ❓ Sin confirmar | [Armaf (sitio oficial: solo Black Knight y White Knight)](https://armaf.com/products/checkmate-black-knight)<br>[FragranceX (minorista, «Checkmate Knight»)](https://www.fragrancex.com/products/armaf/armaf-checkmate-knight-cologne) | La infografía lo atribuía a French Avenue; es de Armaf.<br>El sitio oficial de Armaf solo lista Checkmate Black Knight y Checkmate White Knight (2026). Algunos minoristas venden un «Checkmate Knight» con otra pirámide (bergamota, limón, lavanda / cedro, cardamomo, pachulí / ámbar, vetiver, haba tonka). Falta foto del frasco para saber cuál es. |
+| Checkmate Knight | Armaf | ⚠️ Parcial | [Armaf (sitio oficial: solo Black Knight y White Knight)](https://armaf.com/products/checkmate-black-knight)<br>[FragranceX (minorista, «Checkmate Knight»)](https://www.fragrancex.com/products/armaf/armaf-checkmate-knight-cologne) | La infografía lo atribuía a French Avenue; es de Armaf.<br>El sitio oficial de Armaf solo lista Checkmate Black Knight y Checkmate White Knight (2026). Algunos minoristas venden un «Checkmate Knight» con otra pirámide (bergamota, limón, lavanda / cedro, cardamomo, pachulí / ámbar, vetiver, haba tonka). El 18-nov-2026 el negocio confirmó con foto el frasco negro con caballo dorado («KNIGHT»); se usa la pirámide de los minoristas. |
 | 9 PM Rebel <br><small>(también: 9PM Rebel)</small> | Afnan | ✅ Verificado | [Afnan (tienda oficial)](https://us.afnan.com/products/9-pm-rebel)<br>[Fragrantica](https://www.fragrantica.com/perfume/Afnan/9-PM-Rebel-99238.html) | La infografía decía «amberwood»; la ficha oficial dice ámbar gris. |
 | Oud Saffron <br><small>(también: Orientica Saffron)</small> | Orientica | ✅ Verificado | [Orientica (tienda oficial; sin pirámide publicada)](https://www.orienticaperfumes.com/en-us/products/oud-saffron)<br>[Fragrantica](https://www.fragrantica.com/perfume/Orientica-Premium/Oud-Saffron-69363.html) | La infografía lo llamaba «Orientica Saffron» y lo ponía en Cuero con notas de cuero, rosa y jazmín que no corresponden. Nombre oficial: «Oud Saffron». Se movió a Especiados. |
 
@@ -239,7 +239,7 @@ Generados en Gemini (Nano Banana) a partir de la foto oficial de cada frasco, so
 ## 8. Pendientes antes de publicar
 
 1. Número de WhatsApp en `data/config.json` (`whatsapp.phone`) y ejecutar `python tools/prerender.py`.
-2. Fotos de los frascos de **Ameerat Al Arab Blue** y **Checkmate Knight** para cerrar su identificación.
+2. ~~Fotos de los frascos de Ameerat Al Arab Blue y Checkmate Knight~~: recibidas el 18-nov-2026.
 3. Confirmar los derechos de las fotos de producto, o hacer una sesión propia.
 4. Revisar con el negocio si «Ameer Al Arab» debe mostrarse con su nombre oficial (lo actual) o como «Ameerat Al Arab negro».
 5. Dominio definitivo: completar las URL absolutas de `og:image` y `canonical`.

@@ -58,7 +58,8 @@ ADJUST = {
                 "dark purple plums, one halved": "dark red plums, one halved",
                 "pink grapefruit cut in half": "grapefruit cut in half with ruby-red flesh",
                 "pink peppercorns": "red peppercorns",
-                "purple violet flowers": "small white violet flowers"},
+                "purple violet flowers": "small white violet flowers",
+                "pink geranium flowers with leaves": "white geranium flowers with leaves"},
     "verde": {" with green leaves": "", " with leaves": "", "dried patchouli leaves": "dried dark brown patchouli leaves",
               "sage leaves sprig": "dried grey sage leaves", "tuberose white flower stem": "tuberose white flowers without green stem or buds",
               "pineapple with a cut slice": "pineapple slices without the green crown"},
@@ -154,10 +155,14 @@ LABEL_TEXT = {"ameer-al-arab": "the Arabic calligraphy أمير العرب, then
               "peace-love": "Peace & Love in script",
               "bharara-king": "BHARARA, then KING",
               "ishq-gold": "the Arabic calligraphy عشق الشيوخ, then ISHQ AL SHUYUKH, then GOLD",
-              "orchestra-tempo-tune": "ARMAF, then TEMPO TUNE, then ORCHESTRA"}
+              "orchestra-tempo-tune": "ARMAF, then TEMPO TUNE, then ORCHESTRA",
+              "ameerat-blue": "the Arabic calligraphy أمير العرب, then AMEER AL ARAB, then IMPERIUM, then ASDAAF",
+              "checkmate-knight": "EAU DE PARFUM on the left, KNIGHT in the center, e100ml 3.4 fl oz on the right"}
 # Detalles del frasco que Gemini tiende a perder
 BOTTLE_EXTRA = {"amber-oud-bleu": "The thick deep royal-blue glass on the sides and edges of the bottle is clearly visible and vivid, exactly as in the reference.",
                 "nitro-green": "The bottle is dark green glass wrapped in dark green leather with a gold collar and a hanging leather tag, exactly as in the reference.",
+                "hawas-malibu": "Keep the whole composition SMALL and centered: the bottle is only about 50% of the frame height, the ingredients sit low and tight beside the bottle, and there is a wide empty margin of at least 15% of the image width on the left and on the right.",
+                "checkmate-knight": "The bottle is glossy black with a golden chess-knight horse head as the cap, exactly as in the reference.",
                 "royal-amber": "The bottle is filled with deep golden amber liquid that fully fills it, so the glass reads as solid warm amber and the background is never visible through it.",
                 "bharara-king": "The bottle is dark smoky grey-black glass, fully opaque-looking: the background is never visible through it.",
                 "oud-saffron": "The ornate cage and the cap are polished cool SILVER chrome (neutral silver, not rose gold, not copper, not gold), with small deep-blue gems, over black glass, exactly as in the reference."}
