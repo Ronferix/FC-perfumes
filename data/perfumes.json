@@ -2685,7 +2685,8 @@
         "«Orchestra» es una línea con varias versiones; el negocio confirmó Tempo Tune. Las notas de la infografía no correspondían."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "topaz-malaky",
@@ -2756,7 +2757,8 @@
         "Nombre oficial: «Mosaic Topaz Malaky». La pirámide oficial coincide en buena parte con la infografía; algunos minoristas publican otra distinta (mango, ylang, nardo), que se descartó."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "kingdom-women",
@@ -2986,7 +2988,8 @@
         "La infografía decía solo «Éter» (es una línea). El negocio confirmó Arabian Sky. Tiene cuero en el fondo, por eso aparece también en Cuero."
       ]
     },
-    "imageSource": "oficial"
+    "imageSource": "oficial",
+    "studio": true
   },
   {
     "id": "atheeri",
